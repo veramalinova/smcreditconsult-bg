@@ -703,7 +703,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       emailLabel: "Email",
       phoneLabel: "Phone",
       hoursLabel: "Hours",
-      hoursValue: "Monday–Friday, 9am–5pm",
+      hoursValue: "Monday–Friday, 9am–6pm",
     },
     ctaBand: {
       title: "Have a question about a loan?",
