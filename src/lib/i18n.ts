@@ -296,7 +296,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         "Работим с всички основни кредитни продукти — ипотечен, потребителски кредит и рефинансиране.",
       whyTitle: "Защо кредитен консултант",
       whySupport:
-        "Кредитният консултант не отпуска кредит. Той ви помага да разберете пазара, да сравните реалните условия и да кандидатствате подготвени — без да обикаляте сам всяка банка. Услугата е напълно безплатна за вас.",
+        "Кредитният консултант ви помага да разберете пазара, да сравните реалните условия и да кандидатствате подготвени — без да обикаляте сам всяка банка. Услугата е напълно безплатна за вас.",
       whyItems: [
         {
           title: "Един разговор вместо много клонове",
@@ -519,7 +519,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         "We cover the main loan products — mortgages, consumer loans, and refinancing.",
       whyTitle: "Why use a credit consultant",
       whySupport:
-        "A credit consultant does not issue loans. We help you understand the market, compare real terms, and apply prepared — without visiting every bank yourself. The service is completely free for you.",
+        "A credit consultant helps you understand the market, compare real terms, and apply prepared — without visiting every bank yourself. The service is completely free for you.",
       whyItems: [
         {
           title: "One conversation instead of many branches",
