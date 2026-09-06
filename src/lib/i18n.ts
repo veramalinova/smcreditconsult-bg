@@ -496,7 +496,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         },
         {
           q: "С кои кредити работите?",
-          a: "С ипотечни, потребителски и фирмени кредити и рефинансиране.",
+          a: "С ипотечни, потребителски и фирмени кредити, както и с рефинансиране. Помагаме да сравните оферти, да изберете подходящите условия и да минете процеса до кандидатстване — според вашата цел и профил.",
         },
         {
           q: "Колко време отнема процесът?",
@@ -735,7 +735,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         },
         {
           q: "Which loans do you cover?",
-          a: "Mortgages, consumer loans, business loans, and refinancing.",
+          a: "Mortgages, consumer loans, business loans, and refinancing. We help you compare offers, choose suitable terms, and go through the process to application — based on your goal and profile.",
         },
         {
           q: "How long does the process take?",
