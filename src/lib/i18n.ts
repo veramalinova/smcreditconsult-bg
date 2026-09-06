@@ -394,8 +394,8 @@ export const dictionaries: Record<Locale, Dictionary> = {
           body: "Сравняваме варианти според вашия профил, не според удобството на една банка.",
         },
         {
-          title: "Спокойствие",
-          body: "Време за въпроси, без агресивни продажби и без изкуствен спешност.",
+          title: "Онлайн и по телефона",
+          body: "Целият процес може да мине дистанционно — без губене на време с ходене в офис.",
         },
       ],
     },
@@ -630,8 +630,8 @@ export const dictionaries: Record<Locale, Dictionary> = {
           body: "We compare options for your profile, not for one bank’s convenience.",
         },
         {
-          title: "Calm",
-          body: "Time for questions, no hard sell, and no artificial urgency.",
+          title: "Online and by phone",
+          body: "The whole process can happen remotely — without wasting time visiting an office.",
         },
       ],
     },
