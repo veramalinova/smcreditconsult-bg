@@ -324,7 +324,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         },
       ],
       processTitle: "Как работим",
-      processSupport: "Четири спокойни стъпки от първия разговор до подадена заявка.",
+      processSupport: "Четири стъпки от първия разговор до подадена заявка.",
     },
     servicesOverview: {
       metaTitle: "Услуги — СМ Консулт",
@@ -547,7 +547,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         },
       ],
       processTitle: "How we work",
-      processSupport: "Four calm steps from the first call to a submitted application.",
+      processSupport: "Four steps from the first call to a submitted application.",
     },
     servicesOverview: {
       metaTitle: "Services — SM Consult",
