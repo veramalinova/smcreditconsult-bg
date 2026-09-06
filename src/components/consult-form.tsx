@@ -10,20 +10,6 @@ import { CONTACT_EMAIL } from "@/lib/contact";
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
 
-function buildMailto(name: string, email: string, phone: string, goal: string) {
-  const subject = encodeURIComponent(`Заявка за консултация — ${name}`);
-  const body = encodeURIComponent(
-    [
-      `Име: ${name}`,
-      `Имейл: ${email}`,
-      `Телефон: ${phone || "—"}`,
-      "",
-      goal,
-    ].join("\n"),
-  );
-  return `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
-}
-
 export function ConsultForm() {
   const { t } = useLanguage();
   const [status, setStatus] = useState<FormStatus>("idle");
@@ -67,19 +53,16 @@ export function ConsultForm() {
       );
 
       const contentType = response.headers.get("content-type") ?? "";
-      if (response.ok && contentType.includes("application/json")) {
-        setStatus("success");
-        form.reset();
+      if (!response.ok || !contentType.includes("application/json")) {
+        setStatus("error");
         return;
       }
-    } catch {
-      // Fall through to mailto.
-    }
 
-    // Reliable fallback when FormSubmit is blocked or unavailable.
-    window.location.href = buildMailto(name, email, phone, goal);
-    setStatus("success");
-    form.reset();
+      setStatus("success");
+      form.reset();
+    } catch {
+      setStatus("error");
+    }
   }
 
   if (status === "success") {

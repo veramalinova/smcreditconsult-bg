@@ -32,8 +32,7 @@ export async function POST(request: Request) {
     );
   }
 
-  // Kept as optional server path. Prefer client-side FormSubmit in the form,
-  // because FormSubmit often blocks datacenter IPs with Cloudflare.
+  // FormSubmit may block some server/datacenter IPs with Cloudflare.
   const response = await fetch(
     `https://formsubmit.co/ajax/${encodeURIComponent(CONTACT_EMAIL)}`,
     {
