@@ -10,6 +10,7 @@
 | `/uslugi` | Преглед на услугите |
 | `/uslugi/ipotechnen-kredit` | Ипотечен кредит |
 | `/uslugi/potrebitelski-kredit` | Потребителски кредит |
+| `/uslugi/firmen-kredit` | Фирмен кредит |
 | `/uslugi/refinansirane` | Рефинансиране |
 | `/kak-rabotim` | Процес |
 | `/za-nas` | За нас |
