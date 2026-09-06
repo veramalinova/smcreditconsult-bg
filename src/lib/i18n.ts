@@ -463,7 +463,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         "Заявете кредитна консултация за ипотечен, потребителски кредит или рефинансиране.",
       title: "Заявете консултация",
       support:
-        "Напишете ни кратко какво търсите. Отговаряме до един работен ден със свободен час. Целият процес може да е изцяло онлайн и по телефона.",
+        "Напишете ни кратко какво търсите. Отговаряме до един работен ден. Целият процес може да е изцяло онлайн и по телефона.",
       emailLabel: "Имейл",
       phoneLabel: "Телефон",
       hoursLabel: "Работно време",
@@ -488,7 +488,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         "Моля, попълнете име, имейл и какъв кредит търсите, за да се подготвим.",
       successTitle: "Заявката е получена",
       successBody:
-        "Ще отговорим до един работен ден със свободен час за консултацията.",
+        "Ще отговорим до един работен ден.",
       sendAnother: "Изпрати нова заявка",
     },
     footer: {
@@ -699,7 +699,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         "Request a credit consultation for a mortgage, consumer loan, or refinance.",
       title: "Request a consultation",
       support:
-        "Tell us briefly what you need. We reply within one business day with an available time. The whole process can be fully online and by phone.",
+        "Tell us briefly what you need. We reply within one business day. The whole process can be fully online and by phone.",
       emailLabel: "Email",
       phoneLabel: "Phone",
       hoursLabel: "Hours",
@@ -724,7 +724,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         "Please fill in your name, email, and which loan you need so we can prepare.",
       successTitle: "Request received",
       successBody:
-        "We will reply within one business day with an available time for your consultation.",
+        "We will reply within one business day.",
       sendAnother: "Send another request",
     },
     footer: {
