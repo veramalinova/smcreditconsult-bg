@@ -141,6 +141,7 @@ export default function Home() {
             </p>
             <div className="animate-fade-up-delay-3 mt-8">
               <Button
+                nativeButton={false}
                 render={<a href="#consult" />}
                 className="h-12 bg-jade px-6 text-base text-accent-foreground hover:bg-jade/90"
               >
@@ -269,6 +270,7 @@ export default function Home() {
               {t.ctaBand.title}
             </h2>
             <Button
+              nativeButton={false}
               render={<a href="#consult" />}
               className="mt-8 h-12 border border-white/30 bg-white px-6 text-base text-ink hover:bg-white/90"
             >
