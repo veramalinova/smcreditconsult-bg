@@ -286,7 +286,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         "Безплатна кредитна консултация за ипотечен, потребителски кредит и рефинансиране.",
       headline: "Консултация за кредит според вашите нужди",
       support:
-        "Независима кредитна консултация — сравняваме банкови оферти, обясняваме условията и ви водим до кандидатстване. Услугата е безплатна за вас.",
+        "Независима кредитна консултация — сравняваме банкови оферти, обясняваме условията и ви водим до кандидатстване. Услугата е напълно безплатна за вас.",
       cta: "Безплатна консултация",
       secondaryCta: "Виж услугите",
       imageAlt: "Спокоен дом и градска улица при дневна светлина",
@@ -495,7 +495,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         "Free credit consultation for mortgages, consumer loans, and refinancing.",
       headline: "Credit consultation tailored to your needs",
       support:
-        "Independent credit consulting — we compare bank offers, explain the terms, and guide you to application. The service is free for you.",
+        "Independent credit consulting — we compare bank offers, explain the terms, and guide you to application. The service is completely free for you.",
       cta: "Free consultation",
       secondaryCta: "See services",
       imageAlt: "Calm home and city street in daylight",
