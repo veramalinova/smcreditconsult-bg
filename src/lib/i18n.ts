@@ -103,6 +103,7 @@ export type Dictionary = {
     goalPlaceholder: string;
     submit: string;
     submitting: string;
+    invalid: string;
     error: string;
     successTitle: string;
     successBody: string;
@@ -484,8 +485,9 @@ export const dictionaries: Record<Locale, Dictionary> = {
       goalPlaceholder: "Ипотечен, потребителски, рефинансиране или друго…",
       submit: "Заяви консултация",
       submitting: "Изпращане…",
+      invalid: "Моля, попълнете име, имейл и какъв кредит ви интересува.",
       error:
-        "Не успяхме да изпратим заявката. Проверете полетата и опитайте отново.",
+        "Не успяхме да изпратим заявката през сайта. Опитайте отново след малко или се обадете по телефона.",
       successTitle: "Заявката е получена",
       successBody: "Ще отговорим до един работен ден.",
       sendAnother: "Изпрати нова заявка",
@@ -719,8 +721,9 @@ export const dictionaries: Record<Locale, Dictionary> = {
       goalPlaceholder: "Mortgage, consumer, refinance, or something else…",
       submit: "Request a consultation",
       submitting: "Sending…",
+      invalid: "Please fill in your name, email, and which loan you need.",
       error:
-        "We could not send the request. Check the fields and try again.",
+        "We could not send the request through the site. Please try again shortly or call us.",
       successTitle: "Request received",
       successBody: "We will reply within one business day.",
       sendAnother: "Send another request",

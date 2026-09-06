@@ -34,6 +34,17 @@ Open [http://127.0.0.1:43127](http://127.0.0.1:43127).
 
 ## Notes
 
-Формата на `/konsultaciya` изпраща заявки към `smcreditconsult@gmail.com` през формата в сайта (FormSubmit). Няма mailto — при грешка се показва съобщение, без отваряне на имейл клиент.
+Формата на `/konsultaciya` изпраща заявки към `smcreditconsult@gmail.com` през `/api/consult` (Gmail SMTP). Няма mailto.
 
-**Важно при първо изпращане:** FormSubmit праща активационен имейл на `smcreditconsult@gmail.com`. Отворете го и потвърдете (проверете и Spam). След това заявките започват да пристигат.
+### Имейл настройка
+
+1. В Google акаунта на `smcreditconsult@gmail.com` включете 2-стъпкова проверка.
+2. Създайте **App password** (Security → App passwords).
+3. Копирайте `.env.example` към `.env.local` и попълнете:
+
+```bash
+GMAIL_USER=smcreditconsult@gmail.com
+GMAIL_APP_PASSWORD=xxxx xxxx xxxx xxxx
+```
+
+4. Рестартирайте `npm run dev`.

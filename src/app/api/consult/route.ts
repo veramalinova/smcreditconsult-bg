@@ -1,3 +1,4 @@
+import nodemailer from "nodemailer";
 import { NextResponse } from "next/server";
 import { CONTACT_EMAIL } from "@/lib/contact";
 
@@ -32,37 +33,62 @@ export async function POST(request: Request) {
     );
   }
 
-  // FormSubmit may block some server/datacenter IPs with Cloudflare.
-  const response = await fetch(
-    `https://formsubmit.co/ajax/${encodeURIComponent(CONTACT_EMAIL)}`,
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({
-        name,
-        email,
-        phone: phone || "—",
-        message: goal,
-        _subject: `Нова заявка за консултация — ${name}`,
-        _template: "table",
-        _captcha: "false",
-        _replyto: email,
-      }),
-    },
-  );
+  const gmailUser = process.env.GMAIL_USER?.trim() || CONTACT_EMAIL;
+  const gmailPass = process.env.GMAIL_APP_PASSWORD?.trim();
 
-  const contentType = response.headers.get("content-type") ?? "";
-  if (!response.ok || !contentType.includes("application/json")) {
-    const detail = await response.text().catch(() => "");
-    console.error("FormSubmit error", response.status, detail.slice(0, 300));
+  if (!gmailPass) {
+    return NextResponse.json(
+      { ok: false, error: "not_configured" },
+      { status: 503 },
+    );
+  }
+
+  try {
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: gmailUser,
+        pass: gmailPass,
+      },
+    });
+
+    await transporter.sendMail({
+      from: `"СМ Кредит Консулт" <${gmailUser}>`,
+      to: CONTACT_EMAIL,
+      replyTo: email,
+      subject: `Нова заявка за консултация — ${name}`,
+      text: [
+        `Име: ${name}`,
+        `Имейл: ${email}`,
+        `Телефон: ${phone || "—"}`,
+        "",
+        "Заявка:",
+        goal,
+      ].join("\n"),
+      html: `
+        <h2>Нова заявка за консултация</h2>
+        <p><strong>Име:</strong> ${escapeHtml(name)}</p>
+        <p><strong>Имейл:</strong> ${escapeHtml(email)}</p>
+        <p><strong>Телефон:</strong> ${escapeHtml(phone || "—")}</p>
+        <p><strong>Заявка:</strong></p>
+        <p>${escapeHtml(goal).replace(/\n/g, "<br>")}</p>
+      `,
+    });
+
+    return NextResponse.json({ ok: true });
+  } catch (error) {
+    console.error("Consult email error", error);
     return NextResponse.json(
       { ok: false, error: "send_failed" },
       { status: 502 },
     );
   }
+}
 
-  return NextResponse.json({ ok: true });
+function escapeHtml(value: string) {
+  return value
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;");
 }

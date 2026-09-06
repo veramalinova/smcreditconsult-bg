@@ -6,9 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { CONTACT_EMAIL } from "@/lib/contact";
 
-type FormStatus = "idle" | "submitting" | "success" | "error";
+type FormStatus = "idle" | "submitting" | "success" | "error" | "invalid";
 
 export function ConsultForm() {
   const { t } = useLanguage();
@@ -26,34 +25,18 @@ export function ConsultForm() {
     const goal = String(data.get("goal") ?? "").trim();
 
     if (!name || !email || !goal) {
-      setStatus("error");
+      setStatus("invalid");
       return;
     }
 
     try {
-      const response = await fetch(
-        `https://formsubmit.co/ajax/${encodeURIComponent(CONTACT_EMAIL)}`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-          body: JSON.stringify({
-            name,
-            email,
-            phone: phone || "—",
-            message: goal,
-            _subject: `Нова заявка за консултация — ${name}`,
-            _template: "table",
-            _captcha: "false",
-            _replyto: email,
-          }),
-        },
-      );
+      const response = await fetch("/api/consult", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, phone, goal }),
+      });
 
-      const contentType = response.headers.get("content-type") ?? "";
-      if (!response.ok || !contentType.includes("application/json")) {
+      if (!response.ok) {
         setStatus("error");
         return;
       }
@@ -101,7 +84,7 @@ export function ConsultForm() {
             required
             placeholder={t.form.namePlaceholder}
             className="h-11 bg-white"
-            aria-invalid={status === "error" || undefined}
+            aria-invalid={status === "invalid" || undefined}
           />
         </div>
         <div className="space-y-2">
@@ -114,7 +97,7 @@ export function ConsultForm() {
             required
             placeholder={t.form.emailPlaceholder}
             className="h-11 bg-white"
-            aria-invalid={status === "error" || undefined}
+            aria-invalid={status === "invalid" || undefined}
           />
         </div>
       </div>
@@ -140,9 +123,15 @@ export function ConsultForm() {
           rows={4}
           placeholder={t.form.goalPlaceholder}
           className="min-h-28 resize-y bg-white text-base md:text-sm"
-          aria-invalid={status === "error" || undefined}
+          aria-invalid={status === "invalid" || undefined}
         />
       </div>
+
+      {status === "invalid" ? (
+        <p className="text-sm text-destructive" role="alert">
+          {t.form.invalid}
+        </p>
+      ) : null}
 
       {status === "error" ? (
         <p className="text-sm text-destructive" role="alert">
