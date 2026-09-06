@@ -3,7 +3,7 @@ export function getSiteUrl() {
   const raw =
     process.env.NEXT_PUBLIC_SITE_URL?.trim() ||
     process.env.SITE_URL?.trim() ||
-    "https://smcreditconsult.bg";
+    "https://smcreditconsult-bg.com";
   return raw.replace(/\/$/, "");
 }
 

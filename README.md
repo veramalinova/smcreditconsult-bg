@@ -61,6 +61,6 @@ GMAIL_APP_PASSWORD=xxxx xxxx xxxx xxxx
 - `/sitemap.xml` and `/robots.txt`
 - Custom `404` page
 - Sticky mobile call button (`tel:`)
-- Set `NEXT_PUBLIC_SITE_URL` to the live HTTPS domain before launch
+- Set `NEXT_PUBLIC_SITE_URL=https://smcreditconsult-bg.com` (already the project default)
 - Company-domain email (e.g. `office@…`) can replace Gmail in `src/lib/contact.ts` once DNS/mailbox are ready
 
