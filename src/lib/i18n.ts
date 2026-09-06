@@ -85,7 +85,7 @@ export type Dictionary = {
 export const dictionaries: Record<Locale, Dictionary> = {
   bg: {
     meta: {
-      title: "Meridian Credit — Кредитно решение според вашите нужди",
+      title: "СМ Консулт — Кредитно решение според вашите нужди",
       description:
         "Безплатна кредитна консултация. Всички видове кредити с основен фокус върху жилищни кредити.",
     },
@@ -96,7 +96,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       phoneAria: "Обадете се",
     },
     hero: {
-      brand: "Meridian Credit",
+      brand: "СМ Консулт",
       headline: "Кредитно решение според вашите нужди",
       support:
         "Всички видове кредити. Основен фокус — жилищните. Консултацията е безплатна за вас.",
@@ -150,7 +150,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     },
     about: {
       title: "За нас",
-      body: "Meridian Credit е независима кредитна консултация. Работим с всички видове кредити, а най-силно — с жилищните. Целта ни е да получите ясни условия, без натиск и безплатна първа консултация.",
+      body: "СМ Консулт е независима кредитна консултация. Работим с всички видове кредити, а най-силно — с жилищните. Целта ни е да получите ясни условия, без натиск и безплатна първа консултация.",
       imageAlt: "Консултант и клиент преглеждат документи заедно",
     },
     useful: {
@@ -216,7 +216,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
   },
   en: {
     meta: {
-      title: "Meridian Credit — A credit solution for your needs",
+      title: "SM Consult — A credit solution for your needs",
       description:
         "Free credit consultation. All loan types with a primary focus on residential mortgages.",
     },
@@ -227,7 +227,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       phoneAria: "Call us",
     },
     hero: {
-      brand: "Meridian Credit",
+      brand: "SM Consult",
       headline: "A credit solution for your needs",
       support:
         "All loan types. Primary focus — home mortgages. Your consultation is free.",
@@ -281,7 +281,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     },
     about: {
       title: "About us",
-      body: "Meridian Credit is independent loan consulting. We cover all loan types, with the strongest focus on residential mortgages. You get clear terms, no pressure, and a free first consultation.",
+      body: "SM Consult is independent loan consulting. We cover all loan types, with the strongest focus on residential mortgages. You get clear terms, no pressure, and a free first consultation.",
       imageAlt: "Advisor and client reviewing documents together",
     },
     useful: {

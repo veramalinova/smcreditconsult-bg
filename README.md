@@ -1,6 +1,6 @@
-# Meridian Credit
+# СМ Консулт
 
-A marketing site for an independent credit consulting practice — services, process, and a consultation request form. The default language is Bulgarian, with an EN/БГ switcher in the menu.
+Сайт за независима кредитна консултация — услуги, процес и заявка за безплатна консултация. По подразбиране е на български, с превключвател БГ/EN в менюто.
 
 ## Stack
 
@@ -20,12 +20,12 @@ Open [http://127.0.0.1:43127](http://127.0.0.1:43127).
 
 ## Scripts
 
-| Command        | Description              |
-| -------------- | ------------------------ |
-| `npm run dev`  | Start the development server |
-| `npm run build`| Production build         |
-| `npm run start`| Serve the production build |
-| `npm run lint` | Run ESLint               |
+| Command         | Description                    |
+| --------------- | ------------------------------ |
+| `npm run dev`   | Start the development server   |
+| `npm run build` | Production build               |
+| `npm run start` | Serve the production build     |
+| `npm run lint`  | Run ESLint                     |
 
 ## Notes
 

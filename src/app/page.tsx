@@ -294,10 +294,10 @@ export default function Home() {
                   <dt className="font-medium text-ink">{t.consult.emailLabel}</dt>
                   <dd>
                     <a
-                      href="mailto:hello@meridiancredit.example"
+                      href="mailto:hello@smconsult.example"
                       className="transition-colors hover:text-jade"
                     >
-                      hello@meridiancredit.example
+                      hello@smconsult.example
                     </a>
                   </dd>
                 </div>

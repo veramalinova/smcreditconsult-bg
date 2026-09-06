@@ -24,7 +24,7 @@ type LanguageContextValue = {
 
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
-const STORAGE_KEY = "meridian-locale";
+const STORAGE_KEY = "sm-consult-locale";
 
 let currentLocale: Locale = defaultLocale;
 const listeners = new Set<() => void>();
