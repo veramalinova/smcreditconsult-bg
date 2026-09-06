@@ -2,7 +2,7 @@ export type Locale = "bg" | "en";
 
 export const defaultLocale: Locale = "bg";
 
-export type ServiceId = "mortgage" | "consumer" | "business" | "refinance";
+export type ServiceId = "mortgage" | "consumer" | "business";
 
 export type ServicePage = {
   id: ServiceId;
@@ -133,22 +133,22 @@ const bgServices: Record<ServiceId, ServicePage> = {
     id: "mortgage",
     href: "/uslugi/ipotechnen-kredit",
     title: "Ипотечен кредит",
-    short: "Жилищен кредит за покупка, строеж или ремонт.",
+    short: "Жилищен кредит за покупка, строеж, ремонт или рефинансиране.",
     eyebrow: "Жилищно финансиране",
     headline: "Ипотечен кредит с ясни условия от първия разговор",
     intro:
-      "Помагаме ви да сравните банкови оферти за покупка на жилище, строеж, ремонт или други цели, обезпечени с имот. Работим независимо и безплатно за вас.",
+      "Помагаме ви да сравните банкови оферти за покупка на жилище, строеж, ремонт или рефинансиране на съществуваща ипотека. Работим независимо и безплатно за вас.",
     points: [
       "Сравнение на лихви, такси, ГПР и месечна вноска",
       "Оценка на самоучастие, срок и одобряемост",
       "Подготовка на документи и насоки до одобрение",
-      "Съдействие и при рефинансиране на съществуваща ипотека",
+      "Рефинансиране на текуща ипотека към по-добра оферта",
     ],
     forWhomTitle: "За кого е подходящ",
     forWhom: [
       "Купувате първо или следващо жилище",
       "Планирате строеж или основен ремонт",
-      "Искате по-ясна картина преди среща с банка",
+      "Искате да рефинансирате съществуваща ипотека",
     ],
     cta: "Заяви консултация за ипотечен кредит",
   },
@@ -157,21 +157,21 @@ const bgServices: Record<ServiceId, ServicePage> = {
     href: "/uslugi/potrebitelski-kredit",
     title: "Потребителски кредит",
     short:
-      "Потребителски и лични кредити с ясни условия и реалистична вноска.",
+      "Потребителски и лични кредити — нов кредит или рефинансиране с ясни условия.",
     eyebrow: "Лични нужди",
     headline: "Потребителски кредит без излишни изненади",
     intro:
-      "Когато ви трябва финансиране за ремонт, автомобил, обединяване на задължения или други лични цели, сравняваме оферти и ви казваме ясно какво реално ще струва кредитът.",
+      "Когато ви трябва финансиране за ремонт, автомобил, обединяване на задължения или рефинансиране на текущ потребителски кредит, сравняваме оферти и ви казваме ясно какво реално ще струва.",
     points: [
       "Сравнение на лихва, такси и срок",
-      "Оценка дали потребителският кредит е по-добър от алтернатива",
+      "Оценка дали новият или рефинансиращият кредит е по-изгоден",
       "Помощ с документи и кандидатстване",
       "Честен разговор кога кредитът не е добра идея",
     ],
     forWhomTitle: "За кого е подходящ",
     forWhom: [
       "Имате конкретна сума и срок в главата си",
-      "Искате бърза, но добре премислена оферта",
+      "Искате да рефинансирате или обедините задължения",
       "Искате да избегнете скрити такси",
     ],
     cta: "Заяви консултация за потребителски кредит",
@@ -181,48 +181,24 @@ const bgServices: Record<ServiceId, ServicePage> = {
     href: "/uslugi/firmen-kredit",
     title: "Фирмен кредит",
     short:
-      "Финансиране за оборот, инвестиции и развитие на бизнеса с ясни условия.",
+      "Финансиране за оборот, инвестиции или рефинансиране на фирмен кредит.",
     eyebrow: "За бизнеса",
     headline: "Фирмен кредит според нуждите на компанията",
     intro:
-      "Помагаме на фирми и еднолични търговци да сравнят оферти за оборотен капитал, инвестиционен кредит или друго фирмено финансиране — с реалистична оценка на натоварването и условията.",
+      "Помагаме на фирми и еднолични търговци да сравнят оферти за оборотен капитал, инвестиционен кредит или рефинансиране на текущо фирмено финансиране — с реалистична оценка на натоварването и условията.",
     points: [
       "Сравнение на лихва, такси, срок и обезпечение",
       "Оценка на кешфлоу, одобряемост и нужните документи",
-      "Варианти за оборотен и инвестиционен кредит",
+      "Варианти за оборотен, инвестиционен кредит и рефинансиране",
       "Съдействие при кандидатстване до решение от банката",
     ],
     forWhomTitle: "За кого е подходящ",
     forWhom: [
       "Търсите оборотен капитал или инвестиция в техника и оборудване",
-      "Искате по-ясна оферта преди разговор с банката",
+      "Искате да рефинансирате текущ фирмен кредит",
       "Искате да сравните условия за фирма или ЕТ",
     ],
     cta: "Заяви консултация за фирмен кредит",
-  },
-  refinance: {
-    id: "refinance",
-    href: "/uslugi/refinansirane",
-    title: "Рефинансиране",
-    short:
-      "Прехвърляне към по-добра оферта, когато текущият кредит вече не ви устройва.",
-    eyebrow: "По-добри условия",
-    headline: "Рефинансиране, което реално спестява",
-    intro:
-      "Преглеждаме текущия ви кредит и проверяваме дали нова оферта ще намали вноската или общата цена — след такси за предсрочно погасяване и прехвърляне.",
-    points: [
-      "Сравнение на стара и нова месечна вноска",
-      "Калкулация на такси и реална икономия",
-      "Варианти за ипотечно и потребителско рефинансиране",
-      "Подкрепа през целия процес на прехвърляне",
-    ],
-    forWhomTitle: "За кого е подходящ",
-    forWhom: [
-      "Лихвата или вноската вече са високи",
-      "Искате да обедините няколко кредита",
-      "Искате по-кратък или по-дълъг срок с ясна сметка",
-    ],
-    cta: "Заяви консултация за рефинансиране",
   },
 };
 
@@ -231,22 +207,22 @@ const enServices: Record<ServiceId, ServicePage> = {
     id: "mortgage",
     href: "/uslugi/ipotechnen-kredit",
     title: "Mortgage loan",
-    short: "Home loans for purchase, construction, or renovation.",
+    short: "Home loans for purchase, construction, renovation, or refinancing.",
     eyebrow: "Home financing",
     headline: "Mortgage advice with clear terms from the first call",
     intro:
-      "We help you compare bank offers for buying a home, building, renovating, or other property-secured goals. Independent guidance, free for you.",
+      "We help you compare bank offers for buying a home, building, renovating, or refinancing an existing mortgage. Independent guidance, free for you.",
     points: [
       "Compare rates, fees, APR, and monthly payments",
       "Assess down payment, term, and approval likelihood",
       "Document prep and guidance through approval",
-      "Support for refinancing an existing mortgage too",
+      "Refinance an existing mortgage to a better offer",
     ],
     forWhomTitle: "Who it is for",
     forWhom: [
       "Buying a first or next home",
       "Planning construction or a major renovation",
-      "Wanting clarity before you talk to a bank",
+      "Wanting to refinance an existing mortgage",
     ],
     cta: "Request mortgage consultation",
   },
@@ -254,21 +230,21 @@ const enServices: Record<ServiceId, ServicePage> = {
     id: "consumer",
     href: "/uslugi/potrebitelski-kredit",
     title: "Consumer loan",
-    short: "Personal and consumer loans with clear terms and a realistic payment.",
+    short: "Personal and consumer loans — new credit or refinancing with clear terms.",
     eyebrow: "Personal needs",
     headline: "Consumer loans without expensive surprises",
     intro:
-      "When you need financing for a renovation, car, debt consolidation, or other personal goals, we compare offers and explain what the loan will really cost.",
+      "When you need financing for a renovation, car, debt consolidation, or refinancing an existing consumer loan, we compare offers and explain what it will really cost.",
     points: [
       "Compare rate, fees, and term",
-      "Check whether a consumer loan beats alternatives",
+      "Check whether a new or refinancing loan is the better deal",
       "Help with documents and application",
       "An honest talk when borrowing is not a good idea",
     ],
     forWhomTitle: "Who it is for",
     forWhom: [
       "You already have an amount and term in mind",
-      "You want a fast but well-considered offer",
+      "You want to refinance or consolidate debts",
       "You want to avoid hidden fees",
     ],
     cta: "Request consumer loan consultation",
@@ -278,47 +254,24 @@ const enServices: Record<ServiceId, ServicePage> = {
     href: "/uslugi/firmen-kredit",
     title: "Business loan",
     short:
-      "Financing for working capital, investment, and business growth with clear terms.",
+      "Financing for working capital, investment, or refinancing a business loan.",
     eyebrow: "For business",
     headline: "Business loans matched to your company’s needs",
     intro:
-      "We help companies and sole traders compare offers for working capital, investment loans, or other business financing — with a realistic view of debt load and terms.",
+      "We help companies and sole traders compare offers for working capital, investment loans, or refinancing existing business financing — with a realistic view of debt load and terms.",
     points: [
       "Compare rate, fees, term, and collateral",
       "Assess cash flow, approval chances, and required documents",
-      "Options for working-capital and investment loans",
+      "Options for working-capital, investment, and refinance loans",
       "Application support through the bank’s decision",
     ],
     forWhomTitle: "Who it is for",
     forWhom: [
       "Looking for working capital or equipment investment",
-      "Wanting a clearer offer before talking to a bank",
+      "Wanting to refinance an existing business loan",
       "Comparing terms for a company or sole trader",
     ],
     cta: "Request business loan consultation",
-  },
-  refinance: {
-    id: "refinance",
-    href: "/uslugi/refinansirane",
-    title: "Refinancing",
-    short: "Moving to a better offer when your current loan no longer fits.",
-    eyebrow: "Better terms",
-    headline: "Refinancing that actually saves money",
-    intro:
-      "We review your current loan and check whether a new offer lowers the payment or total cost — after early-repayment and transfer fees.",
-    points: [
-      "Compare old and new monthly payments",
-      "Calculate fees and real savings",
-      "Options for mortgage and consumer refinance",
-      "Support through the full transfer process",
-    ],
-    forWhomTitle: "Who it is for",
-    forWhom: [
-      "Your rate or payment already feels high",
-      "You want to consolidate several loans",
-      "You want a shorter or longer term with a clear math",
-    ],
-    cta: "Request refinance consultation",
   },
 };
 
@@ -327,7 +280,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     meta: {
       title: "СМ Кредит Консулт — Кредитна консултация",
       description:
-        "Независим кредитен консултант. Ипотечен, потребителски, фирмен кредит и рефинансиране. Консултацията е безплатна.",
+        "Независим кредитен консултант. Ипотечен, потребителски и фирмен кредит — включително рефинансиране. Консултацията е безплатна.",
     },
     brand: "СМ Кредит Консулт",
     nav: {
@@ -343,7 +296,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     home: {
       metaTitle: "СМ Кредит Консулт — Кредитен консултант",
       metaDescription:
-        "Кредитна консултация за ипотечен, потребителски, фирмен кредит и рефинансиране.",
+        "Кредитна консултация за ипотечен, потребителски и фирмен кредит — включително рефинансиране.",
       headline: "Консултация за кредит според вашите нужди",
       support:
         "Независима кредитна консултация — сравняваме банкови оферти, обясняваме условията и ви водим до кандидатстване. Услугата е напълно безплатна за вас.",
@@ -352,7 +305,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       imageAlt: "Спокоен дом и градска улица при дневна светлина",
       servicesTitle: "С какво можем да помогнем",
       servicesSupport:
-        "Работим с всички основни кредитни продукти — ипотечен, потребителски, фирмен кредит и рефинансиране.",
+        "Работим с всички основни кредитни продукти — ипотечен, потребителски и фирмен кредит — включително рефинансиране.",
       whyTitle: "Защо кредитен консултант",
       whySupport:
         "Кредитният консултант ви помага да разберете пазара, да сравните реалните условия и да кандидатствате подготвени — без да обикаляте сам всяка банка. Услугата е напълно безплатна за вас.",
@@ -393,7 +346,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     servicesOverview: {
       metaTitle: "Услуги — СМ Кредит Консулт",
       metaDescription:
-        "Ипотечен, потребителски, фирмен кредит и рефинансиране с кредитна консултация.",
+        "Ипотечен, потребителски и фирмен кредит — включително рефинансиране с кредитна консултация.",
       title: "Услуги",
       support:
         "Изберете продукта, който ви интересува, или започнете с обща консултация — ще уточним заедно най-подходящия път.",
@@ -432,12 +385,12 @@ export const dictionaries: Record<Locale, Dictionary> = {
     aboutPage: {
       metaTitle: "За нас — СМ Кредит Консулт",
       metaDescription:
-        "Независима кредитна консултация за ипотечен, потребителски, фирмен кредит и рефинансиране. Безплатно за клиента.",
+        "Независима кредитна консултация за ипотечен, потребителски и фирмен кредит — включително рефинансиране. Безплатно за клиента.",
       title: "За СМ Кредит Консулт",
       lead: "Независим кредитен консултант за хора, които искат най-подходящото решение преди да подпишат.",
       body: [
-        "СМ Кредит Консулт помага при избор на ипотечен, потребителски и фирмен кредит и рефинансиране. Обясняваме условията на разбираем език, а целият процес може да е изцяло онлайн и по телефона — без губене на време с ходене в офис.",
-        "Работим с жилищно финансиране, потребителски и фирмени кредити и рефинансиране — там разликите между офертите са големи, а грешният избор излиза скъпо във времето.",
+        "СМ Кредит Консулт помага при избор на ипотечен, потребителски и фирмен кредит — включително рефинансиране. Обясняваме условията на разбираем език, а целият процес може да е изцяло онлайн и по телефона — без губене на време с ходене в офис.",
+        "Работим с жилищно, потребителско и фирмено финансиране — включително рефинансиране — там разликите между офертите са големи, а грешният избор излиза скъпо във времето.",
         "Консултацията е безплатна за вас. Целта ни е да вземете информирано решение и да кандидатствате подготвени.",
       ],
       imageAlt: "Консултант и клиент преглеждат документи заедно",
@@ -460,7 +413,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     usefulPage: {
       metaTitle: "Полезно — СМ Кредит Консулт",
       metaDescription:
-        "Практични съвети за ипотечен, потребителски и фирмен кредит и рефинансиране.",
+        "Практични съвети за ипотечен, потребителски и фирмен кредит — включително рефинансиране.",
       title: "Полезно преди да кандидатствате",
       support:
         "Кратки ориентири, за да влезете в разговора подготвени.",
@@ -514,7 +467,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         },
         {
           q: "С какви видове кредити може да помогнете?",
-          a: "С ипотечни, потребителски и фирмени кредити, както и с рефинансиране. Помагаме да сравните оферти, да изберете подходящите условия и да минете процеса до кандидатстване — според вашата цел и профил.",
+          a: "С ипотечни, потребителски и фирмени кредити — включително рефинансиране на всеки от тях. Помагаме да сравните оферти, да изберете подходящите условия и да минете процеса до кандидатстване — според вашата цел и профил.",
         },
         {
           q: "Колко време отнема процесът?",
@@ -529,7 +482,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     consultPage: {
       metaTitle: "Консултация — СМ Кредит Консулт",
       metaDescription:
-        "Заявете кредитна консултация за ипотечен, потребителски, фирмен кредит или рефинансиране.",
+        "Заявете кредитна консултация за ипотечен, потребителски или фирмен кредит — включително рефинансиране.",
       title: "Заявете консултация",
       support:
         "Напишете ни кратко какво търсите. Отговаряме до един работен ден. Целият процес може да е изцяло онлайн и по телефона.",
@@ -550,7 +503,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       phone: "Телефон (по желание)",
       phonePlaceholder: "0888 000 000",
       goal: "Какъв кредит ви интересува?",
-      goalPlaceholder: "Ипотечен, потребителски, фирмен, рефинансиране или друго…",
+      goalPlaceholder: "Ипотечен, потребителски, фирмен — включително рефинансиране…",
       submit: "Заяви консултация",
       submitting: "Изпращане…",
       invalid: "Моля, попълнете име, имейл и какъв кредит ви интересува.",
@@ -578,7 +531,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     meta: {
       title: "SM Credit Consult — Credit consultation",
       description:
-        "Independent credit consultant. Mortgage, consumer, and business loans, and refinancing. Consultation is free.",
+        "Independent credit consultant. Mortgage, consumer, and business loans — including refinancing. Consultation is free.",
     },
     brand: "SM Credit Consult",
     nav: {
@@ -594,7 +547,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     home: {
       metaTitle: "SM Credit Consult — Credit consultant",
       metaDescription:
-        "Credit consultation for mortgages, consumer loans, business loans, and refinancing.",
+        "Credit consultation for mortgages, consumer loans, and business loans — including refinancing.",
       headline: "Credit consultation tailored to your needs",
       support:
         "Independent credit consulting — we compare bank offers, explain the terms, and guide you to application. The service is completely free for you.",
@@ -603,7 +556,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       imageAlt: "Calm home and city street in daylight",
       servicesTitle: "How we can help",
       servicesSupport:
-        "We cover the main loan products — mortgages, consumer loans, business loans, and refinancing.",
+        "We cover the main loan products — mortgages, consumer loans, and business loans — including refinancing.",
       whyTitle: "Why use a credit consultant",
       whySupport:
         "A credit consultant helps you understand the market, compare real terms, and apply prepared — without visiting every bank yourself. The service is completely free for you.",
@@ -644,7 +597,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     servicesOverview: {
       metaTitle: "Services — SM Credit Consult",
       metaDescription:
-        "Mortgage, consumer, and business loans, and refinancing with credit consultation.",
+        "Mortgage, consumer, and business loans — including refinancing with credit consultation.",
       title: "Services",
       support:
         "Pick the product you care about, or start with a general consultation — we will refine the best path together.",
@@ -683,12 +636,12 @@ export const dictionaries: Record<Locale, Dictionary> = {
     aboutPage: {
       metaTitle: "About us — SM Credit Consult",
       metaDescription:
-        "Independent credit consulting for mortgages, consumer loans, business loans, and refinancing. Free for the client.",
+        "Independent credit consulting for mortgages, consumer loans, and business loans — including refinancing. Free for the client.",
       title: "About SM Credit Consult",
       lead: "An independent credit consultant for people who want the most suitable solution before they sign.",
       body: [
-        "SM Credit Consult helps with mortgage, consumer, and business loans, and refinancing. We explain the terms in plain language, and the whole process can be fully online and by phone — without wasting time visiting an office.",
-        "We work with home financing, consumer and business loans, and refinancing — where offer differences are large, and a poor choice costs a lot over time.",
+        "SM Credit Consult helps with mortgage, consumer, and business loans — including refinancing. We explain the terms in plain language, and the whole process can be fully online and by phone — without wasting time visiting an office.",
+        "We work with home, consumer, and business financing — including refinancing — where offer differences are large, and a poor choice costs a lot over time.",
         "Consultation is free for you. Our goal is an informed decision and a well-prepared application.",
       ],
       imageAlt: "Advisor and client reviewing documents together",
@@ -711,7 +664,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     usefulPage: {
       metaTitle: "Guides — SM Credit Consult",
       metaDescription:
-        "Practical tips on mortgages, consumer loans, business loans, and refinancing.",
+        "Practical tips on mortgages, consumer loans, and business loans — including refinancing.",
       title: "Useful before you apply",
       support:
         "Short pointers so you enter the conversation prepared.",
@@ -765,7 +718,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         },
         {
           q: "What types of loans can you help with?",
-          a: "Mortgages, consumer loans, business loans, and refinancing. We help you compare offers, choose suitable terms, and go through the process to application — based on your goal and profile.",
+          a: "Mortgages, consumer loans, and business loans — including refinancing. We help you compare offers, choose suitable terms, and go through the process to application — based on your goal and profile.",
         },
         {
           q: "How long does the process take?",
@@ -780,7 +733,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     consultPage: {
       metaTitle: "Consultation — SM Credit Consult",
       metaDescription:
-        "Request a credit consultation for a mortgage, consumer loan, business loan, or refinance.",
+        "Request a credit consultation for a mortgage, consumer, or business loan — including refinancing.",
       title: "Request a consultation",
       support:
         "Tell us briefly what you need. We reply within one business day. The whole process can be fully online and by phone.",
@@ -801,7 +754,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       phone: "Phone (optional)",
       phonePlaceholder: "0888 000 000",
       goal: "Which loan are you interested in?",
-      goalPlaceholder: "Mortgage, consumer, business, refinance, or something else…",
+      goalPlaceholder: "Mortgage, consumer, or business — including refinancing…",
       submit: "Request a consultation",
       submitting: "Sending…",
       invalid: "Please fill in your name, email, and which loan you need.",
@@ -831,5 +784,4 @@ export const serviceOrder: ServiceId[] = [
   "mortgage",
   "consumer",
   "business",
-  "refinance",
 ];
