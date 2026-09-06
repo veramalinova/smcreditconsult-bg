@@ -405,19 +405,27 @@ export const dictionaries: Record<Locale, Dictionary> = {
       tips: [
         {
           title: "Самоучастие и срок",
-          body: "По-високо самоучастие и разумен срок често намаляват общата цена на жилищния кредит.",
+          body: "По-високо самоучастие обикновено подобрява условията и намалява месечната вноска. Срокът също има значение: по-дългият срок сваля вноската, но увеличава общата цена на кредита. Търсете баланс между комфортна вноска и разумна крайна сума.",
         },
         {
           title: "ГПР, не само лихва",
-          body: "Сравнявайте годишния процент на разходите, таксите и застраховките — не само рекламната лихва.",
+          body: "Рекламната лихва рядко е цялата картина. Сравнявайте годишния процент на разходите, таксите за обработка, застраховките и евентуални годишни такси по сметката. Именно там често се крие разликата между две привидно близки оферти.",
         },
         {
           title: "Документи предварително",
-          body: "Доходи, лична карта и данни за имота/целта ускоряват анализа и правят офертите по-точни.",
+          body: "Подгответе предварително доказателства за доход, лична карта и основни данни за имота или целта на кредита. Колкото по-пълна е информацията в началото, толкова по-точен е анализът и по-малко връщания има по-късно в процеса.",
         },
         {
           title: "Рефинансиране с калкулатор",
-          body: "Нова по-ниска вноска има смисъл само ако спестяването надвишава таксите за прехвърляне.",
+          body: "По-ниската вноска не винаги означава по-добра сделка. Преди да рефинансирате, сметнете таксите за предсрочно погасяване, оценката и прехвърлянето. Смисъл има, когато реалното спестяване във времето надвишава тези разходи.",
+        },
+        {
+          title: "Месечна вноска според бюджета",
+          body: "Преди да изберете оферта, проверете как вноската се вписва в месечните ви разходи — не само при текущия доход, но и при възможни промени. Добрият кредит е този, който можете да обслужвате спокойно, без да натоварвате бюджета до краен предел.",
+        },
+        {
+          title: "Условия след първите години",
+          body: "Обърнете внимание какво се случва след промоционалния период: промяна на лихвата, изисквания за застраховка или други условия. Краткосрочната изгода може да изглежда привлекателна, но дългосрочните правила често определят реалната цена.",
         },
       ],
       faqTitle: "Често задавани въпроси",
@@ -628,19 +636,27 @@ export const dictionaries: Record<Locale, Dictionary> = {
       tips: [
         {
           title: "Down payment and term",
-          body: "A higher down payment and a sensible term often lower the total cost of a home loan.",
+          body: "A higher down payment usually improves the terms and lowers the monthly payment. Term matters too: a longer term reduces the installment but raises the total cost. Look for a balance between a comfortable payment and a sensible overall price.",
         },
         {
           title: "APR, not only the rate",
-          body: "Compare APR, fees, and insurance — not just the advertised interest rate.",
+          body: "The advertised rate is rarely the full picture. Compare APR, processing fees, insurance, and any annual account charges. That is often where two seemingly similar offers diverge.",
         },
         {
           title: "Documents early",
-          body: "Income proof, ID, and property/goal details speed up analysis and make offers more accurate.",
+          body: "Prepare income proof, ID, and key details about the property or loan purpose in advance. The fuller the information at the start, the more accurate the analysis — and the fewer returns later in the process.",
         },
         {
           title: "Refinance with math",
-          body: "A lower payment only helps if the savings beat transfer and early-repayment fees.",
+          body: "A lower payment does not always mean a better deal. Before refinancing, calculate early-repayment fees, appraisal, and transfer costs. It makes sense when the real long-term savings beat those expenses.",
+        },
+        {
+          title: "A payment that fits your budget",
+          body: "Before choosing an offer, check how the installment fits your monthly expenses — not only with today’s income, but also if things change. A good loan is one you can service comfortably, without stretching the budget to the edge.",
+        },
+        {
+          title: "What happens after the first years",
+          body: "Pay attention to what changes after any promotional period: rate resets, insurance requirements, or other conditions. A short-term advantage can look attractive, but the longer-term rules often decide the real cost.",
         },
       ],
       faqTitle: "Frequently asked questions",
