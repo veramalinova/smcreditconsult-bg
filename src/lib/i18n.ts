@@ -267,11 +267,11 @@ const enServices: Record<ServiceId, ServicePage> = {
 export const dictionaries: Record<Locale, Dictionary> = {
   bg: {
     meta: {
-      title: "СМ Консулт — Кредитна консултация",
+      title: "СМ Кредит Консулт — Кредитна консултация",
       description:
         "Независим кредитен консултант. Ипотечен, потребителски кредит и рефинансиране. Консултацията е безплатна.",
     },
-    brand: "СМ Консулт",
+    brand: "СМ Кредит Консулт",
     nav: {
       home: "Начало",
       services: "Услуги",
@@ -282,7 +282,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       phoneAria: "Обадете се",
     },
     home: {
-      metaTitle: "СМ Консулт — Кредитен консултант",
+      metaTitle: "СМ Кредит Консулт — Кредитен консултант",
       metaDescription:
         "Кредитна консултация за ипотечен, потребителски кредит и рефинансиране.",
       headline: "Консултация за кредит според вашите нужди",
@@ -332,7 +332,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         "Четири стъпки от първия разговор до подадена заявка. Целият процес може да е изцяло онлайн и по телефона — без да губите време в офис.",
     },
     servicesOverview: {
-      metaTitle: "Услуги — СМ Консулт",
+      metaTitle: "Услуги — СМ Кредит Консулт",
       metaDescription:
         "Ипотечен кредит, потребителски кредит и рефинансиране с кредитна консултация.",
       title: "Услуги",
@@ -341,7 +341,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     },
     services: bgServices,
     processPage: {
-      metaTitle: "Как работим — СМ Консулт",
+      metaTitle: "Как работим — СМ Кредит Консулт",
       metaDescription:
         "Консултация, анализ, сравнение на оферти и съдействие при кандидатстване.",
       title: "Как работим",
@@ -372,13 +372,13 @@ export const dictionaries: Record<Locale, Dictionary> = {
       note: "Целият процес може да протече изцяло онлайн и по телефона. Не е нужно да губите време с ходене по офиси.",
     },
     aboutPage: {
-      metaTitle: "За нас — СМ Консулт",
+      metaTitle: "За нас — СМ Кредит Консулт",
       metaDescription:
         "Независима кредитна консултация за ипотечен, потребителски кредит и рефинансиране. Безплатно за клиента.",
-      title: "За СМ Консулт",
+      title: "За СМ Кредит Консулт",
       lead: "Независим кредитен консултант за хора, които искат най-подходящото решение преди да подпишат.",
       body: [
-        "СМ Консулт помага при избор на ипотечен кредит, потребителски кредит и рефинансиране. Обясняваме условията на разбираем език, а целият процес може да е изцяло онлайн и по телефона — без губене на време с ходене в офис.",
+        "СМ Кредит Консулт помага при избор на ипотечен кредит, потребителски кредит и рефинансиране. Обясняваме условията на разбираем език, а целият процес може да е изцяло онлайн и по телефона — без губене на време с ходене в офис.",
         "Работим с жилищно финансиране, потребителски кредити и рефинансиране — там разликите между офертите са големи, а грешният избор излиза скъпо във времето.",
         "Консултацията е безплатна за вас. Целта ни е да вземете информирано решение и да кандидатствате подготвени.",
       ],
@@ -400,7 +400,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       ],
     },
     usefulPage: {
-      metaTitle: "Полезно — СМ Консулт",
+      metaTitle: "Полезно — СМ Кредит Консулт",
       metaDescription:
         "Практични съвети и отговори за ипотечен кредит, потребителски кредит и рефинансиране.",
       title: "Полезно преди да кандидатствате",
@@ -458,7 +458,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       ],
     },
     consultPage: {
-      metaTitle: "Консултация — СМ Консулт",
+      metaTitle: "Консултация — СМ Кредит Консулт",
       metaDescription:
         "Заявете кредитна консултация за ипотечен, потребителски кредит или рефинансиране.",
       title: "Заявете консултация",
@@ -503,11 +503,11 @@ export const dictionaries: Record<Locale, Dictionary> = {
   },
   en: {
     meta: {
-      title: "SM Consult — Credit consultation",
+      title: "SM Credit Consult — Credit consultation",
       description:
         "Independent credit consultant. Mortgage, consumer loans, and refinancing. Consultation is free.",
     },
-    brand: "SM Consult",
+    brand: "SM Credit Consult",
     nav: {
       home: "Home",
       services: "Services",
@@ -518,7 +518,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       phoneAria: "Call us",
     },
     home: {
-      metaTitle: "SM Consult — Credit consultant",
+      metaTitle: "SM Credit Consult — Credit consultant",
       metaDescription:
         "Credit consultation for mortgages, consumer loans, and refinancing.",
       headline: "Credit consultation tailored to your needs",
@@ -568,7 +568,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         "Four steps from the first call to a submitted application. The whole process can be fully online and by phone — without wasting time at an office.",
     },
     servicesOverview: {
-      metaTitle: "Services — SM Consult",
+      metaTitle: "Services — SM Credit Consult",
       metaDescription:
         "Mortgage loans, consumer loans, and refinancing with credit consultation.",
       title: "Services",
@@ -577,7 +577,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     },
     services: enServices,
     processPage: {
-      metaTitle: "How we work — SM Consult",
+      metaTitle: "How we work — SM Credit Consult",
       metaDescription:
         "Consultation, analysis, offer comparison, and application support.",
       title: "How we work",
@@ -608,13 +608,13 @@ export const dictionaries: Record<Locale, Dictionary> = {
       note: "The whole process can run fully online and by phone. You do not need to waste time going from office to office.",
     },
     aboutPage: {
-      metaTitle: "About us — SM Consult",
+      metaTitle: "About us — SM Credit Consult",
       metaDescription:
         "Independent credit consulting for mortgages, consumer loans, and refinancing. Free for the client.",
-      title: "About SM Consult",
+      title: "About SM Credit Consult",
       lead: "An independent credit consultant for people who want the most suitable solution before they sign.",
       body: [
-        "SM Consult helps with mortgage loans, consumer loans, and refinancing. We explain the terms in plain language, and the whole process can be fully online and by phone — without wasting time visiting an office.",
+        "SM Credit Consult helps with mortgage loans, consumer loans, and refinancing. We explain the terms in plain language, and the whole process can be fully online and by phone — without wasting time visiting an office.",
         "We work with home financing, consumer loans, and refinancing — where offer differences are large, and a poor choice costs a lot over time.",
         "Consultation is free for you. Our goal is an informed decision and a well-prepared application.",
       ],
@@ -636,7 +636,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       ],
     },
     usefulPage: {
-      metaTitle: "Guides — SM Consult",
+      metaTitle: "Guides — SM Credit Consult",
       metaDescription:
         "Practical tips and answers on mortgages, consumer loans, and refinancing.",
       title: "Useful before you apply",
@@ -694,7 +694,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       ],
     },
     consultPage: {
-      metaTitle: "Consultation — SM Consult",
+      metaTitle: "Consultation — SM Credit Consult",
       metaDescription:
         "Request a credit consultation for a mortgage, consumer loan, or refinance.",
       title: "Request a consultation",
