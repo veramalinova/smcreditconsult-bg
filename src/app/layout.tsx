@@ -1,32 +1,35 @@
 import type { Metadata } from "next";
-import { Figtree, Newsreader } from "next/font/google";
+import { Literata, Manrope } from "next/font/google";
+import { LanguageProvider } from "@/components/language-provider";
+import { dictionaries } from "@/lib/i18n";
 import "./globals.css";
 
-const figtree = Figtree({
-  variable: "--font-figtree",
-  subsets: ["latin"],
+const manrope = Manrope({
+  variable: "--font-manrope",
+  subsets: ["latin", "cyrillic"],
   display: "swap",
 });
 
-const newsreader = Newsreader({
-  variable: "--font-newsreader",
-  subsets: ["latin"],
+const literata = Literata({
+  variable: "--font-literata",
+  subsets: ["latin", "cyrillic"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Meridian Credit — Clear advice for complex credit",
-  description:
-    "Independent credit consulting for score recovery, debt strategy, and lending readiness. Book a focused consultation with Meridian Credit.",
+  title: dictionaries.bg.meta.title,
+  description: dictionaries.bg.meta.description,
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="en"
-      className={`${figtree.variable} ${newsreader.variable} h-full antialiased`}
+      lang="bg"
+      className={`${manrope.variable} ${literata.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans">{children}</body>
+      <body className="flex min-h-full flex-col font-sans">
+        <LanguageProvider>{children}</LanguageProvider>
+      </body>
     </html>
   );
 }

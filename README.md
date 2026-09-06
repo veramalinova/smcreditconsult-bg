@@ -1,6 +1,6 @@
 # Meridian Credit
 
-A marketing site for an independent credit consulting practice — services, process, and a consultation request form.
+A marketing site for an independent credit consulting practice — services, process, and a consultation request form. The default language is Bulgarian, with an EN/БГ switcher in the menu.
 
 ## Stack
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { useLanguage } from "@/components/language-provider";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -9,6 +10,7 @@ import { Textarea } from "@/components/ui/textarea";
 type FormStatus = "idle" | "submitting" | "success" | "error";
 
 export function ConsultForm() {
+  const { t } = useLanguage();
   const [status, setStatus] = useState<FormStatus>("idle");
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -38,17 +40,14 @@ export function ConsultForm() {
         role="status"
         aria-live="polite"
       >
-        <p className="font-display text-2xl text-ink">Request received</p>
-        <p className="mt-3 text-muted-foreground">
-          We&apos;ll review your note and reply within one business day with
-          next steps and available times.
-        </p>
+        <p className="font-display text-2xl text-ink">{t.form.successTitle}</p>
+        <p className="mt-3 text-muted-foreground">{t.form.successBody}</p>
         <Button
           type="button"
           className="mt-6 h-11 px-5"
           onClick={() => setStatus("idle")}
         >
-          Send another request
+          {t.form.sendAnother}
         </Button>
       </div>
     );
@@ -62,26 +61,26 @@ export function ConsultForm() {
     >
       <div className="grid gap-5 sm:grid-cols-2">
         <div className="space-y-2">
-          <Label htmlFor="name">Full name</Label>
+          <Label htmlFor="name">{t.form.name}</Label>
           <Input
             id="name"
             name="name"
             autoComplete="name"
             required
-            placeholder="Jordan Blake"
+            placeholder={t.form.namePlaceholder}
             className="h-11 bg-white"
             aria-invalid={status === "error" || undefined}
           />
         </div>
         <div className="space-y-2">
-          <Label htmlFor="email">Email</Label>
+          <Label htmlFor="email">{t.form.email}</Label>
           <Input
             id="email"
             name="email"
             type="email"
             autoComplete="email"
             required
-            placeholder="you@email.com"
+            placeholder={t.form.emailPlaceholder}
             className="h-11 bg-white"
             aria-invalid={status === "error" || undefined}
           />
@@ -89,25 +88,25 @@ export function ConsultForm() {
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="phone">Phone (optional)</Label>
+        <Label htmlFor="phone">{t.form.phone}</Label>
         <Input
           id="phone"
           name="phone"
           type="tel"
           autoComplete="tel"
-          placeholder="(555) 000-0000"
+          placeholder={t.form.phonePlaceholder}
           className="h-11 bg-white"
         />
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="goal">What do you need help with?</Label>
+        <Label htmlFor="goal">{t.form.goal}</Label>
         <Textarea
           id="goal"
           name="goal"
           required
           rows={4}
-          placeholder="Score repair, debt strategy, mortgage readiness, or something else…"
+          placeholder={t.form.goalPlaceholder}
           className="min-h-28 resize-y bg-white text-base md:text-sm"
           aria-invalid={status === "error" || undefined}
         />
@@ -115,8 +114,7 @@ export function ConsultForm() {
 
       {status === "error" ? (
         <p className="text-sm text-destructive" role="alert">
-          Please fill in your name, email, and consulting goal so we can prepare
-          for the call.
+          {t.form.error}
         </p>
       ) : null}
 
@@ -125,7 +123,7 @@ export function ConsultForm() {
         disabled={status === "submitting"}
         className="h-11 w-full bg-jade text-accent-foreground hover:bg-jade/90 sm:w-auto sm:px-6"
       >
-        {status === "submitting" ? "Sending…" : "Request a consultation"}
+        {status === "submitting" ? t.form.submitting : t.form.submit}
       </Button>
     </form>
   );
