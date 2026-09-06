@@ -5,10 +5,8 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { useLanguage } from "@/components/language-provider";
-import {
-  CONTACT_PHONE_DISPLAY,
-  CONTACT_PHONE_TEL,
-} from "@/lib/contact";
+import { PhoneLink } from "@/components/phone-link";
+import { CONTACT_PHONE_DISPLAY } from "@/lib/contact";
 
 export function SiteHeader({
   variant = "solid",
@@ -64,16 +62,11 @@ export function SiteHeader({
             </Link>
           ))}
           <LanguageSwitcher tone={light ? "light" : "dark"} />
-          <a
-            href={`tel:${CONTACT_PHONE_TEL}`}
+          <PhoneLink
             className={
-              light
-                ? "font-medium text-white/90 transition-colors hover:text-white"
-                : "font-medium text-ink transition-colors hover:text-jade"
+              light ? "font-medium text-white/90" : "font-medium text-ink"
             }
-          >
-            {CONTACT_PHONE_DISPLAY}
-          </a>
+          />
           <Link
             href="/konsultaciya"
             className={
@@ -91,14 +84,14 @@ export function SiteHeader({
             className="mr-1"
             tone={light ? "light" : "dark"}
           />
-          <a
-            href={`tel:${CONTACT_PHONE_TEL}`}
+          <PhoneLink
+            forceCall
+            aria-label={t.nav.phoneAria}
             className={`inline-flex h-10 w-10 items-center justify-center rounded-full border ${
               light
                 ? "border-white/30 text-white"
                 : "border-border text-ink"
             }`}
-            aria-label={t.nav.phoneAria}
           >
             <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" aria-hidden>
               <path
@@ -108,7 +101,7 @@ export function SiteHeader({
                 strokeLinejoin="round"
               />
             </svg>
-          </a>
+          </PhoneLink>
           <button
             type="button"
             className={`inline-flex h-10 w-10 items-center justify-center rounded-lg border ${
@@ -158,13 +151,13 @@ export function SiteHeader({
                 {link.label}
               </Link>
             ))}
-            <a
-              href={`tel:${CONTACT_PHONE_TEL}`}
+            <PhoneLink
+              forceCall
               className="mt-2 rounded-lg px-3 py-3 font-medium hover:bg-black/5"
               onClick={() => setOpen(false)}
             >
-              {t.nav.phoneAria}: {CONTACT_PHONE_DISPLAY}
-            </a>
+              {`${t.nav.phoneAria}: ${CONTACT_PHONE_DISPLAY}`}
+            </PhoneLink>
             <Link
               href="/konsultaciya"
               className="mt-1 rounded-lg bg-jade px-3 py-3 text-center font-medium text-accent-foreground"

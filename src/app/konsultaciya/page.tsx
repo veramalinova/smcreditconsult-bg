@@ -2,14 +2,11 @@
 
 import { ConsultForm } from "@/components/consult-form";
 import { useLanguage } from "@/components/language-provider";
+import { PhoneLink } from "@/components/phone-link";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { usePageMeta } from "@/components/use-page-meta";
-import {
-  CONTACT_EMAIL,
-  CONTACT_PHONE_DISPLAY,
-  CONTACT_PHONE_TEL,
-} from "@/lib/contact";
+import { CONTACT_EMAIL } from "@/lib/contact";
 
 export default function ConsultPage() {
   const { t } = useLanguage();
@@ -47,12 +44,7 @@ export default function ConsultPage() {
                     {t.consultPage.phoneLabel}
                   </dt>
                   <dd>
-                    <a
-                      href={`tel:${CONTACT_PHONE_TEL}`}
-                      className="transition-colors hover:text-jade"
-                    >
-                      {CONTACT_PHONE_DISPLAY}
-                    </a>
+                    <PhoneLink className="transition-colors hover:text-jade" />
                   </dd>
                 </div>
                 <div>

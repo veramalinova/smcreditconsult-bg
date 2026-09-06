@@ -2,11 +2,8 @@
 
 import Link from "next/link";
 import { useLanguage } from "@/components/language-provider";
-import {
-  CONTACT_EMAIL,
-  CONTACT_PHONE_DISPLAY,
-  CONTACT_PHONE_TEL,
-} from "@/lib/contact";
+import { PhoneLink } from "@/components/phone-link";
+import { CONTACT_EMAIL } from "@/lib/contact";
 import { serviceOrder } from "@/lib/i18n";
 
 export function SiteFooter() {
@@ -21,12 +18,7 @@ export function SiteFooter() {
             {t.footer.disclaimer}
           </p>
           <div className="mt-5 space-y-2 text-sm">
-            <a
-              href={`tel:${CONTACT_PHONE_TEL}`}
-              className="block transition-colors hover:text-white"
-            >
-              {CONTACT_PHONE_DISPLAY}
-            </a>
+            <PhoneLink className="block transition-colors hover:text-white" />
             <a
               href={`mailto:${CONTACT_EMAIL}`}
               className="block transition-colors hover:text-white"
