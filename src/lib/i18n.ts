@@ -467,7 +467,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       emailLabel: "Имейл",
       phoneLabel: "Телефон",
       hoursLabel: "Работно време",
-      hoursValue: "Понеделник–петък, 9:00–17:00",
+      hoursValue: "Понеделник–петък, 9:00–18:00",
     },
     ctaBand: {
       title: "Имате въпрос за кредит?",
