@@ -30,10 +30,10 @@ export default function ConsultPage() {
                   </dt>
                   <dd>
                     <a
-                      href="mailto:hello@smconsult.example"
+                      href="mailto:smcreditconsult@gmail.com"
                       className="transition-colors hover:text-jade"
                     >
-                      hello@smconsult.example
+                      smcreditconsult@gmail.com
                     </a>
                   </dd>
                 </div>
