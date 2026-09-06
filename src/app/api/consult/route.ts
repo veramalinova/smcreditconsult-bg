@@ -34,9 +34,11 @@ export async function POST(request: Request) {
   }
 
   const gmailUser = process.env.GMAIL_USER?.trim() || CONTACT_EMAIL;
-  const gmailPass = process.env.GMAIL_APP_PASSWORD?.trim();
+  // App passwords are often copied with spaces — Gmail accepts them without.
+  const gmailPass = process.env.GMAIL_APP_PASSWORD?.replace(/\s+/g, "") ?? "";
 
   if (!gmailPass) {
+    console.error("Consult email not configured: missing GMAIL_APP_PASSWORD");
     return NextResponse.json(
       { ok: false, error: "not_configured" },
       { status: 503 },
@@ -45,7 +47,9 @@ export async function POST(request: Request) {
 
   try {
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: "smtp.gmail.com",
+      port: 465,
+      secure: true,
       auth: {
         user: gmailUser,
         pass: gmailPass,
@@ -77,7 +81,13 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ ok: true });
   } catch (error) {
-    console.error("Consult email error", error);
+    const err = error as { code?: string; responseCode?: number; message?: string };
+    console.error("Consult email error", {
+      code: err.code,
+      responseCode: err.responseCode,
+      message: err.message,
+      user: gmailUser,
+    });
     return NextResponse.json(
       { ok: false, error: "send_failed" },
       { status: 502 },
