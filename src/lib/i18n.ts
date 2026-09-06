@@ -484,7 +484,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       legal: "Правна информация",
       contacts: "Контакти",
       disclaimer:
-        "Независими кредитни консултации. Консултацията е безплатна за клиента. Не сме банка и не отпускаме кредити.",
+        "Независими кредитни консултации. Консултацията е безплатна за клиента.",
     },
     lang: { label: "Език", bg: "БГ", en: "EN" },
   },
@@ -707,7 +707,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       legal: "Legal",
       contacts: "Contacts",
       disclaimer:
-        "Independent loan consulting. Consultation is free for the client. We are not a bank and do not issue loans.",
+        "Independent loan consulting. Consultation is free for the client.",
     },
     lang: { label: "Language", bg: "BG", en: "EN" },
   },
