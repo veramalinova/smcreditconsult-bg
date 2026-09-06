@@ -43,10 +43,10 @@ export default function ConsultPage() {
                   </dt>
                   <dd>
                     <a
-                      href="tel:+359888014288"
+                      href="tel:+359889501062"
                       className="transition-colors hover:text-jade"
                     >
-                      0888 014 288
+                      +359 889 501 062
                     </a>
                   </dd>
                 </div>

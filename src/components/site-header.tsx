@@ -78,7 +78,7 @@ export function SiteHeader({
             tone={light ? "light" : "dark"}
           />
           <a
-            href="tel:+359888014288"
+            href="tel:+359889501062"
             className={`inline-flex h-10 w-10 items-center justify-center rounded-full border ${
               light
                 ? "border-white/30 text-white"
