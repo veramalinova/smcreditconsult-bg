@@ -123,7 +123,7 @@ const bgServices: Record<ServiceId, ServicePage> = {
     id: "mortgage",
     href: "/uslugi/ipotechnen-kredit",
     title: "Ипотечен кредит",
-    short: "Жилищен кредит за покупка, строеж или ремонт — основният ни фокус.",
+    short: "Жилищен кредит за покупка, строеж или ремонт.",
     eyebrow: "Жилищно финансиране",
     headline: "Ипотечен кредит с ясни условия от първия разговор",
     intro:
@@ -197,7 +197,7 @@ const enServices: Record<ServiceId, ServicePage> = {
     id: "mortgage",
     href: "/uslugi/ipotechnen-kredit",
     title: "Mortgage loan",
-    short: "Home loans for purchase, construction, or renovation — our core focus.",
+    short: "Home loans for purchase, construction, or renovation.",
     eyebrow: "Home financing",
     headline: "Mortgage advice with clear terms from the first call",
     intro:
@@ -293,7 +293,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       imageAlt: "Спокоен дом и градска улица при дневна светлина",
       servicesTitle: "С какво можем да помогнем",
       servicesSupport:
-        "Работим с всички основни кредитни продукти. Най-силно сме в жилищното финансиране.",
+        "Работим с всички основни кредитни продукти — ипотечен, потребителски кредит и рефинансиране.",
       whyTitle: "Защо кредитен консултант",
       whySupport:
         "Кредитният консултант не отпуска кредит. Той ви помага да разберете пазара, да сравните реалните условия и да кандидатствате подготвени — без да обикаляте сам всяка банка.",
@@ -369,12 +369,12 @@ export const dictionaries: Record<Locale, Dictionary> = {
     aboutPage: {
       metaTitle: "За нас — СМ Консулт",
       metaDescription:
-        "Независима кредитна консултация с фокус върху жилищни кредити. Безплатно за клиента.",
+        "Независима кредитна консултация за ипотечен, потребителски кредит и рефинансиране. Безплатно за клиента.",
       title: "За СМ Консулт",
       lead: "Независим кредитен консултант за хора, които искат ясни условия преди да подпишат.",
       body: [
         "СМ Консулт помага при избор на ипотечен кредит, потребителски кредит и рефинансиране. Работим спокойно, с обяснения на разбираем език и без натиск към конкретна банка.",
-        "Основният ни фокус е жилищното финансиране — там разликите между офертите са най-големи, а грешният избор излиза най-скъпо във времето.",
+        "Работим с жилищно финансиране, потребителски кредити и рефинансиране — там разликите между офертите са големи, а грешният избор излиза скъпо във времето.",
         "Консултацията е безплатна за вас. Целта ни е да вземете информирано решение и да кандидатствате подготвени.",
       ],
       imageAlt: "Консултант и клиент преглеждат документи заедно",
@@ -432,7 +432,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         },
         {
           q: "С кои кредити работите?",
-          a: "С ипотечни, потребителски кредити и рефинансиране. Основният ни фокус е жилищното финансиране.",
+          a: "С ипотечни, потребителски кредити и рефинансиране.",
         },
         {
           q: "Колко време отнема процесът?",
@@ -516,7 +516,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       imageAlt: "Calm home and city street in daylight",
       servicesTitle: "How we can help",
       servicesSupport:
-        "We cover the main loan products. We are strongest in home financing.",
+        "We cover the main loan products — mortgages, consumer loans, and refinancing.",
       whyTitle: "Why use a credit consultant",
       whySupport:
         "A credit consultant does not issue loans. We help you understand the market, compare real terms, and apply prepared — without visiting every bank yourself.",
@@ -592,12 +592,12 @@ export const dictionaries: Record<Locale, Dictionary> = {
     aboutPage: {
       metaTitle: "About us — SM Consult",
       metaDescription:
-        "Independent credit consulting focused on home loans. Free for the client.",
+        "Independent credit consulting for mortgages, consumer loans, and refinancing. Free for the client.",
       title: "About SM Consult",
       lead: "An independent credit consultant for people who want clear terms before they sign.",
       body: [
         "SM Consult helps with mortgage loans, consumer loans, and refinancing. We work calmly, in plain language, without pressure toward a specific bank.",
-        "Our strongest focus is home financing — that is where offer differences are largest, and a poor choice costs the most over time.",
+        "We work with home financing, consumer loans, and refinancing — where offer differences are large, and a poor choice costs a lot over time.",
         "Consultation is free for you. Our goal is an informed decision and a well-prepared application.",
       ],
       imageAlt: "Advisor and client reviewing documents together",
@@ -655,7 +655,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         },
         {
           q: "Which loans do you cover?",
-          a: "Mortgages, consumer loans, and refinancing. Home financing is our primary focus.",
+          a: "Mortgages, consumer loans, and refinancing.",
         },
         {
           q: "How long does the process take?",
