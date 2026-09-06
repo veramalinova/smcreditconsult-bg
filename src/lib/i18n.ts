@@ -485,10 +485,9 @@ export const dictionaries: Record<Locale, Dictionary> = {
       submit: "Заяви консултация",
       submitting: "Изпращане…",
       error:
-        "Моля, попълнете име, имейл и какъв кредит търсите, за да се подготвим.",
+        "Не успяхме да изпратим заявката. Проверете полетата и опитайте отново.",
       successTitle: "Заявката е получена",
-      successBody:
-        "Ще отговорим до един работен ден.",
+      successBody: "Ще отговорим до един работен ден.",
       sendAnother: "Изпрати нова заявка",
     },
     footer: {
@@ -721,10 +720,9 @@ export const dictionaries: Record<Locale, Dictionary> = {
       submit: "Request a consultation",
       submitting: "Sending…",
       error:
-        "Please fill in your name, email, and which loan you need so we can prepare.",
+        "We could not send the request. Check the fields and try again.",
       successTitle: "Request received",
-      successBody:
-        "We will reply within one business day.",
+      successBody: "We will reply within one business day.",
       sendAnother: "Send another request",
     },
     footer: {

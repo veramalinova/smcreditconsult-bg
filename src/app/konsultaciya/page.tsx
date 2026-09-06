@@ -5,6 +5,11 @@ import { useLanguage } from "@/components/language-provider";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { usePageMeta } from "@/components/use-page-meta";
+import {
+  CONTACT_EMAIL,
+  CONTACT_PHONE_DISPLAY,
+  CONTACT_PHONE_TEL,
+} from "@/lib/contact";
 
 export default function ConsultPage() {
   const { t } = useLanguage();
@@ -30,10 +35,10 @@ export default function ConsultPage() {
                   </dt>
                   <dd>
                     <a
-                      href="mailto:smcreditconsult@gmail.com"
+                      href={`mailto:${CONTACT_EMAIL}`}
                       className="transition-colors hover:text-jade"
                     >
-                      smcreditconsult@gmail.com
+                      {CONTACT_EMAIL}
                     </a>
                   </dd>
                 </div>
@@ -43,10 +48,10 @@ export default function ConsultPage() {
                   </dt>
                   <dd>
                     <a
-                      href="tel:+359889501062"
+                      href={`tel:${CONTACT_PHONE_TEL}`}
                       className="transition-colors hover:text-jade"
                     >
-                      +359 889 501 062
+                      {CONTACT_PHONE_DISPLAY}
                     </a>
                   </dd>
                 </div>

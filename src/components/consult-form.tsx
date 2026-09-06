@@ -6,8 +6,23 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { CONTACT_EMAIL } from "@/lib/contact";
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
+
+function buildMailto(name: string, email: string, phone: string, goal: string) {
+  const subject = encodeURIComponent(`Заявка за консултация — ${name}`);
+  const body = encodeURIComponent(
+    [
+      `Име: ${name}`,
+      `Имейл: ${email}`,
+      `Телефон: ${phone || "—"}`,
+      "",
+      goal,
+    ].join("\n"),
+  );
+  return `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+}
 
 export function ConsultForm() {
   const { t } = useLanguage();
@@ -21,6 +36,7 @@ export function ConsultForm() {
     const data = new FormData(form);
     const name = String(data.get("name") ?? "").trim();
     const email = String(data.get("email") ?? "").trim();
+    const phone = String(data.get("phone") ?? "").trim();
     const goal = String(data.get("goal") ?? "").trim();
 
     if (!name || !email || !goal) {
@@ -28,7 +44,40 @@ export function ConsultForm() {
       return;
     }
 
-    await new Promise((resolve) => setTimeout(resolve, 700));
+    try {
+      const response = await fetch(
+        `https://formsubmit.co/ajax/${encodeURIComponent(CONTACT_EMAIL)}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            name,
+            email,
+            phone: phone || "—",
+            message: goal,
+            _subject: `Нова заявка за консултация — ${name}`,
+            _template: "table",
+            _captcha: "false",
+            _replyto: email,
+          }),
+        },
+      );
+
+      const contentType = response.headers.get("content-type") ?? "";
+      if (response.ok && contentType.includes("application/json")) {
+        setStatus("success");
+        form.reset();
+        return;
+      }
+    } catch {
+      // Fall through to mailto.
+    }
+
+    // Reliable fallback when FormSubmit is blocked or unavailable.
+    window.location.href = buildMailto(name, email, phone, goal);
     setStatus("success");
     form.reset();
   }

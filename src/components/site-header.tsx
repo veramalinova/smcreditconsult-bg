@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { useLanguage } from "@/components/language-provider";
+import { CONTACT_PHONE_TEL } from "@/lib/contact";
 
 export function SiteHeader({
   variant = "solid",
@@ -78,7 +79,7 @@ export function SiteHeader({
             tone={light ? "light" : "dark"}
           />
           <a
-            href="tel:+359889501062"
+            href={`tel:${CONTACT_PHONE_TEL}`}
             className={`inline-flex h-10 w-10 items-center justify-center rounded-full border ${
               light
                 ? "border-white/30 text-white"
