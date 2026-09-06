@@ -366,7 +366,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         {
           number: "04",
           title: "Кандидатстване и проследяване",
-          body: "Подготвяме документите, подаваме заявката и сме с вас до ясно решение и следващи стъпки — също дистанционно, ако предпочитате.",
+          body: "Подготвяме документите, подаваме заявката и сме с вас до ясно решение и следващи стъпки — изцяло онлайн и по телефона.",
         },
       ],
     },
@@ -601,7 +601,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         {
           number: "04",
           title: "Application and follow-up",
-          body: "We prepare documents, submit the application, and stay with you until the next step is clear — remotely too, if you prefer.",
+          body: "We prepare documents, submit the application, and stay with you until the next step is clear — fully online and by phone.",
         },
       ],
     },
