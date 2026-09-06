@@ -72,75 +72,75 @@ export type Dictionary = {
 export const dictionaries: Record<Locale, Dictionary> = {
   bg: {
     meta: {
-      title: "Meridian Credit — Ясни съвети за сложен кредит",
+      title: "Meridian Credit — Кредитни консултации с фокус върху жилищен кредит",
       description:
-        "Независими кредитни консултации за подобряване на кредитния рейтинг, стратегия при дългове и готовност за финансиране.",
+        "Безплатна кредитна консултация за всички видове кредити. Основен фокус — жилищни кредити. Независим съвет при избор на оферта.",
     },
     nav: {
-      services: "Услуги",
+      services: "Кредити",
       process: "Процес",
       consult: "Консултация",
-      bookCall: "Запази час",
+      bookCall: "Безплатна консултация",
     },
     hero: {
       brand: "Meridian Credit",
-      headline: "Ясни съвети за сложен кредит.",
+      headline: "Жилищен кредит — с ясен план от първия разговор.",
       support:
-        "Независими консултации за кредитен рейтинг, стратегия при дългове и готовност за кредит — с план, на който можете да разчитате.",
-      ctaPrimary: "Заяви консултация",
-      ctaSecondary: "Виж как помагаме",
+        "Работим с всички видове кредити, а основният ни фокус е жилищното финансиране. Консултацията за вас е безплатна.",
+      ctaPrimary: "Заяви безплатна консултация",
+      ctaSecondary: "Виж видовете кредити",
       imageAlt:
         "Финансови документи и калкулатор на бюро, които подсказват внимателен преглед на кредит",
     },
     services: {
-      eyebrow: "Услуги",
-      title: "Практична кредитна работа, без излишен шум.",
+      eyebrow: "Кредити",
+      title: "Всички видове кредити. Най-силен фокус — жилищните.",
       support:
-        "Един фокусиран ангажимент наведнъж. Обясняваме кое е важно, кое може да почака и какво е следващата стъпка.",
+        "Помагаме ви да сравните условия, да подредите документите и да изберете оферта, която пасва на бюджета и срока ви.",
       items: [
         {
-          title: "Възстановяване на рейтинг",
-          body: "Преглеждаме всяка позиция в доклада, оспорваме неточностите и изграждаме месечен план за устойчиво повишаване на рейтинга — без съкратени пътища.",
+          title: "Жилищни кредити",
+          body: "Основният ни фокус: покупка, строеж, ремонт или рефинансиране на жилище. Разглеждаме лихви, такси, самоучастие и срок — преди да кандидатствате.",
         },
         {
-          title: "Стратегия при дългове",
-          body: "От револвиращи баланси до събирателни сметки — приоритизираме какво да се плати, договори или преструктурира, за да спре лихвата да изяжда напредъка.",
+          title: "Потребителски и бързи кредити",
+          body: "Когато ви трябва по-малко финансиране, сравняваме оферти и ви казваме ясно кога потребителският кредит има смисъл — и кога е по-скъп от очакваното.",
         },
         {
-          title: "Готовност за финансиране",
-          body: "Подготвяте се за ипотека, автокредит или рефинансиране? Подреждаме кредит, натоварване и документи преди срещата с кредитора.",
+          title: "Автокредити и други продукти",
+          body: "Автокредит, кредит за бизнес нужди или консолидиране на задължения — преглеждаме вариантите и ви насочваме към най-чистата структура за вашия случай.",
         },
       ],
     },
     process: {
       eyebrow: "Процес",
-      title: "Спокоен път от объркването до писмен план.",
+      title: "От първия разговор до подадена заявка — безплатно за вас.",
       support:
-        "Без натиск за продажба. След първия разговор ще знаете дали Meridian е подходящ избор — и как трябва да изглеждат следващите тридесет дни.",
+        "Консултацията е безплатна за клиента. Без натиск за конкретна банка — целта е условия, които реално можете да обслужвате.",
       imageAlt: "Ръце, които преглеждат документи по време на консултация",
       steps: [
         {
           number: "01",
-          title: "Ориентиращ разговор",
-          body: "30-минутна среща, за да разберем целите ви, сроковете и текущата кредитна картина.",
+          title: "Безплатна консултация",
+          body: "Кратък разговор за целта, бюджета, дохода и предпочитания срок — особено ако търсите жилищен кредит.",
         },
         {
           number: "02",
-          title: "Кредитен план",
-          body: "Получавате писмен план с приоритети, очаквани срокове и стъпките, които ще предприемем заедно.",
+          title: "Сравнение на оферти",
+          body: "Получавате ясна картина на подходящите продукти: лихва, такси, месечна вноска и какво се изисква като документи.",
         },
         {
           number: "03",
-          title: "Насочено изпълнение",
-          body: "Оставаме с вас през оспорвания, преговори и последващи стъпки, докато следващият етап е ясен.",
+          title: "Кандидатстване с насоки",
+          body: "Помагаме с подготовката на документите и следващите стъпки, докато заявката е подадена и условията са ясни.",
         },
       ],
     },
     consult: {
       eyebrow: "Консултация",
-      title: "Кажете ни къде сте. Ще помогнем с следващия ход.",
+      title: "Безплатна консултация — кажете ни какъв кредит търсите.",
       support:
-        "Споделете кратко за ситуацията си. Отговаряме до един работен ден с възможни часове — без автоматичен спам и без натиск.",
+        "Напишете ни кратко за жилищния или друг кредит, който ви интересува. Отговаряме до един работен ден със свободни часове. Безплатно за вас.",
       emailLabel: "Имейл",
       phoneLabel: "Телефон",
       hoursLabel: "Работно време",
@@ -153,21 +153,21 @@ export const dictionaries: Record<Locale, Dictionary> = {
       emailPlaceholder: "vie@email.com",
       phone: "Телефон (по желание)",
       phonePlaceholder: "0888 000 000",
-      goal: "С какво имате нужда от помощ?",
+      goal: "Какъв кредит ви интересува?",
       goalPlaceholder:
-        "Рейтинг, стратегия при дългове, готовност за ипотека или нещо друго…",
-      submit: "Заяви консултация",
+        "Жилищен кредит, рефинансиране, потребителски, автокредит или друго…",
+      submit: "Заяви безплатна консултация",
       submitting: "Изпращане…",
       error:
-        "Моля, попълнете име, имейл и цел на консултацията, за да се подготвим за разговора.",
+        "Моля, попълнете име, имейл и какъв кредит търсите, за да се подготвим за разговора.",
       successTitle: "Заявката е получена",
       successBody:
-        "Ще прегледаме бележката ви и ще отговорим до един работен ден със следващи стъпки и свободни часове.",
+        "Ще прегледаме бележката ви и ще отговорим до един работен ден със свободни часове за безплатната консултация.",
       sendAnother: "Изпрати нова заявка",
     },
     footer: {
       disclaimer:
-        "Независими кредитни консултации. Не сме кредитор, фирма за „поправка“ на кредит или адвокатска кантора.",
+        "Независими кредитни консултации. Консултацията е безплатна за клиента. Не сме банка и не предоставяме самия кредит.",
     },
     lang: {
       label: "Език",
@@ -177,75 +177,75 @@ export const dictionaries: Record<Locale, Dictionary> = {
   },
   en: {
     meta: {
-      title: "Meridian Credit — Clear advice for complex credit",
+      title: "Meridian Credit — Loan consulting focused on home mortgages",
       description:
-        "Independent credit consulting for score recovery, debt strategy, and lending readiness. Book a focused consultation with Meridian Credit.",
+        "Free credit consultation for all loan types. Primary focus — residential mortgages. Independent guidance when comparing offers.",
     },
     nav: {
-      services: "Services",
+      services: "Loans",
       process: "Process",
       consult: "Consult",
-      bookCall: "Book a call",
+      bookCall: "Free consultation",
     },
     hero: {
       brand: "Meridian Credit",
-      headline: "Clear advice for complex credit.",
+      headline: "Home loans — with a clear plan from the first call.",
       support:
-        "Independent consulting for score recovery, debt strategy, and lending readiness—so you can move forward with a plan that holds.",
-      ctaPrimary: "Request a consultation",
-      ctaSecondary: "See how we help",
+        "We advise on all loan types, with a primary focus on residential mortgages. Your consultation is free.",
+      ctaPrimary: "Request a free consultation",
+      ctaSecondary: "See loan types",
       imageAlt:
         "Financial documents and calculator on a desk, suggesting careful credit review",
     },
     services: {
-      eyebrow: "Services",
-      title: "Practical credit work, without the noise.",
+      eyebrow: "Loans",
+      title: "All loan types. Strongest focus — residential.",
       support:
-        "One focused engagement at a time. We explain what matters, what can wait, and what to do next.",
+        "We help you compare terms, organize documents, and choose an offer that fits your budget and timeline.",
       items: [
         {
-          title: "Score recovery",
-          body: "We map every tradeline, dispute what is inaccurate, and build a month-by-month plan to raise your score with durable habits—not shortcuts.",
+          title: "Residential mortgages",
+          body: "Our core focus: buying, building, renovating, or refinancing a home. We review rates, fees, down payment, and term — before you apply.",
         },
         {
-          title: "Debt strategy",
-          body: "From revolving balances to collection accounts, we prioritize what to pay, negotiate, or restructure so interest stops eating your progress.",
+          title: "Consumer and personal loans",
+          body: "When you need smaller financing, we compare offers and tell you plainly when a consumer loan makes sense — and when it costs more than expected.",
         },
         {
-          title: "Lending readiness",
-          body: "Preparing for a mortgage, auto loan, or refinance? We align credit, utilization, and documentation before you talk to a lender.",
+          title: "Auto loans and other products",
+          body: "Auto finance, business-related credit, or consolidating obligations — we review the options and guide you toward the cleanest structure for your case.",
         },
       ],
     },
     process: {
       eyebrow: "Process",
-      title: "A calm path from confusion to a written plan.",
+      title: "From first call to application — free for you.",
       support:
-        "No hard sell. You leave the first call knowing whether Meridian is the right fit—and what the next thirty days should look like.",
+        "Consultation is free for the client. No pressure toward a specific bank — the goal is terms you can actually afford.",
       imageAlt: "Hands reviewing paperwork during a consulting session",
       steps: [
         {
           number: "01",
-          title: "Discovery call",
-          body: "A 30-minute session to understand your goals, timeline, and current credit picture.",
+          title: "Free consultation",
+          body: "A short call about your goal, budget, income, and preferred term — especially if you are looking for a home loan.",
         },
         {
           number: "02",
-          title: "Credit blueprint",
-          body: "You receive a written plan with priorities, expected timelines, and the actions we will take together.",
+          title: "Offer comparison",
+          body: "You get a clear picture of suitable products: rate, fees, monthly payment, and which documents are required.",
         },
         {
           number: "03",
-          title: "Guided execution",
-          body: "We stay with you through disputes, negotiations, and follow-ups until the next milestone is clear.",
+          title: "Guided application",
+          body: "We help prepare documents and next steps until the application is submitted and the terms are clear.",
         },
       ],
     },
     consult: {
       eyebrow: "Consult",
-      title: "Tell us where you are. We'll help chart the next move.",
+      title: "Free consultation — tell us which loan you need.",
       support:
-        "Share a short note about your situation. We reply within one business day with available times—no automated spam, no pressure to commit.",
+        "Share a short note about the home loan or other credit you are considering. We reply within one business day with available times. Free for you.",
       emailLabel: "Email",
       phoneLabel: "Phone",
       hoursLabel: "Hours",
@@ -258,21 +258,21 @@ export const dictionaries: Record<Locale, Dictionary> = {
       emailPlaceholder: "you@email.com",
       phone: "Phone (optional)",
       phonePlaceholder: "0888 000 000",
-      goal: "What do you need help with?",
+      goal: "Which loan are you interested in?",
       goalPlaceholder:
-        "Score repair, debt strategy, mortgage readiness, or something else…",
-      submit: "Request a consultation",
+        "Home mortgage, refinance, consumer loan, auto loan, or something else…",
+      submit: "Request a free consultation",
       submitting: "Sending…",
       error:
-        "Please fill in your name, email, and consulting goal so we can prepare for the call.",
+        "Please fill in your name, email, and which loan you need so we can prepare for the call.",
       successTitle: "Request received",
       successBody:
-        "We'll review your note and reply within one business day with next steps and available times.",
+        "We'll review your note and reply within one business day with available times for your free consultation.",
       sendAnother: "Send another request",
     },
     footer: {
       disclaimer:
-        "Independent credit consulting. Not a lender, credit repair organization, or law firm.",
+        "Independent loan consulting. Consultation is free for the client. We are not a bank and do not issue the loan ourselves.",
     },
     lang: {
       label: "Language",
