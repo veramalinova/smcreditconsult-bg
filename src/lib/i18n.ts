@@ -2,7 +2,7 @@ export type Locale = "bg" | "en";
 
 export const defaultLocale: Locale = "bg";
 
-export type ServiceId = "mortgage" | "consumer" | "refinance";
+export type ServiceId = "mortgage" | "consumer" | "business" | "refinance";
 
 export type ServicePage = {
   id: ServiceId;
@@ -166,6 +166,30 @@ const bgServices: Record<ServiceId, ServicePage> = {
     ],
     cta: "Заяви консултация за потребителски кредит",
   },
+  business: {
+    id: "business",
+    href: "/uslugi/firmen-kredit",
+    title: "Фирмен кредит",
+    short:
+      "Финансиране за оборот, инвестиции и развитие на бизнеса с ясни условия.",
+    eyebrow: "За бизнеса",
+    headline: "Фирмен кредит според нуждите на компанията",
+    intro:
+      "Помагаме на фирми и еднолични търговци да сравнят оферти за оборотен капитал, инвестиционен кредит или друго фирмено финансиране — с реалистична оценка на натоварването и условията.",
+    points: [
+      "Сравнение на лихва, такси, срок и обезпечение",
+      "Оценка на кешфлоу, одобряемост и нужните документи",
+      "Варианти за оборотен и инвестиционен кредит",
+      "Съдействие при кандидатстване до решение от банката",
+    ],
+    forWhomTitle: "За кого е подходящ",
+    forWhom: [
+      "Търсите оборотен капитал или инвестиция в техника и оборудване",
+      "Искате по-ясна оферта преди разговор с банката",
+      "Искате да сравните условия за фирма или ЕТ",
+    ],
+    cta: "Заяви консултация за фирмен кредит",
+  },
   refinance: {
     id: "refinance",
     href: "/uslugi/refinansirane",
@@ -239,6 +263,30 @@ const enServices: Record<ServiceId, ServicePage> = {
     ],
     cta: "Request consumer loan consultation",
   },
+  business: {
+    id: "business",
+    href: "/uslugi/firmen-kredit",
+    title: "Business loan",
+    short:
+      "Financing for working capital, investment, and business growth with clear terms.",
+    eyebrow: "For business",
+    headline: "Business loans matched to your company’s needs",
+    intro:
+      "We help companies and sole traders compare offers for working capital, investment loans, or other business financing — with a realistic view of debt load and terms.",
+    points: [
+      "Compare rate, fees, term, and collateral",
+      "Assess cash flow, approval chances, and required documents",
+      "Options for working-capital and investment loans",
+      "Application support through the bank’s decision",
+    ],
+    forWhomTitle: "Who it is for",
+    forWhom: [
+      "Looking for working capital or equipment investment",
+      "Wanting a clearer offer before talking to a bank",
+      "Comparing terms for a company or sole trader",
+    ],
+    cta: "Request business loan consultation",
+  },
   refinance: {
     id: "refinance",
     href: "/uslugi/refinansirane",
@@ -269,7 +317,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     meta: {
       title: "СМ Кредит Консулт — Кредитна консултация",
       description:
-        "Независим кредитен консултант. Ипотечен, потребителски кредит и рефинансиране. Консултацията е безплатна.",
+        "Независим кредитен консултант. Ипотечен, потребителски, фирмен кредит и рефинансиране. Консултацията е безплатна.",
     },
     brand: "СМ Кредит Консулт",
     nav: {
@@ -284,7 +332,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     home: {
       metaTitle: "СМ Кредит Консулт — Кредитен консултант",
       metaDescription:
-        "Кредитна консултация за ипотечен, потребителски кредит и рефинансиране.",
+        "Кредитна консултация за ипотечен, потребителски, фирмен кредит и рефинансиране.",
       headline: "Консултация за кредит според вашите нужди",
       support:
         "Независима кредитна консултация — сравняваме банкови оферти, обясняваме условията и ви водим до кандидатстване. Услугата е напълно безплатна за вас.",
@@ -293,7 +341,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       imageAlt: "Спокоен дом и градска улица при дневна светлина",
       servicesTitle: "С какво можем да помогнем",
       servicesSupport:
-        "Работим с всички основни кредитни продукти — ипотечен, потребителски кредит и рефинансиране.",
+        "Работим с всички основни кредитни продукти — ипотечен, потребителски, фирмен кредит и рефинансиране.",
       whyTitle: "Защо кредитен консултант",
       whySupport:
         "Кредитният консултант ви помага да разберете пазара, да сравните реалните условия и да кандидатствате подготвени — без да обикаляте сам всяка банка. Услугата е напълно безплатна за вас.",
@@ -334,7 +382,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     servicesOverview: {
       metaTitle: "Услуги — СМ Кредит Консулт",
       metaDescription:
-        "Ипотечен кредит, потребителски кредит и рефинансиране с кредитна консултация.",
+        "Ипотечен, потребителски, фирмен кредит и рефинансиране с кредитна консултация.",
       title: "Услуги",
       support:
         "Изберете продукта, който ви интересува, или започнете с обща консултация — ще уточним заедно най-подходящия път.",
@@ -373,12 +421,12 @@ export const dictionaries: Record<Locale, Dictionary> = {
     aboutPage: {
       metaTitle: "За нас — СМ Кредит Консулт",
       metaDescription:
-        "Независима кредитна консултация за ипотечен, потребителски кредит и рефинансиране. Безплатно за клиента.",
+        "Независима кредитна консултация за ипотечен, потребителски, фирмен кредит и рефинансиране. Безплатно за клиента.",
       title: "За СМ Кредит Консулт",
       lead: "Независим кредитен консултант за хора, които искат най-подходящото решение преди да подпишат.",
       body: [
-        "СМ Кредит Консулт помага при избор на ипотечен кредит, потребителски кредит и рефинансиране. Обясняваме условията на разбираем език, а целият процес може да е изцяло онлайн и по телефона — без губене на време с ходене в офис.",
-        "Работим с жилищно финансиране, потребителски кредити и рефинансиране — там разликите между офертите са големи, а грешният избор излиза скъпо във времето.",
+        "СМ Кредит Консулт помага при избор на ипотечен, потребителски и фирмен кредит и рефинансиране. Обясняваме условията на разбираем език, а целият процес може да е изцяло онлайн и по телефона — без губене на време с ходене в офис.",
+        "Работим с жилищно финансиране, потребителски и фирмени кредити и рефинансиране — там разликите между офертите са големи, а грешният избор излиза скъпо във времето.",
         "Консултацията е безплатна за вас. Целта ни е да вземете информирано решение и да кандидатствате подготвени.",
       ],
       imageAlt: "Консултант и клиент преглеждат документи заедно",
@@ -401,7 +449,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     usefulPage: {
       metaTitle: "Полезно — СМ Кредит Консулт",
       metaDescription:
-        "Практични съвети и отговори за ипотечен кредит, потребителски кредит и рефинансиране.",
+        "Практични съвети и отговори за ипотечен, потребителски и фирмен кредит и рефинансиране.",
       title: "Полезно преди да кандидатствате",
       support:
         "Кратки ориентири и често задавани въпроси, за да влезете в разговора подготвени.",
@@ -444,7 +492,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         },
         {
           q: "С кои кредити работите?",
-          a: "С ипотечни, потребителски кредити и рефинансиране.",
+          a: "С ипотечни, потребителски и фирмени кредити и рефинансиране.",
         },
         {
           q: "Колко време отнема процесът?",
@@ -459,7 +507,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     consultPage: {
       metaTitle: "Консултация — СМ Кредит Консулт",
       metaDescription:
-        "Заявете кредитна консултация за ипотечен, потребителски кредит или рефинансиране.",
+        "Заявете кредитна консултация за ипотечен, потребителски, фирмен кредит или рефинансиране.",
       title: "Заявете консултация",
       support:
         "Напишете ни кратко какво търсите. Отговаряме до един работен ден. Целият процес може да е изцяло онлайн и по телефона.",
@@ -480,7 +528,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       phone: "Телефон (по желание)",
       phonePlaceholder: "0888 000 000",
       goal: "Какъв кредит ви интересува?",
-      goalPlaceholder: "Ипотечен, потребителски, рефинансиране или друго…",
+      goalPlaceholder: "Ипотечен, потребителски, фирмен, рефинансиране или друго…",
       submit: "Заяви консултация",
       submitting: "Изпращане…",
       invalid: "Моля, попълнете име, имейл и какъв кредит ви интересува.",
@@ -504,7 +552,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     meta: {
       title: "SM Credit Consult — Credit consultation",
       description:
-        "Independent credit consultant. Mortgage, consumer loans, and refinancing. Consultation is free.",
+        "Independent credit consultant. Mortgage, consumer, and business loans, and refinancing. Consultation is free.",
     },
     brand: "SM Credit Consult",
     nav: {
@@ -519,7 +567,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     home: {
       metaTitle: "SM Credit Consult — Credit consultant",
       metaDescription:
-        "Credit consultation for mortgages, consumer loans, and refinancing.",
+        "Credit consultation for mortgages, consumer loans, business loans, and refinancing.",
       headline: "Credit consultation tailored to your needs",
       support:
         "Independent credit consulting — we compare bank offers, explain the terms, and guide you to application. The service is completely free for you.",
@@ -528,7 +576,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       imageAlt: "Calm home and city street in daylight",
       servicesTitle: "How we can help",
       servicesSupport:
-        "We cover the main loan products — mortgages, consumer loans, and refinancing.",
+        "We cover the main loan products — mortgages, consumer loans, business loans, and refinancing.",
       whyTitle: "Why use a credit consultant",
       whySupport:
         "A credit consultant helps you understand the market, compare real terms, and apply prepared — without visiting every bank yourself. The service is completely free for you.",
@@ -569,7 +617,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     servicesOverview: {
       metaTitle: "Services — SM Credit Consult",
       metaDescription:
-        "Mortgage loans, consumer loans, and refinancing with credit consultation.",
+        "Mortgage, consumer, and business loans, and refinancing with credit consultation.",
       title: "Services",
       support:
         "Pick the product you care about, or start with a general consultation — we will refine the best path together.",
@@ -608,12 +656,12 @@ export const dictionaries: Record<Locale, Dictionary> = {
     aboutPage: {
       metaTitle: "About us — SM Credit Consult",
       metaDescription:
-        "Independent credit consulting for mortgages, consumer loans, and refinancing. Free for the client.",
+        "Independent credit consulting for mortgages, consumer loans, business loans, and refinancing. Free for the client.",
       title: "About SM Credit Consult",
       lead: "An independent credit consultant for people who want the most suitable solution before they sign.",
       body: [
-        "SM Credit Consult helps with mortgage loans, consumer loans, and refinancing. We explain the terms in plain language, and the whole process can be fully online and by phone — without wasting time visiting an office.",
-        "We work with home financing, consumer loans, and refinancing — where offer differences are large, and a poor choice costs a lot over time.",
+        "SM Credit Consult helps with mortgage, consumer, and business loans, and refinancing. We explain the terms in plain language, and the whole process can be fully online and by phone — without wasting time visiting an office.",
+        "We work with home financing, consumer and business loans, and refinancing — where offer differences are large, and a poor choice costs a lot over time.",
         "Consultation is free for you. Our goal is an informed decision and a well-prepared application.",
       ],
       imageAlt: "Advisor and client reviewing documents together",
@@ -636,7 +684,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     usefulPage: {
       metaTitle: "Guides — SM Credit Consult",
       metaDescription:
-        "Practical tips and answers on mortgages, consumer loans, and refinancing.",
+        "Practical tips and answers on mortgages, consumer loans, business loans, and refinancing.",
       title: "Useful before you apply",
       support:
         "Short pointers and frequent questions so you enter the conversation prepared.",
@@ -679,7 +727,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         },
         {
           q: "Which loans do you cover?",
-          a: "Mortgages, consumer loans, and refinancing.",
+          a: "Mortgages, consumer loans, business loans, and refinancing.",
         },
         {
           q: "How long does the process take?",
@@ -694,7 +742,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     consultPage: {
       metaTitle: "Consultation — SM Credit Consult",
       metaDescription:
-        "Request a credit consultation for a mortgage, consumer loan, or refinance.",
+        "Request a credit consultation for a mortgage, consumer loan, business loan, or refinance.",
       title: "Request a consultation",
       support:
         "Tell us briefly what you need. We reply within one business day. The whole process can be fully online and by phone.",
@@ -715,7 +763,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       phone: "Phone (optional)",
       phonePlaceholder: "0888 000 000",
       goal: "Which loan are you interested in?",
-      goalPlaceholder: "Mortgage, consumer, refinance, or something else…",
+      goalPlaceholder: "Mortgage, consumer, business, refinance, or something else…",
       submit: "Request a consultation",
       submitting: "Sending…",
       invalid: "Please fill in your name, email, and which loan you need.",
@@ -740,5 +788,6 @@ export const dictionaries: Record<Locale, Dictionary> = {
 export const serviceOrder: ServiceId[] = [
   "mortgage",
   "consumer",
+  "business",
   "refinance",
 ];

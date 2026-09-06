@@ -50,8 +50,24 @@ export function RefinanceIcon({ className = "h-10 w-10" }: { className?: string 
   );
 }
 
+export function BusinessIcon({ className = "h-10 w-10" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 48 48" className={className} fill="none" aria-hidden>
+      <path
+        d="M10 40V18l8-6h12l8 6v22"
+        stroke="currentColor"
+        strokeWidth="1.75"
+        strokeLinejoin="round"
+      />
+      <path d="M18 40V28h12v12" stroke="currentColor" strokeWidth="1.75" />
+      <path d="M20 22h2M26 22h2M20 27h2M26 27h2" stroke="currentColor" strokeWidth="1.75" />
+    </svg>
+  );
+}
+
 export const serviceIcons = {
   mortgage: MortgageIcon,
   consumer: ConsumerIcon,
+  business: BusinessIcon,
   refinance: RefinanceIcon,
 } as const;
