@@ -504,7 +504,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         },
         {
           q: "Мога ли да говоря с вас онлайн?",
-          a: "Да. Целият процес може да бъде изцяло онлайн и по телефона — без да губите време да ходите в офис. При нужда е възможна и присъствена среща.",
+          a: "Да. Целият процес може да бъде изцяло онлайн и по телефона — без да губите време да ходите в офис.",
         },
       ],
     },
@@ -743,7 +743,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         },
         {
           q: "Can we talk online?",
-          a: "Yes. The whole process can be fully online and by phone — without wasting time visiting an office. An in-person meeting is also possible when needed.",
+          a: "Yes. The whole process can be fully online and by phone — without wasting time visiting an office.",
         },
       ],
     },
