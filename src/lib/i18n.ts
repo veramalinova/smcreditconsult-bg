@@ -119,6 +119,10 @@ export type Dictionary = {
     company: string;
     legal: string;
     contacts: string;
+    phoneLabel: string;
+    emailLabel: string;
+    hoursLabel: string;
+    hoursValue: string;
     disclaimer: string;
   };
   lang: { label: string; bg: string; en: string };
@@ -561,6 +565,10 @@ export const dictionaries: Record<Locale, Dictionary> = {
       company: "Компания",
       legal: "Правна информация",
       contacts: "Контакти",
+      phoneLabel: "Телефон за връзка",
+      emailLabel: "Имейл",
+      hoursLabel: "Работно време",
+      hoursValue: "Понеделник–петък, 9:00–18:00",
       disclaimer:
         "Независими кредитни консултации. Консултацията е напълно безплатна за клиента.",
     },
@@ -808,6 +816,10 @@ export const dictionaries: Record<Locale, Dictionary> = {
       company: "Company",
       legal: "Legal",
       contacts: "Contacts",
+      phoneLabel: "Contact phone",
+      emailLabel: "Email",
+      hoursLabel: "Working hours",
+      hoursValue: "Monday–Friday, 9:00–18:00",
       disclaimer:
         "Independent loan consulting. Consultation is completely free for the client.",
     },
