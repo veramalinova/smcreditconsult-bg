@@ -330,7 +330,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       steps: [
         {
           number: "01",
-          title: "Безплатна консултация",
+          title: "Консултация",
           body: "Говорим за целта, дохода, срока и какъв кредит реално ви трябва — онлайн или по телефон.",
         },
         {
