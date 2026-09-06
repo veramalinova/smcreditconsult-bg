@@ -509,7 +509,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
           a: "Не. Ние сме кредитен консултант. Кредитът се отпуска от банка, която изберете след сравнение на оферти.",
         },
         {
-          q: "С кои кредити работите?",
+          q: "С какви видове кредити може да помогнете?",
           a: "С ипотечни, потребителски и фирмени кредити, както и с рефинансиране. Помагаме да сравните оферти, да изберете подходящите условия и да минете процеса до кандидатстване — според вашата цел и профил.",
         },
         {
@@ -756,7 +756,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
           a: "No. We are a credit consultant. The loan is issued by the bank you choose after comparing offers.",
         },
         {
-          q: "Which loans do you cover?",
+          q: "What types of loans can you help with?",
           a: "Mortgages, consumer loans, business loans, and refinancing. We help you compare offers, choose suitable terms, and go through the process to application — based on your goal and profile.",
         },
         {
