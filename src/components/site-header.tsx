@@ -5,7 +5,10 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { useLanguage } from "@/components/language-provider";
-import { CONTACT_PHONE_TEL } from "@/lib/contact";
+import {
+  CONTACT_PHONE_DISPLAY,
+  CONTACT_PHONE_TEL,
+} from "@/lib/contact";
 
 export function SiteHeader({
   variant = "solid",
@@ -61,6 +64,16 @@ export function SiteHeader({
             </Link>
           ))}
           <LanguageSwitcher tone={light ? "light" : "dark"} />
+          <a
+            href={`tel:${CONTACT_PHONE_TEL}`}
+            className={
+              light
+                ? "font-medium text-white/90 transition-colors hover:text-white"
+                : "font-medium text-ink transition-colors hover:text-jade"
+            }
+          >
+            {CONTACT_PHONE_DISPLAY}
+          </a>
           <Link
             href="/konsultaciya"
             className={
@@ -145,9 +158,16 @@ export function SiteHeader({
                 {link.label}
               </Link>
             ))}
+            <a
+              href={`tel:${CONTACT_PHONE_TEL}`}
+              className="mt-2 rounded-lg px-3 py-3 font-medium hover:bg-black/5"
+              onClick={() => setOpen(false)}
+            >
+              {t.nav.phoneAria}: {CONTACT_PHONE_DISPLAY}
+            </a>
             <Link
               href="/konsultaciya"
-              className="mt-2 rounded-lg bg-jade px-3 py-3 text-center font-medium text-accent-foreground"
+              className="mt-1 rounded-lg bg-jade px-3 py-3 text-center font-medium text-accent-foreground"
               onClick={() => setOpen(false)}
             >
               {t.nav.consult}
