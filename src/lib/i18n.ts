@@ -59,7 +59,6 @@ export type Dictionary = {
     title: string;
     support: string;
     steps: { number: string; title: string; body: string }[];
-    note: string;
   };
   aboutPage: {
     metaTitle: string;
@@ -370,7 +369,6 @@ export const dictionaries: Record<Locale, Dictionary> = {
           body: "Подготвяме документите, подаваме заявката и сме с вас до ясно решение и следващи стъпки — също дистанционно, ако предпочитате.",
         },
       ],
-      note: "Целият процес може да протече изцяло онлайн и по телефона. Не е нужно да губите време с ходене по офиси.",
     },
     aboutPage: {
       metaTitle: "За нас — СМ Кредит Консулт",
