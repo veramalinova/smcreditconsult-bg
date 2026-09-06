@@ -14,7 +14,8 @@
 | `/uslugi/refinansirane` | Рефинансиране |
 | `/kak-rabotim` | Процес |
 | `/za-nas` | За нас |
-| `/polezno` | Съвети и FAQ |
+| `/polezno` | Съвети |
+| `/vaprosi` | Често задавани въпроси |
 | `/konsultaciya` | Безплатна консултация |
 
 ## Stack

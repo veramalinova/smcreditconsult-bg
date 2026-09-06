@@ -27,6 +27,7 @@ export type Dictionary = {
     process: string;
     about: string;
     useful: string;
+    faq: string;
     consult: string;
     phoneAria: string;
   };
@@ -77,8 +78,13 @@ export type Dictionary = {
     support: string;
     tipsTitle: string;
     tips: { title: string; body: string }[];
-    faqTitle: string;
-    faq: { q: string; a: string }[];
+  };
+  faqPage: {
+    metaTitle: string;
+    metaDescription: string;
+    title: string;
+    support: string;
+    items: { q: string; a: string }[];
   };
   consultPage: {
     metaTitle: string;
@@ -326,6 +332,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       process: "Как работим",
       about: "За нас",
       useful: "Полезно",
+      faq: "Въпроси",
       consult: "Консултация",
       phoneAria: "Обадете се",
     },
@@ -449,10 +456,10 @@ export const dictionaries: Record<Locale, Dictionary> = {
     usefulPage: {
       metaTitle: "Полезно — СМ Кредит Консулт",
       metaDescription:
-        "Практични съвети и отговори за ипотечен, потребителски и фирмен кредит и рефинансиране.",
+        "Практични съвети за ипотечен, потребителски и фирмен кредит и рефинансиране.",
       title: "Полезно преди да кандидатствате",
       support:
-        "Кратки ориентири и често задавани въпроси, за да влезете в разговора подготвени.",
+        "Кратки ориентири, за да влезете в разговора подготвени.",
       tipsTitle: "Практични съвети",
       tips: [
         {
@@ -480,8 +487,15 @@ export const dictionaries: Record<Locale, Dictionary> = {
           body: "Обърнете внимание какво се случва след промоционалния период: промяна на лихвата, изисквания за застраховка или други условия. Краткосрочната изгода може да изглежда привлекателна, но дългосрочните правила често определят реалната цена.",
         },
       ],
-      faqTitle: "Често задавани въпроси",
-      faq: [
+    },
+    faqPage: {
+      metaTitle: "Често задавани въпроси — СМ Кредит Консулт",
+      metaDescription:
+        "Отговори за безплатната консултация, кредитите, с които работим, и онлайн процеса.",
+      title: "Често задавани въпроси",
+      support:
+        "Кратки отговори преди да заявите консултация — за услугата, продуктите и начина на работа.",
+      items: [
         {
           q: "Безплатна ли е консултацията?",
           a: "Да. За вас услугата е безплатна и не ви обвързва да продължите с кандидатстване.",
@@ -565,6 +579,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       process: "How we work",
       about: "About",
       useful: "Guides",
+      faq: "FAQ",
       consult: "Consultation",
       phoneAria: "Call us",
     },
@@ -688,10 +703,10 @@ export const dictionaries: Record<Locale, Dictionary> = {
     usefulPage: {
       metaTitle: "Guides — SM Credit Consult",
       metaDescription:
-        "Practical tips and answers on mortgages, consumer loans, business loans, and refinancing.",
+        "Practical tips on mortgages, consumer loans, business loans, and refinancing.",
       title: "Useful before you apply",
       support:
-        "Short pointers and frequent questions so you enter the conversation prepared.",
+        "Short pointers so you enter the conversation prepared.",
       tipsTitle: "Practical tips",
       tips: [
         {
@@ -719,8 +734,15 @@ export const dictionaries: Record<Locale, Dictionary> = {
           body: "Pay attention to what changes after any promotional period: rate resets, insurance requirements, or other conditions. A short-term advantage can look attractive, but the longer-term rules often decide the real cost.",
         },
       ],
-      faqTitle: "Frequently asked questions",
-      faq: [
+    },
+    faqPage: {
+      metaTitle: "Frequently asked questions — SM Credit Consult",
+      metaDescription:
+        "Answers about the free consultation, the loans we cover, and the online process.",
+      title: "Frequently asked questions",
+      support:
+        "Short answers before you request a consultation — about the service, products, and how we work.",
+      items: [
         {
           q: "Is the consultation free?",
           a: "Yes. The service is free for you and does not obligate you to apply.",
