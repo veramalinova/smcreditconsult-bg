@@ -583,7 +583,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         "Consultation, analysis, offer comparison, and application support.",
       title: "How we work",
       support:
-        "The process is transparent and pressure-free. At every stage you know what comes next and why. We can do everything fully online and by phone, with no office visit.",
+        "The process is transparent. At every stage you know what comes next and why. We can do everything fully online and by phone, with no office visit.",
       steps: [
         {
           number: "01",
