@@ -32,10 +32,10 @@ export default function FaqPage() {
                 key={item.q}
                 className="group border-b border-border/80 pb-6"
               >
-                <summary className="cursor-pointer list-none font-display text-xl text-ink marker:content-none">
+                <summary className="cursor-pointer list-none marker:content-none">
                   <span className="flex items-start justify-between gap-4">
-                    {item.q}
-                    <span className="text-jade transition-transform group-open:rotate-45">
+                    <h2 className="font-display text-xl text-ink">{item.q}</h2>
+                    <span className="mt-1 text-jade transition-transform group-open:rotate-45">
                       +
                     </span>
                   </span>

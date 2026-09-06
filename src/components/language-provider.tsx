@@ -68,15 +68,8 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const locale = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   useEffect(() => {
+    // Only sync language attribute here. Page titles/descriptions are owned by usePageMeta.
     document.documentElement.lang = locale;
-    document.title = dictionaries[locale].meta.title;
-    const description = document.querySelector('meta[name="description"]');
-    if (description) {
-      description.setAttribute(
-        "content",
-        dictionaries[locale].meta.description
-      );
-    }
   }, [locale]);
 
   const setLocale = useCallback((next: Locale) => {

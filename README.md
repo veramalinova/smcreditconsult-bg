@@ -52,3 +52,15 @@ GMAIL_APP_PASSWORD=xxxx xxxx xxxx xxxx
 ```
 
 4. Рестартирайте `npm run dev`.
+
+## Production / SEO
+
+- Per-page `title` + meta description (BG/EN)
+- Open Graph + Twitter cards + canonical URL
+- Favicon / app icons (`src/app/icon.svg`, `apple-icon.svg`)
+- `/sitemap.xml` and `/robots.txt`
+- Custom `404` page
+- Sticky mobile call button (`tel:`)
+- Set `NEXT_PUBLIC_SITE_URL` to the live HTTPS domain before launch
+- Company-domain email (e.g. `office@…`) can replace Gmail in `src/lib/contact.ts` once DNS/mailbox are ready
+

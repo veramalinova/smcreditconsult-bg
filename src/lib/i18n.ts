@@ -125,6 +125,15 @@ export type Dictionary = {
     hoursValue: string;
     disclaimer: string;
   };
+  mobileCall: { label: string; aria: string };
+  notFound: {
+    metaTitle: string;
+    metaDescription: string;
+    title: string;
+    body: string;
+    home: string;
+    consult: string;
+  };
   lang: { label: string; bg: string; en: string };
 };
 
@@ -525,6 +534,18 @@ export const dictionaries: Record<Locale, Dictionary> = {
       disclaimer:
         "Независими кредитни консултации. Консултацията е напълно безплатна за клиента.",
     },
+    mobileCall: {
+      label: "Обадете се за безплатна консултация",
+      aria: "Обадете се за безплатна консултация",
+    },
+    notFound: {
+      metaTitle: "Страницата не е намерена | СМ Кредит Консулт",
+      metaDescription: "Тази страница не съществува или е преместена.",
+      title: "Страницата не е намерена",
+      body: "Проверете адреса или се върнете към началото — или заявете безплатна консултация.",
+      home: "Към началото",
+      consult: "Консултация",
+    },
     lang: { label: "Език", bg: "БГ", en: "EN" },
   },
   en: {
@@ -775,6 +796,18 @@ export const dictionaries: Record<Locale, Dictionary> = {
       hoursValue: "Monday–Friday, 9:00–18:00",
       disclaimer:
         "Independent loan consulting. Consultation is completely free for the client.",
+    },
+    mobileCall: {
+      label: "Call for a free consultation",
+      aria: "Call for a free consultation",
+    },
+    notFound: {
+      metaTitle: "Page not found | SM Credit Consult",
+      metaDescription: "This page does not exist or has been moved.",
+      title: "Page not found",
+      body: "Check the address or go back home — or request a free consultation.",
+      home: "Back home",
+      consult: "Consultation",
     },
     lang: { label: "Language", bg: "BG", en: "EN" },
   },
