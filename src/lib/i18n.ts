@@ -267,7 +267,7 @@ const enServices: Record<ServiceId, ServicePage> = {
 export const dictionaries: Record<Locale, Dictionary> = {
   bg: {
     meta: {
-      title: "СМ Консулт — Безплатна кредитна консултация",
+      title: "СМ Консулт — Кредитна консултация",
       description:
         "Независим кредитен консултант. Ипотечен, потребителски кредит и рефинансиране. Консултацията е безплатна.",
     },
@@ -284,11 +284,11 @@ export const dictionaries: Record<Locale, Dictionary> = {
     home: {
       metaTitle: "СМ Консулт — Кредитен консултант",
       metaDescription:
-        "Безплатна кредитна консултация за ипотечен, потребителски кредит и рефинансиране.",
+        "Кредитна консултация за ипотечен, потребителски кредит и рефинансиране.",
       headline: "Консултация за кредит според вашите нужди",
       support:
         "Независима кредитна консултация — сравняваме банкови оферти, обясняваме условията и ви водим до кандидатстване. Услугата е напълно безплатна за вас.",
-      cta: "Безплатна консултация",
+      cta: "Консултация",
       secondaryCta: "Виж услугите",
       imageAlt: "Спокоен дом и градска улица при дневна светлина",
       servicesTitle: "С какво можем да помогнем",
@@ -329,7 +329,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     servicesOverview: {
       metaTitle: "Услуги — СМ Консулт",
       metaDescription:
-        "Ипотечен кредит, потребителски кредит и рефинансиране с безплатна консултация.",
+        "Ипотечен кредит, потребителски кредит и рефинансиране с кредитна консултация.",
       title: "Услуги",
       support:
         "Изберете продукта, който ви интересува, или започнете с обща консултация — ще уточним заедно най-подходящия път.",
@@ -445,10 +445,10 @@ export const dictionaries: Record<Locale, Dictionary> = {
       ],
     },
     consultPage: {
-      metaTitle: "Безплатна консултация — СМ Консулт",
+      metaTitle: "Консултация — СМ Консулт",
       metaDescription:
-        "Заявете безплатна кредитна консултация за ипотечен, потребителски кредит или рефинансиране.",
-      title: "Заявете безплатна консултация",
+        "Заявете кредитна консултация за ипотечен, потребителски кредит или рефинансиране.",
+      title: "Заявете консултация",
       support:
         "Напишете ни кратко какво търсите. Отговаряме до един работен ден със свободен час.",
       emailLabel: "Имейл",
@@ -469,13 +469,13 @@ export const dictionaries: Record<Locale, Dictionary> = {
       phonePlaceholder: "0888 000 000",
       goal: "Какъв кредит ви интересува?",
       goalPlaceholder: "Ипотечен, потребителски, рефинансиране или друго…",
-      submit: "Заяви безплатна консултация",
+      submit: "Заяви консултация",
       submitting: "Изпращане…",
       error:
         "Моля, попълнете име, имейл и какъв кредит търсите, за да се подготвим.",
       successTitle: "Заявката е получена",
       successBody:
-        "Ще отговорим до един работен ден със свободен час за безплатната консултация.",
+        "Ще отговорим до един работен ден със свободен час за консултацията.",
       sendAnother: "Изпрати нова заявка",
     },
     footer: {
@@ -490,7 +490,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
   },
   en: {
     meta: {
-      title: "SM Consult — Free credit consultation",
+      title: "SM Consult — Credit consultation",
       description:
         "Independent credit consultant. Mortgage, consumer loans, and refinancing. Consultation is free.",
     },
@@ -507,11 +507,11 @@ export const dictionaries: Record<Locale, Dictionary> = {
     home: {
       metaTitle: "SM Consult — Credit consultant",
       metaDescription:
-        "Free credit consultation for mortgages, consumer loans, and refinancing.",
+        "Credit consultation for mortgages, consumer loans, and refinancing.",
       headline: "Credit consultation tailored to your needs",
       support:
         "Independent credit consulting — we compare bank offers, explain the terms, and guide you to application. The service is completely free for you.",
-      cta: "Free consultation",
+      cta: "Consultation",
       secondaryCta: "See services",
       imageAlt: "Calm home and city street in daylight",
       servicesTitle: "How we can help",
@@ -552,7 +552,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     servicesOverview: {
       metaTitle: "Services — SM Consult",
       metaDescription:
-        "Mortgage loans, consumer loans, and refinancing with a free consultation.",
+        "Mortgage loans, consumer loans, and refinancing with credit consultation.",
       title: "Services",
       support:
         "Pick the product you care about, or start with a general consultation — we will refine the best path together.",
@@ -561,7 +561,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     processPage: {
       metaTitle: "How we work — SM Consult",
       metaDescription:
-        "Free consultation, analysis, offer comparison, and application support.",
+        "Consultation, analysis, offer comparison, and application support.",
       title: "How we work",
       support:
         "The process is transparent and pressure-free. At every stage you know what comes next and why.",
@@ -668,10 +668,10 @@ export const dictionaries: Record<Locale, Dictionary> = {
       ],
     },
     consultPage: {
-      metaTitle: "Free consultation — SM Consult",
+      metaTitle: "Consultation — SM Consult",
       metaDescription:
-        "Request a free credit consultation for a mortgage, consumer loan, or refinance.",
-      title: "Request a free consultation",
+        "Request a credit consultation for a mortgage, consumer loan, or refinance.",
+      title: "Request a consultation",
       support:
         "Tell us briefly what you need. We reply within one business day with an available time.",
       emailLabel: "Email",
@@ -692,13 +692,13 @@ export const dictionaries: Record<Locale, Dictionary> = {
       phonePlaceholder: "0888 000 000",
       goal: "Which loan are you interested in?",
       goalPlaceholder: "Mortgage, consumer, refinance, or something else…",
-      submit: "Request a free consultation",
+      submit: "Request a consultation",
       submitting: "Sending…",
       error:
         "Please fill in your name, email, and which loan you need so we can prepare.",
       successTitle: "Request received",
       successBody:
-        "We will reply within one business day with an available time for your free consultation.",
+        "We will reply within one business day with an available time for your consultation.",
       sendAnother: "Send another request",
     },
     footer: {
