@@ -62,11 +62,6 @@ export function SiteHeader({
             </Link>
           ))}
           <LanguageSwitcher tone={light ? "light" : "dark"} />
-          <PhoneLink
-            className={
-              light ? "font-medium text-white/90" : "font-medium text-ink"
-            }
-          />
           <Link
             href="/konsultaciya"
             className={
