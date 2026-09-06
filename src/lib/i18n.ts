@@ -376,7 +376,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       metaDescription:
         "Независима кредитна консултация за ипотечен, потребителски кредит и рефинансиране. Безплатно за клиента.",
       title: "За СМ Консулт",
-      lead: "Независим кредитен консултант за хора, които искат ясни условия преди да подпишат.",
+      lead: "Независим кредитен консултант за хора, които искат най-подходящото решение преди да подпишат.",
       body: [
         "СМ Консулт помага при избор на ипотечен кредит, потребителски кредит и рефинансиране. Обясняваме условията на разбираем език, а целият процес може да е изцяло онлайн и по телефона — без губене на време с ходене в офис.",
         "Работим с жилищно финансиране, потребителски кредити и рефинансиране — там разликите между офертите са големи, а грешният избор излиза скъпо във времето.",
@@ -612,7 +612,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       metaDescription:
         "Independent credit consulting for mortgages, consumer loans, and refinancing. Free for the client.",
       title: "About SM Consult",
-      lead: "An independent credit consultant for people who want clear terms before they sign.",
+      lead: "An independent credit consultant for people who want the most suitable solution before they sign.",
       body: [
         "SM Consult helps with mortgage loans, consumer loans, and refinancing. We explain the terms in plain language, and the whole process can be fully online and by phone — without wasting time visiting an office.",
         "We work with home financing, consumer loans, and refinancing — where offer differences are large, and a poor choice costs a lot over time.",
