@@ -96,29 +96,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="py-16 sm:py-20">
-          <div className="mx-auto max-w-6xl px-5 sm:px-8">
-            <h2 className="font-display text-3xl tracking-tight text-ink sm:text-4xl">
-              {t.home.whyTitle}
-            </h2>
-            <div className="mt-10 divide-y divide-border/80 border-y border-border/80">
-              {t.home.whyItems.map((item) => (
-                <article
-                  key={item.title}
-                  className="grid gap-3 py-7 md:grid-cols-[0.35fr_0.65fr] md:gap-10"
-                >
-                  <h3 className="font-display text-xl text-ink sm:text-2xl">
-                    {item.title}
-                  </h3>
-                  <p className="leading-relaxed text-muted-foreground">
-                    {item.body}
-                  </p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <section className="bg-ink py-16 text-white sm:py-20">
           <div className="mx-auto max-w-6xl px-5 sm:px-8">
             <div className="mx-auto max-w-2xl text-center">
@@ -149,6 +126,29 @@ export default function HomePage() {
               >
                 {t.nav.process}
               </Link>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 sm:py-20">
+          <div className="mx-auto max-w-6xl px-5 sm:px-8">
+            <h2 className="font-display text-3xl tracking-tight text-ink sm:text-4xl">
+              {t.home.whyTitle}
+            </h2>
+            <div className="mt-10 divide-y divide-border/80 border-y border-border/80">
+              {t.home.whyItems.map((item) => (
+                <article
+                  key={item.title}
+                  className="grid gap-3 py-7 md:grid-cols-[0.35fr_0.65fr] md:gap-10"
+                >
+                  <h3 className="font-display text-xl text-ink sm:text-2xl">
+                    {item.title}
+                  </h3>
+                  <p className="leading-relaxed text-muted-foreground">
+                    {item.body}
+                  </p>
+                </article>
+              ))}
             </div>
           </div>
         </section>
