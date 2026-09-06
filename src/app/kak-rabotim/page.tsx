@@ -47,9 +47,6 @@ export default function ProcessPage() {
               </li>
             ))}
           </ol>
-          <p className="mx-auto mt-4 max-w-6xl px-5 text-sm text-muted-foreground sm:px-8">
-            {t.processPage.note}
-          </p>
           <div className="mx-auto mt-10 max-w-6xl px-5 sm:px-8">
             <Link
               href="/konsultaciya"
