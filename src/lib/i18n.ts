@@ -41,6 +41,7 @@ export type Dictionary = {
     servicesTitle: string;
     servicesSupport: string;
     whyTitle: string;
+    whySupport: string;
     whyItems: { title: string; body: string }[];
     processTitle: string;
     processSupport: string;
@@ -294,18 +295,32 @@ export const dictionaries: Record<Locale, Dictionary> = {
       servicesSupport:
         "Работим с всички основни кредитни продукти. Най-силно сме в жилищното финансиране.",
       whyTitle: "Защо кредитен консултант",
+      whySupport:
+        "Кредитният консултант не отпуска кредит. Той ви помага да разберете пазара, да сравните реалните условия и да кандидатствате подготвени — без да обикаляте сам всяка банка.",
       whyItems: [
         {
-          title: "Безплатно за вас",
-          body: "Консултацията и съдействието не ви струват. Не ви обвързваме с конкретна банка.",
+          title: "Един разговор вместо много клонове",
+          body: "Вместо да събирате оферти сам от различни банки, минавате през един консултант. Заедно уточняваме каква сума, срок и месечна вноска са реалистични за вас, преди да се губи време в несвързани предложения.",
         },
         {
-          title: "Сравнение на оферти",
-          body: "Гледаме лихва, такси, ГПР и реална месечна вноска — не само рекламната лихва.",
+          title: "Сравнение на реалната цена",
+          body: "Не гледаме само рекламната лихва. Сравняваме такси, застраховки, ГПР и месечна вноска, за да видите кой вариант е по-изгоден в дългосрочен план — не само на хартия.",
         },
         {
-          title: "До усвояването",
-          body: "Помагаме с документи, срокове и следващи стъпки, докато процесът е ясен.",
+          title: "Подготовка на документите",
+          body: "Помагаме да подредите нужните документи и да избегнете връщания заради липсващи справки. Когато досието е ясно, процесът при банката обикновено върви по-бързо и по-спокойно.",
+        },
+        {
+          title: "Независим поглед върху профила ви",
+          body: "Оценяваме дохода, текущите задължения и целта на кредита. Ако даден продукт не ви пасва или рискът е висок, го казваме директно — дори това да значи да изчакате или да изберете друг вариант.",
+        },
+        {
+          title: "Съдействие до кандидатстването",
+          body: "След като изберете оферта, оставаме с вас при подаване на заявката и следващите стъпки. Целта е да знаете какво се случва на всеки етап, без изненади и без натиск.",
+        },
+        {
+          title: "Услугата е безплатна за вас",
+          body: "Консултацията и съдействието не ви струват допълнително. Не ви обвързваме с конкретна банка — избирате условията, които ви устройват.",
         },
       ],
       processTitle: "Как работим",
@@ -503,18 +518,32 @@ export const dictionaries: Record<Locale, Dictionary> = {
       servicesSupport:
         "We cover the main loan products. We are strongest in home financing.",
       whyTitle: "Why use a credit consultant",
+      whySupport:
+        "A credit consultant does not issue loans. We help you understand the market, compare real terms, and apply prepared — without visiting every bank yourself.",
       whyItems: [
         {
-          title: "Free for you",
-          body: "Advice and support cost you nothing. We do not lock you into one bank.",
+          title: "One conversation instead of many branches",
+          body: "Instead of collecting offers from different banks on your own, you go through one consultant. Together we clarify what amount, term, and monthly payment are realistic for you before time is spent on mismatched proposals.",
         },
         {
-          title: "Offer comparison",
-          body: "We look at rate, fees, APR, and the real monthly payment — not just the ad rate.",
+          title: "Comparison of the real cost",
+          body: "We do not look only at the advertised rate. We compare fees, insurance, APR, and the monthly payment so you can see which option is better over time — not just on paper.",
         },
         {
-          title: "Through drawdown",
-          body: "We help with documents, timelines, and next steps until the process is clear.",
+          title: "Document preparation",
+          body: "We help you organize the required documents and avoid returns for missing paperwork. When the file is clear, the bank process usually moves faster and with fewer surprises.",
+        },
+        {
+          title: "An independent view of your profile",
+          body: "We assess income, current obligations, and the purpose of the loan. If a product does not fit or the risk is high, we say so directly — even if that means waiting or choosing another option.",
+        },
+        {
+          title: "Support through application",
+          body: "After you choose an offer, we stay with you for submission and the next steps. The goal is that you know what is happening at every stage, without pressure.",
+        },
+        {
+          title: "The service is free for you",
+          body: "Consultation and support do not cost you extra. We do not lock you into a specific bank — you choose the terms that fit.",
         },
       ],
       processTitle: "How we work",

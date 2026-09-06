@@ -135,6 +135,9 @@ export default function HomePage() {
             <h2 className="font-display text-3xl tracking-tight text-ink sm:text-4xl">
               {t.home.whyTitle}
             </h2>
+            <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+              {t.home.whySupport}
+            </p>
             <div className="mt-10 divide-y divide-border/80 border-y border-border/80">
               {t.home.whyItems.map((item) => (
                 <article
