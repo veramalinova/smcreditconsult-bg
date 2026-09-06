@@ -487,6 +487,10 @@ export const dictionaries: Record<Locale, Dictionary> = {
           a: "Да. За вас услугата е безплатна и не ви обвързва да продължите с кандидатстване.",
         },
         {
+          q: "Защо ми е нужен кредитен консултант?",
+          a: "За да сравните реалните условия на няколко банки на едно място — лихва, такси, ГПР и месечна вноска — и да кандидатствате подготвени, без да обикаляте сами всеки клон. Спестявате време и намалявате риска от скъп избор.",
+        },
+        {
           q: "Отпускате ли кредити?",
           a: "Не. Ние сме кредитен консултант. Кредитът се отпуска от банка, която изберете след сравнение на оферти.",
         },
@@ -720,6 +724,10 @@ export const dictionaries: Record<Locale, Dictionary> = {
         {
           q: "Is the consultation free?",
           a: "Yes. The service is free for you and does not obligate you to apply.",
+        },
+        {
+          q: "Why do I need a credit consultant?",
+          a: "To compare real terms from several banks in one place — rate, fees, APR, and monthly payment — and apply prepared, without visiting every branch yourself. You save time and reduce the risk of an expensive choice.",
         },
         {
           q: "Do you issue loans?",
