@@ -604,7 +604,6 @@ export const dictionaries: Record<Locale, Dictionary> = {
           body: "We prepare documents, submit the application, and stay with you until the next step is clear — remotely too, if you prefer.",
         },
       ],
-      note: "The whole process can run fully online and by phone. You do not need to waste time going from office to office.",
     },
     aboutPage: {
       metaTitle: "About us — SM Credit Consult",
