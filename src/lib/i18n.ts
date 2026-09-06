@@ -322,9 +322,14 @@ export const dictionaries: Record<Locale, Dictionary> = {
           title: "Услугата е безплатна за вас",
           body: "Консултацията и съдействието не ви струват допълнително. Не ви обвързваме с конкретна банка — избирате условията, които ви устройват.",
         },
+        {
+          title: "Изцяло онлайн и по телефона",
+          body: "Целият процес може да мине дистанционно — разговор, анализ, сравнение на оферти и кандидатстване. Без губене на време с ходене в офис, ако предпочитате да работите от вкъщи или в движение.",
+        },
       ],
       processTitle: "Как работим",
-      processSupport: "Четири стъпки от първия разговор до подадена заявка.",
+      processSupport:
+        "Четири стъпки от първия разговор до подадена заявка. Целият процес може да е изцяло онлайн и по телефона — без да губите време в офис.",
     },
     servicesOverview: {
       metaTitle: "Услуги — СМ Консулт",
@@ -341,12 +346,12 @@ export const dictionaries: Record<Locale, Dictionary> = {
         "Консултация, анализ, сравнение на оферти и съдействие при кандидатстване.",
       title: "Как работим",
       support:
-        "Процесът е прозрачен и без натиск. На всеки етап знаете какво следва и защо.",
+        "Процесът е прозрачен и без натиск. На всеки етап знаете какво следва и защо. Можем да минем през всичко изцяло онлайн и по телефона, без посещение в офис.",
       steps: [
         {
           number: "01",
           title: "Консултация",
-          body: "Говорим за целта, дохода, срока и какъв кредит реално ви трябва — онлайн или по телефон.",
+          body: "Говорим за целта, дохода, срока и какъв кредит реално ви трябва — онлайн или по телефон, без нужда да идвате на място.",
         },
         {
           number: "02",
@@ -361,10 +366,10 @@ export const dictionaries: Record<Locale, Dictionary> = {
         {
           number: "04",
           title: "Кандидатстване и проследяване",
-          body: "Подготвяме документите, подаваме заявката и сме с вас до ясно решение и следващи стъпки.",
+          body: "Подготвяме документите, подаваме заявката и сме с вас до ясно решение и следващи стъпки — също дистанционно, ако предпочитате.",
         },
       ],
-      note: "Не отпускаме кредити. Съдействаме като независим консултант, а финансирането идва от банката, която изберете.",
+      note: "Целият процес може да протече изцяло онлайн и по телефона. Не е нужно да губите време с ходене по офиси.",
     },
     aboutPage: {
       metaTitle: "За нас — СМ Консулт",
@@ -448,7 +453,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         },
         {
           q: "Мога ли да говоря с вас онлайн?",
-          a: "Да. Работим по телефон и онлайн, както и с присъствена среща при нужда.",
+          a: "Да. Целият процес може да бъде изцяло онлайн и по телефона — без да губите време да ходите в офис. При нужда е възможна и присъствена среща.",
         },
       ],
     },
@@ -458,7 +463,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         "Заявете кредитна консултация за ипотечен, потребителски кредит или рефинансиране.",
       title: "Заявете консултация",
       support:
-        "Напишете ни кратко какво търсите. Отговаряме до един работен ден със свободен час.",
+        "Напишете ни кратко какво търсите. Отговаряме до един работен ден със свободен час. Целият процес може да е изцяло онлайн и по телефона.",
       emailLabel: "Имейл",
       phoneLabel: "Телефон",
       hoursLabel: "Работно време",
@@ -553,9 +558,14 @@ export const dictionaries: Record<Locale, Dictionary> = {
           title: "The service is free for you",
           body: "Consultation and support do not cost you extra. We do not lock you into a specific bank — you choose the terms that fit.",
         },
+        {
+          title: "Fully online and by phone",
+          body: "The whole process can happen remotely — conversation, analysis, offer comparison, and application. No time wasted visiting an office if you prefer to work from home or on the go.",
+        },
       ],
       processTitle: "How we work",
-      processSupport: "Four steps from the first call to a submitted application.",
+      processSupport:
+        "Four steps from the first call to a submitted application. The whole process can be fully online and by phone — without wasting time at an office.",
     },
     servicesOverview: {
       metaTitle: "Services — SM Consult",
@@ -572,12 +582,12 @@ export const dictionaries: Record<Locale, Dictionary> = {
         "Consultation, analysis, offer comparison, and application support.",
       title: "How we work",
       support:
-        "The process is transparent and pressure-free. At every stage you know what comes next and why.",
+        "The process is transparent and pressure-free. At every stage you know what comes next and why. We can do everything fully online and by phone, with no office visit.",
       steps: [
         {
           number: "01",
           title: "Consultation",
-          body: "We talk about your goal, income, term, and which loan you actually need — online or by phone.",
+          body: "We talk about your goal, income, term, and which loan you actually need — online or by phone, with no need to come in person.",
         },
         {
           number: "02",
@@ -592,10 +602,10 @@ export const dictionaries: Record<Locale, Dictionary> = {
         {
           number: "04",
           title: "Application and follow-up",
-          body: "We prepare documents, submit the application, and stay with you until the next step is clear.",
+          body: "We prepare documents, submit the application, and stay with you until the next step is clear — remotely too, if you prefer.",
         },
       ],
-      note: "We do not issue loans. We advise as an independent consultant; financing comes from the bank you choose.",
+      note: "The whole process can run fully online and by phone. You do not need to waste time going from office to office.",
     },
     aboutPage: {
       metaTitle: "About us — SM Consult",
@@ -679,7 +689,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         },
         {
           q: "Can we talk online?",
-          a: "Yes. We work by phone and online, and in person when needed.",
+          a: "Yes. The whole process can be fully online and by phone — without wasting time visiting an office. An in-person meeting is also possible when needed.",
         },
       ],
     },
@@ -689,7 +699,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         "Request a credit consultation for a mortgage, consumer loan, or refinance.",
       title: "Request a consultation",
       support:
-        "Tell us briefly what you need. We reply within one business day with an available time.",
+        "Tell us briefly what you need. We reply within one business day with an available time. The whole process can be fully online and by phone.",
       emailLabel: "Email",
       phoneLabel: "Phone",
       hoursLabel: "Hours",
