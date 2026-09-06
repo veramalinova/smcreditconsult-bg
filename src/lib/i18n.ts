@@ -539,7 +539,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       steps: [
         {
           number: "01",
-          title: "Free consultation",
+          title: "Consultation",
           body: "We talk about your goal, income, term, and which loan you actually need — online or by phone.",
         },
         {
