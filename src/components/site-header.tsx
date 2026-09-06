@@ -67,8 +67,8 @@ export function SiteHeader({
             href="/konsultaciya"
             className={
               light
-                ? "rounded-lg bg-white/95 px-3 py-2 text-sm font-medium text-ink transition-colors hover:bg-white"
-                : "rounded-lg bg-jade px-3 py-2 text-sm font-medium text-accent-foreground transition-colors hover:bg-jade/90"
+                ? "rounded-md bg-white/95 px-3 py-2 text-sm font-medium text-ink transition-colors hover:bg-white"
+                : "rounded-md bg-jade px-3 py-2 text-sm font-medium text-accent-foreground transition-colors hover:bg-jade/90"
             }
           >
             {t.nav.consult}
@@ -100,7 +100,7 @@ export function SiteHeader({
           </PhoneLink>
           <button
             type="button"
-            className={`inline-flex h-10 w-10 items-center justify-center rounded-lg border ${
+            className={`inline-flex h-10 w-10 items-center justify-center rounded-md border ${
               light
                 ? "border-white/30 text-white"
                 : "border-border text-ink"
@@ -141,7 +141,7 @@ export function SiteHeader({
               <Link
                 key={link.href}
                 href={link.href}
-                className="rounded-lg px-3 py-3 hover:bg-black/5"
+                className="rounded-md px-3 py-3 hover:bg-black/5"
                 onClick={() => setOpen(false)}
               >
                 {link.label}
@@ -149,14 +149,14 @@ export function SiteHeader({
             ))}
             <PhoneLink
               forceCall
-              className="mt-2 rounded-lg px-3 py-3 font-medium hover:bg-black/5"
+              className="mt-2 rounded-md px-3 py-3 font-medium hover:bg-black/5"
               onClick={() => setOpen(false)}
             >
               {`${t.nav.phoneAria}: ${CONTACT_PHONE_DISPLAY}`}
             </PhoneLink>
             <Link
               href="/konsultaciya"
-              className="mt-1 rounded-lg bg-jade px-3 py-3 text-center font-medium text-accent-foreground"
+              className="mt-1 rounded-md bg-jade px-3 py-3 text-center font-medium text-accent-foreground"
               onClick={() => setOpen(false)}
             >
               {t.nav.consult}

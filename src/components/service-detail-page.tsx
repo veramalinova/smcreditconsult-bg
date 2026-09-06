@@ -35,7 +35,7 @@ export function ServiceDetailPage({ serviceId }: { serviceId: ServiceId }) {
             </p>
             <Link
               href="/konsultaciya"
-              className="mt-8 inline-flex h-12 items-center justify-center bg-jade px-6 text-base font-medium text-accent-foreground transition-colors hover:bg-jade/90"
+              className="mt-8 inline-flex h-12 items-center justify-center rounded-md bg-jade px-6 text-base font-medium text-accent-foreground transition-colors hover:bg-jade/90"
             >
               {service.cta}
             </Link>

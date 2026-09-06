@@ -50,7 +50,7 @@ export default function ProcessPage() {
           <div className="mx-auto mt-10 max-w-6xl px-5 sm:px-8">
             <Link
               href="/konsultaciya"
-              className="inline-flex h-12 items-center justify-center bg-jade px-6 text-base font-medium text-accent-foreground transition-colors hover:bg-jade/90"
+              className="inline-flex h-12 items-center justify-center rounded-md bg-jade px-6 text-base font-medium text-accent-foreground transition-colors hover:bg-jade/90"
             >
               {t.nav.consult}
             </Link>

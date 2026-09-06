@@ -51,7 +51,7 @@ export function ConsultForm() {
   if (status === "success") {
     return (
       <div
-        className="border border-jade/30 bg-white/80 px-6 py-10 text-center"
+        className="rounded-md border border-jade/30 bg-white/80 px-6 py-10 text-center"
         role="status"
         aria-live="polite"
       >
@@ -71,7 +71,7 @@ export function ConsultForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="space-y-5 border border-border/80 bg-white/80 p-6 sm:p-8"
+      className="space-y-5 rounded-md border border-border/80 bg-white/80 p-6 sm:p-8"
       noValidate
     >
       <div className="grid gap-5 sm:grid-cols-2">

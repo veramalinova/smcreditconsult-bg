@@ -44,13 +44,13 @@ export default function HomePage() {
             <div className="animate-fade-up-delay-3 mt-8 flex flex-wrap items-center justify-center gap-3">
               <Link
                 href="/konsultaciya"
-                className="inline-flex h-12 items-center justify-center bg-jade px-6 text-base font-medium text-accent-foreground transition-colors hover:bg-jade/90"
+                className="inline-flex h-12 items-center justify-center rounded-md bg-jade px-6 text-base font-medium text-accent-foreground transition-colors hover:bg-jade/90"
               >
                 {t.home.cta}
               </Link>
               <Link
                 href="/uslugi"
-                className="inline-flex h-12 items-center justify-center border border-white/35 px-6 text-base font-medium text-white transition-colors hover:bg-white/10"
+                className="inline-flex h-12 items-center justify-center rounded-md border border-white/35 px-6 text-base font-medium text-white transition-colors hover:bg-white/10"
               >
                 {t.home.secondaryCta}
               </Link>
@@ -122,7 +122,7 @@ export default function HomePage() {
             <div className="mt-10 text-center">
               <Link
                 href="/kak-rabotim"
-                className="inline-flex h-11 items-center justify-center border border-white/30 px-5 text-sm font-medium text-white transition-colors hover:bg-white/10"
+                className="inline-flex h-11 items-center justify-center rounded-md border border-white/30 px-5 text-sm font-medium text-white transition-colors hover:bg-white/10"
               >
                 {t.nav.process}
               </Link>

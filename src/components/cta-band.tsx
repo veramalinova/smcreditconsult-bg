@@ -14,7 +14,7 @@ export function CtaBand() {
         </h2>
         <Link
           href="/konsultaciya"
-          className="mt-8 inline-flex h-12 items-center justify-center border border-white/30 bg-white px-6 text-base font-medium text-ink transition-colors hover:bg-white/90"
+          className="mt-8 inline-flex h-12 items-center justify-center rounded-md border border-white/30 bg-white px-6 text-base font-medium text-ink transition-colors hover:bg-white/90"
         >
           {t.ctaBand.button}
         </Link>
