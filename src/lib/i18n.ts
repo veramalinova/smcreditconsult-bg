@@ -356,7 +356,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         {
           number: "02",
           title: "Анализ на профила",
-          body: "Преглеждаме възможностите за одобрение, натоварването и ограниченията на различните продукти.",
+          body: "Преглеждаме дохода и текущите ви задължения, колко още можете да поемете като месечна вноска и кои кредити реално ви пасват.",
         },
         {
           number: "03",
@@ -591,7 +591,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         {
           number: "02",
           title: "Profile analysis",
-          body: "We review approval chances, debt load, and the limits of different products.",
+          body: "We review your income and current debts, how much more monthly payment you can take on, and which loans actually fit you.",
         },
         {
           number: "03",
