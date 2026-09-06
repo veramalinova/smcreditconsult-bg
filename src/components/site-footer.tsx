@@ -8,9 +8,11 @@ import {
   CONTACT_PHONE_DISPLAY,
 } from "@/lib/contact";
 import { serviceOrder } from "@/lib/i18n";
+import { getLegalNav } from "@/lib/legal";
 
 export function SiteFooter() {
-  const { t } = useLanguage();
+  const { locale, t } = useLanguage();
+  const legalLinks = getLegalNav(locale);
 
   return (
     <footer className="border-t border-white/10 bg-ink text-white/70">
@@ -104,6 +106,26 @@ export function SiteFooter() {
               <p className="mt-1 text-white">{t.footer.hoursValue}</p>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="border-t border-white/10">
+        <div className="mx-auto max-w-6xl px-5 py-6 sm:px-8">
+          <p className="text-sm font-medium tracking-[0.14em] text-foam uppercase">
+            {t.footer.legal}
+          </p>
+          <ul className="mt-3 flex flex-col gap-2 text-sm sm:flex-row sm:flex-wrap sm:gap-x-6 sm:gap-y-2">
+            {legalLinks.map((link) => (
+              <li key={link.id}>
+                <Link
+                  href={link.href}
+                  className="transition-colors hover:text-white"
+                >
+                  {link.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </footer>

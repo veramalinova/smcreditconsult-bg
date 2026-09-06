@@ -16,6 +16,9 @@
 | `/polezno` | Съвети |
 | `/vaprosi` | Често задавани въпроси |
 | `/konsultaciya` | Безплатна консултация |
+| `/politika-za-poveritelnost` | Политика за поверителност |
+| `/politika-za-biskvitki` | Политика за бисквитки |
+| `/obshti-usloviya` | Общи условия |
 
 ## Stack
 
