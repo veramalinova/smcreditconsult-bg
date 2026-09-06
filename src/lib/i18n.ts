@@ -284,9 +284,9 @@ export const dictionaries: Record<Locale, Dictionary> = {
       metaTitle: "СМ Консулт — Кредитен консултант",
       metaDescription:
         "Безплатна кредитна консултация за ипотечен, потребителски кредит и рефинансиране.",
-      headline: "Кредитно решение според вашите нужди",
+      headline: "Консултация за кредит според вашите нужди",
       support:
-        "Сравняваме оферти, обясняваме условията и ви водим до кандидатстване. Основен фокус — жилищните кредити. Услугата е безплатна за вас.",
+        "Независима кредитна консултация — сравняваме банкови оферти, обясняваме условията и ви водим до кандидатстване. Основен фокус — жилищните кредити. Услугата е безплатна за вас. Не сме банка и не отпускаме кредити.",
       cta: "Безплатна консултация",
       secondaryCta: "Виж услугите",
       imageAlt: "Спокоен дом и градска улица при дневна светлина",
@@ -493,9 +493,9 @@ export const dictionaries: Record<Locale, Dictionary> = {
       metaTitle: "SM Consult — Credit consultant",
       metaDescription:
         "Free credit consultation for mortgages, consumer loans, and refinancing.",
-      headline: "A credit solution for your needs",
+      headline: "Credit consultation tailored to your needs",
       support:
-        "We compare offers, explain the terms, and guide you to application. Primary focus — home loans. The service is free for you.",
+        "Independent credit consulting — we compare bank offers, explain the terms, and guide you to application. Primary focus — home loans. The service is free for you. We are not a bank and do not issue loans.",
       cta: "Free consultation",
       secondaryCta: "See services",
       imageAlt: "Calm home and city street in daylight",
