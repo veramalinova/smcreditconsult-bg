@@ -631,7 +631,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
           body: "We compare options for your profile, not for one bank’s convenience.",
         },
         {
-          title: "Online and by phone",
+          title: "Save time",
           body: "The whole process can happen remotely — without wasting time visiting an office.",
         },
       ],
