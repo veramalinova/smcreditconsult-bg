@@ -55,6 +55,14 @@ export function SiteFooter() {
               </Link>
             </li>
             <li>
+              <Link
+                href={t.freeWhy.href}
+                className="transition-colors hover:text-white"
+              >
+                {t.freeWhy.linkLabel}
+              </Link>
+            </li>
+            <li>
               <Link href="/polezno" className="transition-colors hover:text-white">
                 {t.nav.useful}
               </Link>

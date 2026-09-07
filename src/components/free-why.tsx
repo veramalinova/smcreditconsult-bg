@@ -1,3 +1,6 @@
+"use client";
+
+import Link from "next/link";
 import { useLanguage } from "@/components/language-provider";
 
 export function FreeWhy({ className = "" }: { className?: string }) {
@@ -12,6 +15,12 @@ export function FreeWhy({ className = "" }: { className?: string }) {
         <p className="mt-5 max-w-3xl text-base leading-relaxed text-muted-foreground sm:text-lg">
           {t.freeWhy.body}
         </p>
+        <Link
+          href={t.freeWhy.href}
+          className="mt-6 inline-flex text-base font-medium text-jade transition-colors hover:text-ink"
+        >
+          {t.freeWhy.moreLabel}
+        </Link>
       </div>
     </section>
   );

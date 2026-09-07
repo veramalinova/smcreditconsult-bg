@@ -101,7 +101,20 @@ export type Dictionary = {
     hoursValue: string;
   };
   ctaBand: { title: string; button: string };
-  freeWhy: { title: string; body: string };
+  freeWhy: {
+    title: string;
+    body: string;
+    href: string;
+    linkLabel: string;
+    moreLabel: string;
+  };
+  freeWhyPage: {
+    metaTitle: string;
+    metaDescription: string;
+    title: string;
+    lead: string;
+    body: string[];
+  };
   form: {
     name: string;
     namePlaceholder: string;
@@ -341,7 +354,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         "Кредитен консултант за ипотечни, потребителски и фирмени кредити. Сравнение на банкови оферти, рефинансиране и професионално съдействие. Безплатна консултация.",
       headline: "Вашият кредит. Нашата експертиза.",
       support:
-        "Сравняваме предложения от банки и ви помагаме да изберете подходящото финансиране според вашите цели и финансов профил.",
+        "Сравняваме предложения от банки и ви помагаме да изберете подходящото финансиране според вашите цели и финансов профил — напълно безплатно.",
       highlights: [
         "Безплатна консултация",
         "Дългогодишен опит",
@@ -571,6 +584,21 @@ export const dictionaries: Record<Locale, Dictionary> = {
     freeWhy: {
       title: "Защо консултацията е безплатна?",
       body: "За клиента консултацията и съдействието са без допълнителна такса. Когато е приложимо, възнаграждението на кредитния посредник се заплаща от кредитора съгласно договорните отношения между страните.",
+      href: "/zashto-e-bezplatno",
+      linkLabel: "Защо е безплатно",
+      moreLabel: "Прочетете повече",
+    },
+    freeWhyPage: {
+      metaTitle: "Защо е безплатно | СМ Кредит Консулт",
+      metaDescription:
+        "Защо кредитната консултация е безплатна за клиента и как се заплаща възнаграждението на посредника.",
+      title: "Защо консултацията е безплатна?",
+      lead: "Кратък и ясен отговор — без скрити такси за вас при консултацията и съдействието.",
+      body: [
+        "За клиента консултацията и съдействието са без допълнителна такса. Не плащате отделно за разговор, сравнение на оферти или помощ с документите през нас.",
+        "Когато е приложимо, възнаграждението на кредитния посредник се заплаща от кредитора съгласно договорните отношения между страните.",
+        "Услугата не ви обвързва да кандидатствате или да изберете конкретна банка. Целта е да вземете информирано решение с ясна картина на условията.",
+      ],
     },
     form: {
       name: "Име и фамилия",
@@ -652,7 +680,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       support:
         "We compare bank offers and help you choose the right financing for your goals and financial profile — completely free.",
       highlights: [
-        "Completely free for you",
+        "Free consultation",
         "Years of experience",
         "Fully online",
       ],
@@ -880,6 +908,21 @@ export const dictionaries: Record<Locale, Dictionary> = {
     freeWhy: {
       title: "Why is the consultation free?",
       body: "For the client, consultation and support come with no extra fee. When applicable, the credit intermediary’s remuneration is paid by the lender under the contractual arrangements between the parties.",
+      href: "/zashto-e-bezplatno",
+      linkLabel: "Why it’s free",
+      moreLabel: "Read more",
+    },
+    freeWhyPage: {
+      metaTitle: "Why it’s free | SM Credit Consult",
+      metaDescription:
+        "Why credit consultation is free for the client and how the intermediary’s remuneration is paid.",
+      title: "Why is the consultation free?",
+      lead: "A short, clear answer — no hidden fees for you for consultation and support.",
+      body: [
+        "For the client, consultation and support come with no extra fee. You do not pay separately for a conversation, offer comparison, or document help through us.",
+        "When applicable, the credit intermediary’s remuneration is paid by the lender under the contractual arrangements between the parties.",
+        "The service does not obligate you to apply or choose a specific bank. The goal is an informed decision with a clear picture of the terms.",
+      ],
     },
     form: {
       name: "Full name",

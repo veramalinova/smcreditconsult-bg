@@ -13,6 +13,7 @@
 | `/uslugi/firmen-kredit` | Фирмен кредит |
 | `/kak-rabotim` | Процес |
 | `/za-nas` | За нас |
+| `/zashto-e-bezplatno` | Защо е безплатно |
 | `/polezno` | Съвети |
 | `/vaprosi` | Често задавани въпроси |
 | `/konsultaciya` | Безплатна консултация |

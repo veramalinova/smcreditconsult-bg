@@ -9,6 +9,7 @@ const paths = [
   "/uslugi/firmen-kredit",
   "/kak-rabotim",
   "/za-nas",
+  "/zashto-e-bezplatno",
   "/polezno",
   "/vaprosi",
   "/konsultaciya",
