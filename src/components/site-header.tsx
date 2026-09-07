@@ -6,7 +6,7 @@ import { useState } from "react";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { useLanguage } from "@/components/language-provider";
 import { PhoneLink } from "@/components/phone-link";
-import { getContactPhone } from "@/lib/contact";
+import { getPrimaryContactPhone } from "@/lib/contact";
 
 export function SiteHeader({
   variant = "solid",
@@ -17,7 +17,7 @@ export function SiteHeader({
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const light = variant === "transparent";
-  const phone = getContactPhone(locale);
+  const phone = getPrimaryContactPhone(locale);
 
   const links = [
     { href: "/uslugi", label: t.nav.services },

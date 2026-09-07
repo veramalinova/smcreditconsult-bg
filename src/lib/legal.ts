@@ -1,5 +1,5 @@
 import type { Locale } from "@/lib/i18n";
-import { CONTACT_EMAIL, CONTACT_PHONE_BG, CONTACT_PHONE_EN } from "@/lib/contact";
+import { CONTACT_EMAIL, CONTACT_PHONES_BG, CONTACT_PHONES_EN } from "@/lib/contact";
 
 export type LegalPageId = "privacy" | "cookies" | "terms";
 
@@ -35,7 +35,7 @@ const pages: Record<Locale, Record<LegalPageId, LegalPageContent>> = {
           title: "Кой сме ние",
           paragraphs: [
             "СМ Кредит Консулт предоставя кредитни консултации. Не сме банка и не отпускаме кредити. Администратор на личните данни, събрани чрез сайта, е СМ Кредит Консулт.",
-            `За въпроси относно личните данни: ${CONTACT_EMAIL}, телефон ${CONTACT_PHONE_BG.display}.`,
+            `За въпроси относно личните данни: ${CONTACT_EMAIL}, телефон ${CONTACT_PHONES_BG.map((p) => p.display).join(" / ")}.`,
           ],
         },
         {
@@ -159,7 +159,7 @@ const pages: Record<Locale, Record<LegalPageId, LegalPageContent>> = {
           title: "Who we are",
           paragraphs: [
             "SM Credit Consult provides credit consulting. We are not a bank and we do not issue loans. SM Credit Consult is the controller of personal data collected through this website.",
-            `For privacy questions: ${CONTACT_EMAIL}, phone ${CONTACT_PHONE_EN.display}.`,
+            `For privacy questions: ${CONTACT_EMAIL}, phone ${CONTACT_PHONES_EN.map((p) => p.display).join(" / ")}.`,
           ],
         },
         {

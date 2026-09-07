@@ -2,18 +2,15 @@
 
 import Link from "next/link";
 import { useLanguage } from "@/components/language-provider";
-import { PhoneLink } from "@/components/phone-link";
-import {
-  CONTACT_EMAIL,
-  getContactPhone,
-} from "@/lib/contact";
+import { PhoneLink, PhoneList } from "@/components/phone-link";
+import { CONTACT_EMAIL, getPrimaryContactPhone } from "@/lib/contact";
 import { serviceOrder } from "@/lib/i18n";
 import { getLegalNav } from "@/lib/legal";
 
 export function SiteFooter() {
   const { locale, t } = useLanguage();
   const legalLinks = getLegalNav(locale);
-  const phone = getContactPhone(locale);
+  const phone = getPrimaryContactPhone(locale);
 
   return (
     <footer className="border-t border-white/10 bg-ink text-white/70">
@@ -87,9 +84,10 @@ export function SiteFooter() {
           <div className="mt-5 space-y-4 text-sm">
             <div>
               <p className="text-white/75">{t.footer.phoneLabel}</p>
-              <PhoneLink className="mt-1 block font-display text-xl text-white sm:text-2xl">
-                {phone.display}
-              </PhoneLink>
+              <PhoneList
+                className="mt-1"
+                itemClassName="block font-display text-xl text-white sm:text-2xl"
+              />
             </div>
 
             <div>

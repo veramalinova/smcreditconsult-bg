@@ -2,7 +2,7 @@
 
 import { ConsultForm } from "@/components/consult-form";
 import { useLanguage } from "@/components/language-provider";
-import { PhoneLink } from "@/components/phone-link";
+import { PhoneList } from "@/components/phone-link";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { usePageMeta } from "@/components/use-page-meta";
@@ -52,7 +52,10 @@ export default function ConsultPage() {
                     {t.consultPage.phoneLabel}
                   </dt>
                   <dd>
-                    <PhoneLink className="transition-colors hover:text-jade" />
+                    <PhoneList
+                      className="mt-1"
+                      itemClassName="block transition-colors hover:text-jade"
+                    />
                   </dd>
                 </div>
                 <div>
