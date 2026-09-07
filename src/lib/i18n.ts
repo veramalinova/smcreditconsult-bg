@@ -394,32 +394,37 @@ export const dictionaries: Record<Locale, Dictionary> = {
     aboutPage: {
       metaTitle: "За нас — СМ Кредит Консулт",
       metaDescription:
-        "Независима кредитна консултация с дългогодишен опит — ипотечен, потребителски и фирмен кредит, включително рефинансиране. Безплатно за клиента.",
+        "Зад СМ Кредит Консулт стоят хора с дългогодишен опит в кредитирането. Независима и безплатна консултация за ипотечен, потребителски и фирмен кредит.",
       title: "За СМ Кредит Консулт",
-      lead: "Независим кредитен консултант с дългогодишен опит — за хора, които искат най-подходящото решение преди да подпишат.",
+      lead: "Зад сайта стоят хора с дългогодишен опит в кредитирането — за клиенти, които искат яснота и спокойствие преди да подпишат.",
       body: [
-        "СМ Кредит Консулт помага при избор на ипотечен, потребителски и фирмен кредит — включително рефинансиране. С дългогодишен опит обясняваме условията на разбираем език, а целият процес може да е изцяло онлайн и по телефона — без губене на време с ходене в офис.",
-        "Работим с жилищно, потребителско и фирмено финансиране — включително рефинансиране — там разликите между офертите са големи, а грешният избор излиза скъпо във времето.",
-        "Консултацията е безплатна за вас. Целта ни е да вземете информирано решение и да кандидатствате подготвени.",
+        "СМ Кредит Консулт е независима кредитна консултация. Зад услугата стоят специалисти с дългогодишен опит в кредитирането — хора, които познават как реално работят банковите процеси, как се оценява кредитен профил и къде най-често се губят време и пари.",
+        "Помагаме при избор на ипотечен, потребителски и фирмен кредит — включително рефинансиране. Обясняваме условията на разбираем език: лихва, такси, ГПР, месечна вноска и какво реално се изисква като документи. Целият процес може да е изцяло онлайн и по телефона — без губене на време с ходене в офис.",
+        "Опитът ни е практически: сравнение на оферти, подреждане на документите, типични причини за отказ или забавяне и как да кандидатствате подготвени. Не сме банка и не отпускаме кредити — ролята ни е да ви ориентираме независимо, без натиск към конкретна институция.",
+        "Консултацията е безплатна за вас. Целта ни е да вземете информирано решение и да кандидатствате спокойно — с ясна картина какво подписвате и защо.",
       ],
       imageAlt: "Консултант и клиент преглеждат документи заедно",
-      valuesTitle: "Какво ценим",
+      valuesTitle: "На какво можете да разчитате",
       values: [
         {
-          title: "Дългогодишен опит",
-          body: "Познаваме банковите процеси и типичните капани при кредит — помагаме ви да избегнете скъпи грешки.",
+          title: "Дългогодишен опит в кредитирането",
+          body: "Зад консултацията стоят хора, които са минавали през реални кредитни казуси — ипотека, потребителски и фирмен кредит, включително рефинансиране. Познаваме банковите изисквания и типичните капани, за да ви спестим скъпи грешки.",
         },
         {
-          title: "Яснота",
-          body: "Говорим с числа и срокове, не с общи обещания.",
+          title: "Доверие чрез яснота",
+          body: "Говорим с числа, срокове и условия — не с общи обещания. Ако даден продукт не ви пасва или рискът е висок, го казваме директно.",
         },
         {
           title: "Независимост",
-          body: "Сравняваме варианти според вашия профил, не според удобството на една банка.",
+          body: "Сравняваме варианти според вашия профил и цел, не според удобството на една банка. Вие избирате офертата, която ви устройва.",
+        },
+        {
+          title: "Без натиск, с отговорност",
+          body: "Консултацията не ви обвързва да кандидатствате. Работим спокойно, стъпка по стъпка, докато имате достатъчно яснота, за да вземете решение.",
         },
         {
           title: "Спестете време",
-          body: "Целият процес може да мине дистанционно — без губене на време с ходене в офис.",
+          body: "Целият процес може да мине дистанционно — разговор, анализ, сравнение и съдействие при кандидатстване, без губене на време с ходене в офис.",
         },
       ],
     },
@@ -661,32 +666,37 @@ export const dictionaries: Record<Locale, Dictionary> = {
     aboutPage: {
       metaTitle: "About us — SM Credit Consult",
       metaDescription:
-        "Independent credit consulting with years of experience — mortgages, consumer loans, and business loans, including refinancing. Free for the client.",
+        "Behind SM Credit Consult are people with years of experience in lending. Independent, free consultation for mortgages, consumer loans, and business loans.",
       title: "About SM Credit Consult",
-      lead: "An independent credit consultant with years of experience — for people who want the most suitable solution before they sign.",
+      lead: "Behind the site are people with years of experience in lending — for clients who want clarity and peace of mind before they sign.",
       body: [
-        "SM Credit Consult helps with mortgage, consumer, and business loans — including refinancing. With years of experience, we explain the terms in plain language, and the whole process can be fully online and by phone — without wasting time visiting an office.",
-        "We work with home, consumer, and business financing — including refinancing — where offer differences are large, and a poor choice costs a lot over time.",
-        "Consultation is free for you. Our goal is an informed decision and a well-prepared application.",
+        "SM Credit Consult is independent credit consulting. Behind the service are specialists with years of experience in lending — people who know how bank processes really work, how a credit profile is assessed, and where time and money are most often lost.",
+        "We help with mortgage, consumer, and business loans — including refinancing. We explain the terms in plain language: rate, fees, APR, monthly payment, and what documents are actually required. The whole process can be fully online and by phone — without wasting time visiting an office.",
+        "Our experience is practical: comparing offers, organizing the file, common reasons for refusal or delay, and how to apply prepared. We are not a bank and we do not issue loans — our role is to guide you independently, without pressure toward a specific institution.",
+        "Consultation is free for you. Our goal is an informed decision and a calm application — with a clear picture of what you are signing and why.",
       ],
       imageAlt: "Advisor and client reviewing documents together",
-      valuesTitle: "What we value",
+      valuesTitle: "What you can rely on",
       values: [
         {
-          title: "Years of experience",
-          body: "We know bank processes and the common pitfalls with loans — we help you avoid costly mistakes.",
+          title: "Years of experience in lending",
+          body: "Behind the consultation are people who have worked through real credit cases — mortgages, consumer and business loans, including refinancing. We know bank requirements and common pitfalls, so we can help you avoid costly mistakes.",
         },
         {
-          title: "Clarity",
-          body: "We talk in numbers and timelines, not vague promises.",
+          title: "Trust through clarity",
+          body: "We talk in numbers, timelines, and terms — not vague promises. If a product does not fit or the risk is high, we say so directly.",
         },
         {
           title: "Independence",
-          body: "We compare options for your profile, not for one bank’s convenience.",
+          body: "We compare options for your profile and goal, not for one bank’s convenience. You choose the offer that fits.",
+        },
+        {
+          title: "No pressure, with responsibility",
+          body: "The consultation does not obligate you to apply. We work calmly, step by step, until you have enough clarity to decide.",
         },
         {
           title: "Save time",
-          body: "The whole process can happen remotely — without wasting time visiting an office.",
+          body: "The whole process can happen remotely — conversation, analysis, comparison, and application support, without wasting time visiting an office.",
         },
       ],
     },
