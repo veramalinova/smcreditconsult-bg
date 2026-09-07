@@ -7,9 +7,10 @@ export type ContactPhone = {
   display: string;
 };
 
-/** Bulgarian contact number — one primary number site-wide. */
+/** Bulgarian contact numbers. */
 export const CONTACT_PHONES_BG: readonly ContactPhone[] = [
   { tel: "+359889501062", display: "+359 889 501 062" },
+  { tel: "+359899924208", display: "+359 899 924 208" },
 ] as const;
 
 /** English / international contact number. */
