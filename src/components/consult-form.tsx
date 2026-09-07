@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState, type FormEvent } from "react";
 import { useLanguage } from "@/components/language-provider";
 import { Button } from "@/components/ui/button";
@@ -7,11 +8,18 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
-type FormStatus = "idle" | "submitting" | "success" | "error" | "invalid";
+type FormStatus =
+  | "idle"
+  | "submitting"
+  | "success"
+  | "error"
+  | "invalid"
+  | "privacy";
 
 export function ConsultForm() {
   const { t } = useLanguage();
   const [status, setStatus] = useState<FormStatus>("idle");
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -29,11 +37,22 @@ export function ConsultForm() {
       return;
     }
 
+    if (!privacyAccepted) {
+      setStatus("privacy");
+      return;
+    }
+
     try {
       const response = await fetch("/api/consult", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, phone, goal }),
+        body: JSON.stringify({
+          name,
+          email,
+          phone,
+          goal,
+          privacyAccepted: true,
+        }),
       });
 
       if (!response.ok) {
@@ -42,6 +61,7 @@ export function ConsultForm() {
       }
 
       setStatus("success");
+      setPrivacyAccepted(false);
       form.reset();
     } catch {
       setStatus("error");
@@ -127,9 +147,42 @@ export function ConsultForm() {
         />
       </div>
 
+      <div className="flex items-start gap-3">
+        <input
+          id="privacy"
+          name="privacy"
+          type="checkbox"
+          checked={privacyAccepted}
+          onChange={(event) => {
+            setPrivacyAccepted(event.target.checked);
+            if (status === "privacy") setStatus("idle");
+          }}
+          required
+          className="mt-1 size-4 shrink-0 accent-jade"
+          aria-invalid={status === "privacy" || undefined}
+        />
+        <label htmlFor="privacy" className="text-sm leading-relaxed text-muted-foreground">
+          {t.form.privacyAckBefore}
+          <Link
+            href="/politika-za-poveritelnost"
+            className="font-medium text-ink underline decoration-jade/50 underline-offset-2 transition-colors hover:text-jade"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {t.form.privacyAckLink}
+          </Link>
+        </label>
+      </div>
+
       {status === "invalid" ? (
         <p className="text-sm text-destructive" role="alert">
           {t.form.invalid}
+        </p>
+      ) : null}
+
+      {status === "privacy" ? (
+        <p className="text-sm text-destructive" role="alert">
+          {t.form.privacyRequired}
         </p>
       ) : null}
 

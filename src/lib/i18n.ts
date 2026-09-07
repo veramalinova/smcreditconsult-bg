@@ -108,6 +108,9 @@ export type Dictionary = {
     phonePlaceholder: string;
     goal: string;
     goalPlaceholder: string;
+    privacyAckBefore: string;
+    privacyAckLink: string;
+    privacyRequired: string;
     submit: string;
     submitting: string;
     invalid: string;
@@ -533,6 +536,10 @@ export const dictionaries: Record<Locale, Dictionary> = {
       phonePlaceholder: "0888 000 000",
       goal: "Какъв кредит ви интересува?",
       goalPlaceholder: "Ипотечен, потребителски, фирмен — включително рефинансиране…",
+      privacyAckBefore: "Запознах се с ",
+      privacyAckLink: "Политиката за поверителност",
+      privacyRequired:
+        "Моля, потвърдете, че сте се запознали с Политиката за поверителност.",
       submit: "Заяви безплатна консултация",
       submitting: "Изпращане…",
       invalid: "Моля, попълнете име, имейл и какъв кредит ви интересува.",
@@ -814,6 +821,9 @@ export const dictionaries: Record<Locale, Dictionary> = {
       phonePlaceholder: "0888 000 000",
       goal: "Which loan are you interested in?",
       goalPlaceholder: "Mortgage, consumer, or business — including refinancing…",
+      privacyAckBefore: "I have read the ",
+      privacyAckLink: "Privacy Policy",
+      privacyRequired: "Please confirm that you have read the Privacy Policy.",
       submit: "Request a free consultation",
       submitting: "Sending…",
       invalid: "Please fill in your name, email, and which loan you need.",

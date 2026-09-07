@@ -7,6 +7,7 @@ type ConsultPayload = {
   email?: string;
   phone?: string;
   goal?: string;
+  privacyAccepted?: boolean;
 };
 
 export async function POST(request: Request) {
@@ -25,10 +26,18 @@ export async function POST(request: Request) {
   const email = String(body.email ?? "").trim();
   const phone = String(body.phone ?? "").trim();
   const goal = String(body.goal ?? "").trim();
+  const privacyAccepted = body.privacyAccepted === true;
 
   if (!name || !email || !goal) {
     return NextResponse.json(
       { ok: false, error: "missing_fields" },
+      { status: 400 },
+    );
+  }
+
+  if (!privacyAccepted) {
+    return NextResponse.json(
+      { ok: false, error: "privacy_required" },
       { status: 400 },
     );
   }
