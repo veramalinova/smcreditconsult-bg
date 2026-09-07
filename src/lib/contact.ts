@@ -7,13 +7,12 @@ export type ContactPhone = {
   display: string;
 };
 
-/** Bulgarian contact numbers. */
+/** Bulgarian contact number — one primary number site-wide. */
 export const CONTACT_PHONES_BG: readonly ContactPhone[] = [
   { tel: "+359889501062", display: "+359 889 501 062" },
-  { tel: "+359899924208", display: "+359 899 924 208" },
 ] as const;
 
-/** English / international contact numbers. */
+/** English / international contact number. */
 export const CONTACT_PHONES_EN: readonly ContactPhone[] = [
   { tel: "+359877059038", display: "+359 877 059 038" },
 ] as const;
@@ -27,7 +26,6 @@ export function getPrimaryContactPhone(locale: Locale = "bg"): ContactPhone {
   return getContactPhones(locale)[0];
 }
 
-/** @deprecated Prefer getPrimaryContactPhone / getContactPhones. */
 export const CONTACT_PHONE_BG = CONTACT_PHONES_BG[0];
 export const CONTACT_PHONE_EN = CONTACT_PHONES_EN[0];
 export const CONTACT_PHONE_TEL = CONTACT_PHONE_BG.tel;
