@@ -6,17 +6,18 @@ import { useState } from "react";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { useLanguage } from "@/components/language-provider";
 import { PhoneLink } from "@/components/phone-link";
-import { CONTACT_PHONE_DISPLAY } from "@/lib/contact";
+import { getContactPhone } from "@/lib/contact";
 
 export function SiteHeader({
   variant = "solid",
 }: {
   variant?: "solid" | "transparent";
 }) {
-  const { t } = useLanguage();
+  const { locale, t } = useLanguage();
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const light = variant === "transparent";
+  const phone = getContactPhone(locale);
 
   const links = [
     { href: "/uslugi", label: t.nav.services },
@@ -152,7 +153,7 @@ export function SiteHeader({
               className="mt-2 rounded-md px-3 py-3 font-medium hover:bg-black/5"
               onClick={() => setOpen(false)}
             >
-              {`${t.nav.phoneAria}: ${CONTACT_PHONE_DISPLAY}`}
+              {`${t.nav.phoneAria}: ${phone.display}`}
             </PhoneLink>
             <Link
               href="/konsultaciya"

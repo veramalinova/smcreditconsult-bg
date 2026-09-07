@@ -1,8 +1,8 @@
+"use client";
+
 import type { ReactNode } from "react";
-import {
-  CONTACT_PHONE_DISPLAY,
-  CONTACT_PHONE_TEL,
-} from "@/lib/contact";
+import { useLanguage } from "@/components/language-provider";
+import { getContactPhone } from "@/lib/contact";
 import { cn } from "@/lib/utils";
 
 type PhoneLinkProps = {
@@ -17,6 +17,7 @@ type PhoneLinkProps = {
 /**
  * On phones, tapping opens the dialer.
  * On desktop, the number is plain text so browsers do not prompt for an app.
+ * Number follows the active language (BG / EN).
  */
 export function PhoneLink({
   className,
@@ -25,12 +26,14 @@ export function PhoneLink({
   "aria-label": ariaLabel,
   onClick,
 }: PhoneLinkProps) {
-  const label = children ?? CONTACT_PHONE_DISPLAY;
+  const { locale } = useLanguage();
+  const phone = getContactPhone(locale);
+  const label = children ?? phone.display;
 
   if (forceCall) {
     return (
       <a
-        href={`tel:${CONTACT_PHONE_TEL}`}
+        href={`tel:${phone.tel}`}
         className={className}
         aria-label={ariaLabel}
         onClick={onClick}
@@ -43,7 +46,7 @@ export function PhoneLink({
   return (
     <>
       <a
-        href={`tel:${CONTACT_PHONE_TEL}`}
+        href={`tel:${phone.tel}`}
         className={cn(className, "md:hidden")}
         aria-label={ariaLabel}
         onClick={onClick}

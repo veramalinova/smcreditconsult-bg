@@ -5,7 +5,7 @@ import { useLanguage } from "@/components/language-provider";
 import { PhoneLink } from "@/components/phone-link";
 import {
   CONTACT_EMAIL,
-  CONTACT_PHONE_DISPLAY,
+  getContactPhone,
 } from "@/lib/contact";
 import { serviceOrder } from "@/lib/i18n";
 import { getLegalNav } from "@/lib/legal";
@@ -13,6 +13,7 @@ import { getLegalNav } from "@/lib/legal";
 export function SiteFooter() {
   const { locale, t } = useLanguage();
   const legalLinks = getLegalNav(locale);
+  const phone = getContactPhone(locale);
 
   return (
     <footer className="border-t border-white/10 bg-ink text-white/70">
@@ -87,7 +88,7 @@ export function SiteFooter() {
             <div>
               <p className="text-white/75">{t.footer.phoneLabel}</p>
               <PhoneLink className="mt-1 block font-display text-xl text-white sm:text-2xl">
-                {CONTACT_PHONE_DISPLAY}
+                {phone.display}
               </PhoneLink>
             </div>
 
