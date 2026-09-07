@@ -49,7 +49,8 @@ const pages: Record<Locale, Record<LegalPageId, LegalPageContent>> = {
           title: "За какво ги използваме",
           paragraphs: [
             "Данните се използват само за връзка с вас, подготовка на консултацията и съдействие при сравнение на банкови оферти — според вашата заявка.",
-            "Не продаваме лични данни. Не ги предоставяме на трети страни за маркетинг. Ако е нужно да споделим информация с банка във връзка с вашето кандидатстване, това става с ваше знание и за конкретната цел.",
+            "Ако сте приели бисквитките за Analytics, Google може да получава технически данни за посещението (напр. страница, устройство) според настройките на GA4. Не продаваме лични данни и не ги предоставяме на трети страни за маркетинг.",
+            "Ако е нужно да споделим информация с банка във връзка с вашето кандидатстване, това става с ваше знание и за конкретната цел.",
           ],
         },
         {
@@ -80,20 +81,22 @@ const pages: Record<Locale, Record<LegalPageId, LegalPageContent>> = {
         {
           title: "Какво използваме",
           paragraphs: [
-            "Сайтът работи с минимални технически средства. Не използваме рекламни или аналитични бисквитки на трети страни.",
-            "Избраният език (БГ/EN) се запазва в локалното хранилище на браузъра (localStorage), за да не се налага да го избирате отново при следващо посещение.",
+            "Сайтът запазва избрания език (БГ/EN) в локалното хранилище на браузъра (localStorage), за да не се налага да го избирате отново.",
+            "Ако дадете съгласие, може да се зареди Google Analytics (GA4) за статистика на посещенията и дали формата за консултация е изпратена успешно. Analytics се включва само след „Приемам“ в банера за бисквитки.",
+            "Не използваме рекламни бисквитки за ремаркетинг.",
           ],
         },
         {
           title: "Защо е нужно",
           paragraphs: [
-            "Това е техническа настройка за удобство. Без нея езикът би се връщал към подразбиращия се при всяко зареждане.",
+            "Езикът е техническа настройка за удобство. Без нея се връща към подразбиращия се при всяко зареждане.",
+            "Analytics (при съгласие) помага да видим кои страници се ползват и дали заявките за консултация минават успешно — без да продаваме данни.",
           ],
         },
         {
           title: "Как да управлявате настройките",
           paragraphs: [
-            "Можете да изчистите localStorage и бисквитките от настройките на браузъра си. Това няма да попречи на основното ползване на сайта, но езикът може да се нулира.",
+            "Можете да изчистите localStorage и бисквитките от настройките на браузъра си. Това няма да попречи на основното ползване на сайта, но езикът и изборът за Analytics може да се нулират.",
             "Ако в бъдеще добавим допълнителни бисквитки, ще актуализираме тази страница.",
           ],
         },
@@ -170,7 +173,8 @@ const pages: Record<Locale, Record<LegalPageId, LegalPageContent>> = {
           title: "How we use it",
           paragraphs: [
             "We use the data only to contact you, prepare the consultation, and help compare bank offers — according to your request.",
-            "We do not sell personal data. We do not share it with third parties for marketing. If information needs to be shared with a bank for your application, that happens with your knowledge and for that specific purpose.",
+            "If you accepted Analytics cookies, Google may receive technical visit data (e.g. page, device) according to GA4 settings. We do not sell personal data and do not provide it to third parties for marketing.",
+            "If information needs to be shared with a bank for your application, that happens with your knowledge and for that specific purpose.",
           ],
         },
         {
@@ -201,20 +205,22 @@ const pages: Record<Locale, Record<LegalPageId, LegalPageContent>> = {
         {
           title: "What we use",
           paragraphs: [
-            "The site uses minimal technical means. We do not use third-party advertising or analytics cookies.",
-            "Your language choice (BG/EN) is saved in the browser’s localStorage so you do not have to select it again on the next visit.",
+            "The site saves your language choice (BG/EN) in the browser’s localStorage so you do not have to select it again.",
+            "If you consent, Google Analytics (GA4) may load for visit statistics and to see whether the consultation form was submitted successfully. Analytics only runs after you tap “Accept” on the cookie banner.",
+            "We do not use advertising cookies for remarketing.",
           ],
         },
         {
           title: "Why we need it",
           paragraphs: [
-            "This is a convenience setting. Without it, the language would reset to the default on every load.",
+            "Language is a technical convenience setting. Without it, the site returns to the default on every load.",
+            "Analytics (with consent) helps us see which pages are used and whether consultation requests succeed — we do not sell data.",
           ],
         },
         {
           title: "How to manage settings",
           paragraphs: [
-            "You can clear localStorage and cookies in your browser settings. That will not block basic use of the site, but the language may reset.",
+            "You can clear localStorage and cookies in your browser settings. That will not block basic use of the site, but the language and consent choice may reset.",
             "If we add additional cookies later, we will update this page.",
           ],
         },

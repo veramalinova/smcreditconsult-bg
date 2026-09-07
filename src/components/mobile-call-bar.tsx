@@ -2,6 +2,7 @@
 
 import { useLanguage } from "@/components/language-provider";
 import { PhoneLink } from "@/components/phone-link";
+import { trackPhoneClick } from "@/lib/analytics";
 
 export function MobileCallBar() {
   const { t } = useLanguage();
@@ -12,6 +13,7 @@ export function MobileCallBar() {
         <PhoneLink
           forceCall
           aria-label={t.mobileCall.aria}
+          onClick={trackPhoneClick}
           className="pointer-events-auto flex h-12 w-full items-center justify-center gap-2 rounded-md bg-white px-4 text-sm font-semibold text-ink transition-opacity active:opacity-90"
         >
           <svg

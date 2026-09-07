@@ -141,6 +141,12 @@ export type Dictionary = {
     home: string;
     consult: string;
   };
+  analytics: {
+    banner: string;
+    accept: string;
+    decline: string;
+    more: string;
+  };
   lang: { label: string; bg: string; en: string };
 };
 
@@ -610,6 +616,13 @@ export const dictionaries: Record<Locale, Dictionary> = {
       home: "Към началото",
       consult: "Безплатна консултация",
     },
+    analytics: {
+      banner:
+        "Използваме Google Analytics само след ваше съгласие, за да разберем как се ползва сайтът и дали формата за консултация работи добре.",
+      accept: "Приемам",
+      decline: "Отказвам",
+      more: "Повече за бисквитките",
+    },
     lang: { label: "Език", bg: "БГ", en: "EN" },
   },
   en: {
@@ -909,6 +922,13 @@ export const dictionaries: Record<Locale, Dictionary> = {
       body: "Check the address or go back home — or request a free consultation.",
       home: "Back home",
       consult: "Free consultation",
+    },
+    analytics: {
+      banner:
+        "We use Google Analytics only with your consent, to understand how the site is used and whether the consultation form works well.",
+      accept: "Accept",
+      decline: "Decline",
+      more: "More about cookies",
     },
     lang: { label: "Language", bg: "BG", en: "EN" },
   },

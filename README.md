@@ -64,3 +64,18 @@ GMAIL_APP_PASSWORD=xxxx xxxx xxxx xxxx
 - Set `NEXT_PUBLIC_SITE_URL=https://smcreditconsult-bg.com` (already the project default)
 - Company-domain email (e.g. `office@…`) can replace Gmail in `src/lib/contact.ts` once DNS/mailbox are ready
 
+### Analytics + conversions (GA4)
+
+1. Отвори [Google Analytics](https://analytics.google.com) → **Admin** → създай property (GA4) за `smcreditconsult-bg.com`.
+2. **Data streams** → **Web** → копирай **Measurement ID** (`G-XXXXXXXXXX`).
+3. Във **Vercel** → Project → Settings → Environment Variables добави:
+   - `NEXT_PUBLIC_GA_MEASUREMENT_ID` = `G-XXXXXXXXXX` (Environment: Production, тип **Config** / plain, не Secret — трябва да е публичен)
+4. **Redeploy** сайта.
+5. В GA4 → **Admin** → **Events** потвърди:
+   - `generate_lead` — успешна форма за консултация
+   - `click_to_call` — клик на мобилния бутон за обаждане  
+   Маркирай `generate_lead` като **Key event** (конверсия).
+6. На сайта analytics се зарежда **само след „Приемам“** в банера за бисквитки.
+
+Без `NEXT_PUBLIC_GA_MEASUREMENT_ID` analytics е изключен (банерът не се показва).
+

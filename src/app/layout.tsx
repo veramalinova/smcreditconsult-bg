@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Literata, Manrope } from "next/font/google";
+import { Analytics } from "@/components/analytics";
 import { LanguageProvider } from "@/components/language-provider";
 import { MobileCallBar } from "@/components/mobile-call-bar";
 import { dictionaries } from "@/lib/i18n";
@@ -67,6 +68,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <LanguageProvider>
           {children}
           <MobileCallBar />
+          <Analytics />
         </LanguageProvider>
       </body>
     </html>
