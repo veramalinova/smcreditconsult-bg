@@ -2,15 +2,14 @@
 
 import Link from "next/link";
 import { useLanguage } from "@/components/language-provider";
-import { PhoneLink, PhoneList } from "@/components/phone-link";
-import { CONTACT_EMAIL, getPrimaryContactPhone } from "@/lib/contact";
+import { PhoneList } from "@/components/phone-link";
+import { CONTACT_EMAIL } from "@/lib/contact";
 import { serviceOrder } from "@/lib/i18n";
 import { getLegalNav } from "@/lib/legal";
 
 export function SiteFooter() {
   const { locale, t } = useLanguage();
   const legalLinks = getLegalNav(locale);
-  const phone = getPrimaryContactPhone(locale);
 
   return (
     <footer className="border-t border-white/10 bg-ink text-white/70">
