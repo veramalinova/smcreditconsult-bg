@@ -14,7 +14,7 @@ export const CONTACT_PHONES_BG: readonly ContactPhone[] = [
 
 /** English / international contact number. */
 export const CONTACT_PHONES_EN: readonly ContactPhone[] = [
-  { tel: "+359877059038", display: "+359 877 059 038" },
+  { tel: "+359897059038", display: "+359 897 059 038" },
 ] as const;
 
 export function getContactPhones(locale: Locale = "bg"): readonly ContactPhone[] {
