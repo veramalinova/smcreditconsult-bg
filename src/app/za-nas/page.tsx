@@ -12,6 +12,8 @@ export default function AboutPage() {
   const { t } = useLanguage();
   usePageMeta(t.aboutPage.metaTitle, t.aboutPage.metaDescription);
 
+  const [first, second, ...rest] = t.aboutPage.body;
+
   return (
     <div className="flex min-h-full flex-col">
       <SiteHeader />
@@ -27,24 +29,51 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="py-16 sm:py-20">
-          <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 sm:px-8 lg:grid-cols-2 lg:gap-16">
-            <div className="relative aspect-[4/3] overflow-hidden">
+        <section className="pt-10 sm:pt-12">
+          <div className="mx-auto max-w-6xl px-5 sm:px-8">
+            <div className="relative aspect-[21/9] min-h-[220px] overflow-hidden sm:aspect-[2.4/1]">
               <Image
                 src="/consult.jpg"
                 alt={t.aboutPage.imageAlt}
                 fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
+                className="object-cover object-center"
+                sizes="(max-width: 1152px) 100vw, 1152px"
               />
-            </div>
-            <div className="space-y-5 text-base leading-relaxed text-muted-foreground sm:text-lg">
-              {t.aboutPage.body.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
             </div>
           </div>
         </section>
+
+        <section className="py-12 sm:py-16">
+          <div className="mx-auto max-w-3xl space-y-5 px-5 text-base leading-relaxed text-muted-foreground sm:px-8 sm:text-lg">
+            {first ? <p>{first}</p> : null}
+            {second ? <p>{second}</p> : null}
+          </div>
+        </section>
+
+        <section className="pb-4">
+          <div className="mx-auto max-w-6xl px-5 sm:px-8">
+            <div className="relative aspect-[21/9] min-h-[200px] overflow-hidden sm:aspect-[2.4/1]">
+              <Image
+                src="/hero.jpg"
+                alt={t.aboutPage.secondaryImageAlt}
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1152px) 100vw, 1152px"
+              />
+            </div>
+          </div>
+        </section>
+
+        {rest.length > 0 ? (
+          <section className="py-12 sm:py-16">
+            <div className="mx-auto max-w-3xl space-y-5 px-5 text-base leading-relaxed text-muted-foreground sm:px-8 sm:text-lg">
+              {rest.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
+          </section>
+        ) : null}
 
         <FreeWhy className="border-t border-border/70 bg-mist" />
 

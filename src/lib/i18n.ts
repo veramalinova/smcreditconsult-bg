@@ -71,6 +71,7 @@ export type Dictionary = {
     lead: string;
     body: string[];
     imageAlt: string;
+    secondaryImageAlt: string;
     valuesTitle: string;
     values: { title: string; body: string }[];
   };
@@ -441,6 +442,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         "Консултацията е безплатна за вас. Целта ни е да вземете информирано решение и да кандидатствате спокойно — с ясна картина какво подписвате и защо.",
       ],
       imageAlt: "Консултант и клиент преглеждат документи заедно",
+      secondaryImageAlt: "Спокоен дом и градска улица при дневна светлина",
       valuesTitle: "На какво можете да разчитате",
       values: [
         {
@@ -749,6 +751,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         "Consultation is free for you. Our goal is an informed decision and a calm application — with a clear picture of what you are signing and why.",
       ],
       imageAlt: "Advisor and client reviewing documents together",
+      secondaryImageAlt: "Calm home and city street in daylight",
       valuesTitle: "What you can rely on",
       values: [
         {
