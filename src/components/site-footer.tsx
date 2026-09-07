@@ -60,6 +60,11 @@ export function SiteFooter() {
               </Link>
             </li>
             <li>
+              <Link href="/vaprosi" className="transition-colors hover:text-white">
+                {t.nav.faq}
+              </Link>
+            </li>
+            <li>
               <Link
                 href="/konsultaciya"
                 className="transition-colors hover:text-white"
