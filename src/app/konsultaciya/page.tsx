@@ -25,6 +25,14 @@ export default function ConsultPage() {
               <p className="mt-4 max-w-md text-lg text-muted-foreground">
                 {t.consultPage.support}
               </p>
+              <div className="mt-6 max-w-md border-l-2 border-jade/50 pl-4">
+                <p className="font-display text-lg text-ink">
+                  {t.freeWhy.title}
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  {t.freeWhy.body}
+                </p>
+              </div>
               <dl className="mt-10 space-y-4 text-sm text-muted-foreground">
                 <div>
                   <dt className="font-medium text-ink">

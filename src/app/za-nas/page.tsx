@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { CtaBand } from "@/components/cta-band";
+import { FreeWhy } from "@/components/free-why";
 import { useLanguage } from "@/components/language-provider";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -45,7 +46,9 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="border-t border-border/70 bg-mist py-16 sm:py-20">
+        <FreeWhy className="border-t border-border/70 bg-mist" />
+
+        <section className="border-t border-border/70 py-16 sm:py-20">
           <div className="mx-auto max-w-6xl px-5 sm:px-8">
             <h2 className="font-display text-3xl text-ink sm:text-4xl">
               {t.aboutPage.valuesTitle}

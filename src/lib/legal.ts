@@ -113,6 +113,7 @@ const pages: Record<Locale, Record<LegalPageId, LegalPageContent>> = {
           title: "Предмет на услугата",
           paragraphs: [
             "СМ Кредит Консулт предоставя ориентация и съдействие при избор и кандидатстване за ипотечен, потребителски или фирмен кредит — включително рефинансиране. Работим с дългогодишен опит. Консултацията за клиента е безплатна.",
+            "За клиента консултацията и съдействието са без допълнителна такса. Когато е приложимо, възнаграждението на кредитния посредник се заплаща от кредитора съгласно договорните отношения между страните.",
             "Не сме кредитор. Окончателното одобрение, условията и отпускането на кредит са изцяло решение на съответната банка или финансов институция.",
           ],
         },
@@ -233,6 +234,7 @@ const pages: Record<Locale, Record<LegalPageId, LegalPageContent>> = {
           title: "Scope of the service",
           paragraphs: [
             "SM Credit Consult provides guidance and support when choosing and applying for a mortgage, consumer, or business loan — including refinancing. We work with years of experience. Consultation is free for the client.",
+            "For the client, consultation and support come with no extra fee. When applicable, the credit intermediary’s remuneration is paid by the lender under the contractual arrangements between the parties.",
             "We are not a lender. Final approval, terms, and disbursement are decided solely by the relevant bank or financial institution.",
           ],
         },

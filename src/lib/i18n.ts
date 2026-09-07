@@ -98,6 +98,7 @@ export type Dictionary = {
     hoursValue: string;
   };
   ctaBand: { title: string; button: string };
+  freeWhy: { title: string; body: string };
   form: {
     name: string;
     namePlaceholder: string;
@@ -347,7 +348,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         },
         {
           title: "Услугата е безплатна за вас",
-          body: "Консултацията и съдействието не ви струват допълнително. Не ви обвързваме с конкретна банка — избирате условията, които ви устройват.",
+          body: "Консултацията и съдействието са без допълнителна такса за вас. Когато е приложимо, възнаграждението на кредитния посредник се заплаща от кредитора съгласно договорните отношения между страните.",
         },
         {
           title: "Изцяло онлайн и по телефона",
@@ -479,7 +480,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       items: [
         {
           q: "Безплатна ли е консултацията?",
-          a: "Да. За вас услугата е безплатна и не ви обвързва да продължите с кандидатстване.",
+          a: "Да. За клиента консултацията и съдействието са без допълнителна такса и не ви обвързват да кандидатствате. Когато е приложимо, възнаграждението на кредитния посредник се заплаща от кредитора съгласно договорните отношения между страните.",
         },
         {
           q: "Защо ми е нужен кредитен консултант?",
@@ -518,6 +519,10 @@ export const dictionaries: Record<Locale, Dictionary> = {
     ctaBand: {
       title: "Имате въпрос за кредит?",
       button: "Поискай безплатна консултация",
+    },
+    freeWhy: {
+      title: "Защо консултацията е безплатна?",
+      body: "За клиента консултацията и съдействието са без допълнителна такса. Когато е приложимо, възнаграждението на кредитния посредник се заплаща от кредитора съгласно договорните отношения между страните.",
     },
     form: {
       name: "Име и фамилия",
@@ -624,7 +629,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         },
         {
           title: "The service is free for you",
-          body: "Consultation and support do not cost you extra. We do not lock you into a specific bank — you choose the terms that fit.",
+          body: "Consultation and support come with no extra fee for you. When applicable, the credit intermediary’s remuneration is paid by the lender under the contractual arrangements between the parties.",
         },
         {
           title: "Fully online and by phone",
@@ -756,7 +761,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       items: [
         {
           q: "Is the consultation free?",
-          a: "Yes. The service is free for you and does not obligate you to apply.",
+          a: "Yes. For the client, consultation and support come with no extra fee and do not obligate you to apply. When applicable, the credit intermediary’s remuneration is paid by the lender under the contractual arrangements between the parties.",
         },
         {
           q: "Why do I need a credit consultant?",
@@ -795,6 +800,10 @@ export const dictionaries: Record<Locale, Dictionary> = {
     ctaBand: {
       title: "Have a question about a loan?",
       button: "Request a free consultation",
+    },
+    freeWhy: {
+      title: "Why is the consultation free?",
+      body: "For the client, consultation and support come with no extra fee. When applicable, the credit intermediary’s remuneration is paid by the lender under the contractual arrangements between the parties.",
     },
     form: {
       name: "Full name",

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CtaBand } from "@/components/cta-band";
+import { FreeWhy } from "@/components/free-why";
 import { useLanguage } from "@/components/language-provider";
 import { serviceIcons } from "@/components/service-icons";
 import { SiteFooter } from "@/components/site-footer";
@@ -167,6 +168,8 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        <FreeWhy className="border-t border-border/70 bg-mist" />
 
         <CtaBand />
       </main>
