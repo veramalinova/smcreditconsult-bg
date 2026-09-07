@@ -164,7 +164,7 @@ const bgServices: Record<ServiceId, ServicePage> = {
       "Планирате строеж или основен ремонт",
       "Искате да рефинансирате съществуваща ипотека",
     ],
-    cta: "Заяви консултация за ипотечен кредит",
+    cta: "Получете безплатна консултация",
   },
   consumer: {
     id: "consumer",
@@ -188,7 +188,7 @@ const bgServices: Record<ServiceId, ServicePage> = {
       "Искате да рефинансирате или обедините задължения",
       "Искате да избегнете скрити такси",
     ],
-    cta: "Заяви консултация за потребителски кредит",
+    cta: "Получете безплатна консултация",
   },
   business: {
     id: "business",
@@ -212,7 +212,7 @@ const bgServices: Record<ServiceId, ServicePage> = {
       "Искате да рефинансирате текущ фирмен кредит",
       "Искате да сравните условия за фирма или ЕТ",
     ],
-    cta: "Заяви консултация за фирмен кредит",
+    cta: "Получете безплатна консултация",
   },
 };
 
@@ -238,7 +238,7 @@ const enServices: Record<ServiceId, ServicePage> = {
       "Planning construction or a major renovation",
       "Wanting to refinance an existing mortgage",
     ],
-    cta: "Request mortgage consultation",
+    cta: "Get a free consultation",
   },
   consumer: {
     id: "consumer",
@@ -261,7 +261,7 @@ const enServices: Record<ServiceId, ServicePage> = {
       "You want to refinance or consolidate debts",
       "You want to avoid hidden fees",
     ],
-    cta: "Request consumer loan consultation",
+    cta: "Get a free consultation",
   },
   business: {
     id: "business",
@@ -285,7 +285,7 @@ const enServices: Record<ServiceId, ServicePage> = {
       "Wanting to refinance an existing business loan",
       "Comparing terms for a company or sole trader",
     ],
-    cta: "Request business loan consultation",
+    cta: "Get a free consultation",
   },
 };
 
@@ -304,7 +304,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       about: "За нас",
       useful: "Полезно",
       faq: "Въпроси",
-      consult: "Консултация",
+      consult: "Безплатна консултация",
       phoneAria: "Обадете се",
     },
     home: {
@@ -537,7 +537,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     },
     ctaBand: {
       title: "Имате въпрос за кредит?",
-      button: "Поискай безплатна консултация",
+      button: "Получете безплатна консултация",
     },
     freeWhy: {
       title: "Защо консултацията е безплатна?",
@@ -556,7 +556,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       privacyAckLink: "Политиката за поверителност",
       privacyRequired:
         "Моля, потвърдете, че сте се запознали с Политиката за поверителност.",
-      submit: "Заяви безплатна консултация",
+      submit: "Получете безплатна консултация",
       submitting: "Изпращане…",
       invalid: "Моля, попълнете име, имейл и какъв кредит ви интересува.",
       error:
@@ -605,7 +605,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       about: "About",
       useful: "Guides",
       faq: "FAQ",
-      consult: "Consultation",
+      consult: "Free consultation",
       phoneAria: "Call us",
     },
     home: {
@@ -838,7 +838,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     },
     ctaBand: {
       title: "Have a question about a loan?",
-      button: "Request a free consultation",
+      button: "Get a free consultation",
     },
     freeWhy: {
       title: "Why is the consultation free?",
@@ -856,7 +856,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       privacyAckBefore: "I have read the ",
       privacyAckLink: "Privacy Policy",
       privacyRequired: "Please confirm that you have read the Privacy Policy.",
-      submit: "Request a free consultation",
+      submit: "Get a free consultation",
       submitting: "Sending…",
       invalid: "Please fill in your name, email, and which loan you need.",
       error:
