@@ -289,7 +289,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     meta: {
       title: "СМ Кредит Консулт — Кредитна консултация",
       description:
-        "Независим кредитен консултант. Ипотечен, потребителски и фирмен кредит — включително рефинансиране. Консултацията е безплатна.",
+        "Независим кредитен консултант с дългогодишен опит. Ипотечен, потребителски и фирмен кредит — включително рефинансиране. Консултацията е безплатна.",
     },
     brand: "СМ Кредит Консулт",
     nav: {
@@ -305,11 +305,11 @@ export const dictionaries: Record<Locale, Dictionary> = {
     home: {
       metaTitle: "СМ Кредит Консулт — Кредитен консултант",
       metaDescription:
-        "Кредитна консултация за ипотечен, потребителски и фирмен кредит — включително рефинансиране.",
+        "Безплатна кредитна консултация с дългогодишен опит — ипотечен, потребителски и фирмен кредит, включително рефинансиране.",
       headline: "Консултация за кредит според вашите нужди",
       support:
-        "Независима кредитна консултация — сравняваме банкови оферти, обясняваме условията и ви водим до кандидатстване. Услугата е напълно безплатна за вас.",
-      cta: "Консултация",
+        "Независима кредитна консултация с дългогодишен опит — сравняваме банкови оферти, обясняваме условията и ви водим до кандидатстване. Услугата е напълно безплатна за вас.",
+      cta: "Безплатна консултация",
       secondaryCta: "Виж услугите",
       imageAlt: "Спокоен дом и градска улица при дневна светлина",
       servicesTitle: "С какво можем да помогнем",
@@ -317,7 +317,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         "Работим с всички основни кредитни продукти — ипотечен, потребителски и фирмен кредит — включително рефинансиране.",
       whyTitle: "Защо кредитен консултант",
       whySupport:
-        "Кредитният консултант ви помага да разберете пазара, да сравните реалните условия и да кандидатствате подготвени — без да обикаляте сам всяка банка. Услугата е напълно безплатна за вас.",
+        "С дългогодишен опит ви помагаме да разберете пазара, да сравните реалните условия и да кандидатствате подготвени — без да обикаляте сам всяка банка. Услугата е напълно безплатна за вас.",
       whyItems: [
         {
           title: "Един разговор вместо много клонове",
@@ -394,17 +394,21 @@ export const dictionaries: Record<Locale, Dictionary> = {
     aboutPage: {
       metaTitle: "За нас — СМ Кредит Консулт",
       metaDescription:
-        "Независима кредитна консултация за ипотечен, потребителски и фирмен кредит — включително рефинансиране. Безплатно за клиента.",
+        "Независима кредитна консултация с дългогодишен опит — ипотечен, потребителски и фирмен кредит, включително рефинансиране. Безплатно за клиента.",
       title: "За СМ Кредит Консулт",
-      lead: "Независим кредитен консултант за хора, които искат най-подходящото решение преди да подпишат.",
+      lead: "Независим кредитен консултант с дългогодишен опит — за хора, които искат най-подходящото решение преди да подпишат.",
       body: [
-        "СМ Кредит Консулт помага при избор на ипотечен, потребителски и фирмен кредит — включително рефинансиране. Обясняваме условията на разбираем език, а целият процес може да е изцяло онлайн и по телефона — без губене на време с ходене в офис.",
+        "СМ Кредит Консулт помага при избор на ипотечен, потребителски и фирмен кредит — включително рефинансиране. С дългогодишен опит обясняваме условията на разбираем език, а целият процес може да е изцяло онлайн и по телефона — без губене на време с ходене в офис.",
         "Работим с жилищно, потребителско и фирмено финансиране — включително рефинансиране — там разликите между офертите са големи, а грешният избор излиза скъпо във времето.",
         "Консултацията е безплатна за вас. Целта ни е да вземете информирано решение и да кандидатствате подготвени.",
       ],
       imageAlt: "Консултант и клиент преглеждат документи заедно",
       valuesTitle: "Какво ценим",
       values: [
+        {
+          title: "Дългогодишен опит",
+          body: "Познаваме банковите процеси и типичните капани при кредит — помагаме ви да избегнете скъпи грешки.",
+        },
         {
           title: "Яснота",
           body: "Говорим с числа и срокове, не с общи обещания.",
@@ -489,12 +493,12 @@ export const dictionaries: Record<Locale, Dictionary> = {
       ],
     },
     consultPage: {
-      metaTitle: "Консултация — СМ Кредит Консулт",
+      metaTitle: "Безплатна консултация — СМ Кредит Консулт",
       metaDescription:
-        "Заявете кредитна консултация за ипотечен, потребителски или фирмен кредит — включително рефинансиране.",
-      title: "Заявете консултация",
+        "Заявете безплатна кредитна консултация за ипотечен, потребителски или фирмен кредит — включително рефинансиране.",
+      title: "Заявете безплатна консултация",
       support:
-        "Напишете ни кратко какво търсите. Отговаряме до един работен ден. Целият процес може да е изцяло онлайн и по телефона.",
+        "Напишете ни кратко какво търсите. Консултацията е безплатна. Отговаряме до един работен ден. Целият процес може да е изцяло онлайн и по телефона.",
       emailLabel: "Имейл",
       phoneLabel: "Телефон",
       hoursLabel: "Работно време",
@@ -502,7 +506,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     },
     ctaBand: {
       title: "Имате въпрос за кредит?",
-      button: "Поискай консултация",
+      button: "Поискай безплатна консултация",
     },
     form: {
       name: "Име и фамилия",
@@ -513,7 +517,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       phonePlaceholder: "0888 000 000",
       goal: "Какъв кредит ви интересува?",
       goalPlaceholder: "Ипотечен, потребителски, фирмен — включително рефинансиране…",
-      submit: "Заяви консултация",
+      submit: "Заяви безплатна консултация",
       submitting: "Изпращане…",
       invalid: "Моля, попълнете име, имейл и какъв кредит ви интересува.",
       error:
@@ -532,7 +536,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       hoursLabel: "Работно време",
       hoursValue: "Понеделник–петък, 9:00–18:00",
       disclaimer:
-        "Независими кредитни консултации. Консултацията е напълно безплатна за клиента.",
+        "Независими кредитни консултации с дългогодишен опит. Консултацията е напълно безплатна за клиента.",
     },
     mobileCall: {
       label: "Обадете се за безплатна консултация",
@@ -544,7 +548,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       title: "Страницата не е намерена",
       body: "Проверете адреса или се върнете към началото — или заявете безплатна консултация.",
       home: "Към началото",
-      consult: "Консултация",
+      consult: "Безплатна консултация",
     },
     lang: { label: "Език", bg: "БГ", en: "EN" },
   },
@@ -552,7 +556,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     meta: {
       title: "SM Credit Consult — Credit consultation",
       description:
-        "Independent credit consultant. Mortgage, consumer, and business loans — including refinancing. Consultation is free.",
+        "Independent credit consultant with years of experience. Mortgage, consumer, and business loans — including refinancing. Consultation is free.",
     },
     brand: "SM Credit Consult",
     nav: {
@@ -568,11 +572,11 @@ export const dictionaries: Record<Locale, Dictionary> = {
     home: {
       metaTitle: "SM Credit Consult — Credit consultant",
       metaDescription:
-        "Credit consultation for mortgages, consumer loans, and business loans — including refinancing.",
+        "Free credit consultation with years of experience — mortgages, consumer loans, and business loans, including refinancing.",
       headline: "Credit consultation tailored to your needs",
       support:
-        "Independent credit consulting — we compare bank offers, explain the terms, and guide you to application. The service is completely free for you.",
-      cta: "Consultation",
+        "Independent credit consulting with years of experience — we compare bank offers, explain the terms, and guide you to application. The service is completely free for you.",
+      cta: "Free consultation",
       secondaryCta: "See services",
       imageAlt: "Calm home and city street in daylight",
       servicesTitle: "How we can help",
@@ -580,7 +584,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         "We cover the main loan products — mortgages, consumer loans, and business loans — including refinancing.",
       whyTitle: "Why use a credit consultant",
       whySupport:
-        "A credit consultant helps you understand the market, compare real terms, and apply prepared — without visiting every bank yourself. The service is completely free for you.",
+        "With years of experience, we help you understand the market, compare real terms, and apply prepared — without visiting every bank yourself. The service is completely free for you.",
       whyItems: [
         {
           title: "One conversation instead of many branches",
@@ -657,17 +661,21 @@ export const dictionaries: Record<Locale, Dictionary> = {
     aboutPage: {
       metaTitle: "About us — SM Credit Consult",
       metaDescription:
-        "Independent credit consulting for mortgages, consumer loans, and business loans — including refinancing. Free for the client.",
+        "Independent credit consulting with years of experience — mortgages, consumer loans, and business loans, including refinancing. Free for the client.",
       title: "About SM Credit Consult",
-      lead: "An independent credit consultant for people who want the most suitable solution before they sign.",
+      lead: "An independent credit consultant with years of experience — for people who want the most suitable solution before they sign.",
       body: [
-        "SM Credit Consult helps with mortgage, consumer, and business loans — including refinancing. We explain the terms in plain language, and the whole process can be fully online and by phone — without wasting time visiting an office.",
+        "SM Credit Consult helps with mortgage, consumer, and business loans — including refinancing. With years of experience, we explain the terms in plain language, and the whole process can be fully online and by phone — without wasting time visiting an office.",
         "We work with home, consumer, and business financing — including refinancing — where offer differences are large, and a poor choice costs a lot over time.",
         "Consultation is free for you. Our goal is an informed decision and a well-prepared application.",
       ],
       imageAlt: "Advisor and client reviewing documents together",
       valuesTitle: "What we value",
       values: [
+        {
+          title: "Years of experience",
+          body: "We know bank processes and the common pitfalls with loans — we help you avoid costly mistakes.",
+        },
         {
           title: "Clarity",
           body: "We talk in numbers and timelines, not vague promises.",
@@ -752,12 +760,12 @@ export const dictionaries: Record<Locale, Dictionary> = {
       ],
     },
     consultPage: {
-      metaTitle: "Consultation — SM Credit Consult",
+      metaTitle: "Free consultation — SM Credit Consult",
       metaDescription:
-        "Request a credit consultation for a mortgage, consumer, or business loan — including refinancing.",
-      title: "Request a consultation",
+        "Request a free credit consultation for a mortgage, consumer, or business loan — including refinancing.",
+      title: "Request a free consultation",
       support:
-        "Tell us briefly what you need. We reply within one business day. The whole process can be fully online and by phone.",
+        "Tell us briefly what you need. The consultation is free. We reply within one business day. The whole process can be fully online and by phone.",
       emailLabel: "Email",
       phoneLabel: "Phone",
       hoursLabel: "Hours",
@@ -765,7 +773,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     },
     ctaBand: {
       title: "Have a question about a loan?",
-      button: "Request a consultation",
+      button: "Request a free consultation",
     },
     form: {
       name: "Full name",
@@ -776,7 +784,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       phonePlaceholder: "0888 000 000",
       goal: "Which loan are you interested in?",
       goalPlaceholder: "Mortgage, consumer, or business — including refinancing…",
-      submit: "Request a consultation",
+      submit: "Request a free consultation",
       submitting: "Sending…",
       invalid: "Please fill in your name, email, and which loan you need.",
       error:
@@ -795,7 +803,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       hoursLabel: "Working hours",
       hoursValue: "Monday–Friday, 9:00–18:00",
       disclaimer:
-        "Independent loan consulting. Consultation is completely free for the client.",
+        "Independent loan consulting with years of experience. Consultation is completely free for the client.",
     },
     mobileCall: {
       label: "Call for a free consultation",
@@ -807,7 +815,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       title: "Page not found",
       body: "Check the address or go back home — or request a free consultation.",
       home: "Back home",
-      consult: "Consultation",
+      consult: "Free consultation",
     },
     lang: { label: "Language", bg: "BG", en: "EN" },
   },
