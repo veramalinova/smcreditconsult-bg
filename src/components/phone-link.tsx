@@ -50,7 +50,7 @@ export function PhoneLink({
   }
 
   return (
-    <>
+    <span className="block">
       <a
         href={`tel:${phone.tel}`}
         className={cn(className, "md:hidden")}
@@ -60,7 +60,7 @@ export function PhoneLink({
         {label}
       </a>
       <span className={cn(className, "hidden md:inline")}>{label}</span>
-    </>
+    </span>
   );
 }
 
@@ -76,7 +76,7 @@ export function PhoneList({
   const phones = getContactPhones(locale);
 
   return (
-    <div className={cn("space-y-1", className)}>
+    <div className={cn("flex flex-col gap-1", className)}>
       {phones.map((phone) => (
         <PhoneLink key={phone.tel} phone={phone} className={itemClassName}>
           {phone.display}
