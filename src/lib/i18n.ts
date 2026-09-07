@@ -769,11 +769,11 @@ export const dictionaries: Record<Locale, Dictionary> = {
     aboutPage: {
       metaTitle: "About us | SM Credit Consult",
       metaDescription:
-        "Behind SM Credit Consult are people with years of experience in lending. Credit consultation for mortgages, consumer loans, and business loans. Free consultation.",
+        "Behind SM Credit Consult are experts with years of experience in loans. Credit consultation for mortgages, consumer loans, and business loans. Free consultation.",
       title: "About SM Credit Consult",
       lead: "We are experts with years of experience in loans — for clients who want clarity and peace of mind before they sign.",
       body: [
-        "SM Credit Consult is credit consulting with years of experience. Behind the service are specialists in lending — people who know how bank processes really work, how a credit profile is assessed, and where time and money are most often lost.",
+        "SM Credit Consult is credit consulting with years of experience. Behind the service are specialists in loans — people who know how bank processes really work, how a credit profile is assessed, and where time and money are most often lost.",
         "We help with mortgage, consumer, and business loans — including refinancing. We explain the terms in plain language: rate, fees, APR, monthly payment, and what documents are actually required. The whole process can be fully online and by phone — without wasting time visiting an office.",
         "Our experience is practical: comparing offers, organizing the file, common reasons for refusal or delay, and how to apply prepared. We are not a bank and we do not issue loans — our role is to guide you according to your profile, without pressure toward a specific institution.",
         "Consultation is free for you. Our goal is an informed decision and a calm application — with a clear picture of what you are signing and why.",
@@ -783,7 +783,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       valuesTitle: "What you can rely on",
       values: [
         {
-          title: "Years of experience in lending",
+          title: "Years of experience in loans",
           body: "Behind the consultation are people who have worked through real credit cases — mortgages, consumer and business loans, including refinancing. We know bank requirements and common pitfalls, so we can help you avoid costly mistakes.",
         },
         {
