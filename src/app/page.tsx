@@ -42,18 +42,24 @@ export default function HomePage() {
             <p className="animate-fade-up-delay-2 mx-auto mt-4 max-w-xl text-base leading-relaxed text-white/75 sm:text-lg">
               {t.home.support}
             </p>
-            <p className="animate-fade-up-delay-2 mx-auto mt-5 max-w-2xl text-sm tracking-wide text-white/70 sm:text-base">
+            <ul className="animate-fade-up-delay-2 mx-auto mt-7 flex max-w-2xl list-none flex-col items-center gap-3 sm:mt-8 sm:flex-row sm:justify-center sm:gap-0">
               {t.home.highlights.map((item, index) => (
-                <span key={item}>
+                <li
+                  key={item}
+                  className="flex items-center text-center"
+                >
                   {index > 0 ? (
-                    <span className="mx-2 text-white/35" aria-hidden>
-                      ·
-                    </span>
+                    <span
+                      className="mx-5 hidden h-4 w-px shrink-0 bg-foam/55 sm:block"
+                      aria-hidden
+                    />
                   ) : null}
-                  {item}
-                </span>
+                  <span className="font-display text-[0.95rem] tracking-[0.04em] text-foam sm:text-base">
+                    {item}
+                  </span>
+                </li>
               ))}
-            </p>
+            </ul>
             <div className="animate-fade-up-delay-3 mt-8 flex flex-wrap items-center justify-center gap-3">
               <Link
                 href="/konsultaciya"
