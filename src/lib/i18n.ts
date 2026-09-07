@@ -9,6 +9,8 @@ export type ServicePage = {
   href: string;
   title: string;
   short: string;
+  metaTitle: string;
+  metaDescription: string;
   eyebrow: string;
   headline: string;
   intro: string;
@@ -148,6 +150,9 @@ const bgServices: Record<ServiceId, ServicePage> = {
     href: "/uslugi/ipotechnen-kredit",
     title: "Ипотечен кредит",
     short: "Жилищен кредит за покупка, строеж, ремонт или рефинансиране.",
+    metaTitle: "Ипотечен кредит | СМ Кредит Консулт",
+    metaDescription:
+      "Сравнете оферти за ипотечен кредит за покупка, строеж, ремонт или рефинансиране. Професионална консултация и съдействие при кандидатстване.",
     eyebrow: "Жилищно финансиране",
     headline: "Ипотечен кредит с ясни условия от първия разговор",
     intro:
@@ -172,6 +177,9 @@ const bgServices: Record<ServiceId, ServicePage> = {
     title: "Потребителски кредит",
     short:
       "Потребителски и лични кредити — нов кредит или рефинансиране с ясни условия.",
+    metaTitle: "Потребителски кредит | СМ Кредит Консулт",
+    metaDescription:
+      "Сравнете оферти за потребителски кредит — нов кредит или рефинансиране. Професионална консултация и съдействие при кандидатстване.",
     eyebrow: "Лични нужди",
     headline: "Потребителски кредит без излишни изненади",
     intro:
@@ -196,6 +204,9 @@ const bgServices: Record<ServiceId, ServicePage> = {
     title: "Фирмен кредит",
     short:
       "Финансиране за оборот, инвестиции или рефинансиране на фирмен кредит.",
+    metaTitle: "Фирмен кредит | СМ Кредит Консулт",
+    metaDescription:
+      "Сравнете оферти за фирмен кредит за оборот, инвестиции или рефинансиране. Професионална консултация и съдействие при кандидатстване.",
     eyebrow: "За бизнеса",
     headline: "Фирмен кредит според нуждите на компанията",
     intro:
@@ -222,6 +233,9 @@ const enServices: Record<ServiceId, ServicePage> = {
     href: "/uslugi/ipotechnen-kredit",
     title: "Mortgage loan",
     short: "Home loans for purchase, construction, renovation, or refinancing.",
+    metaTitle: "Mortgage loan | SM Credit Consult",
+    metaDescription:
+      "Compare mortgage loan offers for purchase, construction, renovation, or refinancing. Professional consultation and application support.",
     eyebrow: "Home financing",
     headline: "Mortgage advice with clear terms from the first call",
     intro:
@@ -244,7 +258,11 @@ const enServices: Record<ServiceId, ServicePage> = {
     id: "consumer",
     href: "/uslugi/potrebitelski-kredit",
     title: "Consumer loan",
-    short: "Personal and consumer loans — new credit or refinancing with clear terms.",
+    short:
+      "Consumer and personal loans — new credit or refinancing with clear terms.",
+    metaTitle: "Consumer loan | SM Credit Consult",
+    metaDescription:
+      "Compare consumer loan offers — new credit or refinancing. Professional consultation and application support.",
     eyebrow: "Personal needs",
     headline: "Consumer loans without expensive surprises",
     intro:
@@ -269,6 +287,9 @@ const enServices: Record<ServiceId, ServicePage> = {
     title: "Business loan",
     short:
       "Financing for working capital, investment, or refinancing a business loan.",
+    metaTitle: "Business loan | SM Credit Consult",
+    metaDescription:
+      "Compare business loan offers for working capital, investment, or refinancing. Professional consultation and application support.",
     eyebrow: "For business",
     headline: "Business loans matched to your company’s needs",
     intro:
@@ -292,9 +313,9 @@ const enServices: Record<ServiceId, ServicePage> = {
 export const dictionaries: Record<Locale, Dictionary> = {
   bg: {
     meta: {
-      title: "СМ Кредит Консулт — Кредитна консултация",
+      title: "СМ Кредит Консулт | Кредитен консултант и посредник",
       description:
-        "Кредитен консултант с дългогодишен опит. Ипотечен, потребителски и фирмен кредит — включително рефинансиране. Консултацията е безплатна.",
+        "Кредитен консултант за ипотечни, потребителски и фирмени кредити. Сравнение на банкови оферти, рефинансиране и професионално съдействие. Безплатна консултация.",
     },
     brand: "СМ Кредит Консулт",
     nav: {
@@ -308,9 +329,9 @@ export const dictionaries: Record<Locale, Dictionary> = {
       phoneAria: "Обадете се",
     },
     home: {
-      metaTitle: "СМ Кредит Консулт — Кредитен консултант",
+      metaTitle: "СМ Кредит Консулт | Кредитен консултант и посредник",
       metaDescription:
-        "Безплатна кредитна консултация с дългогодишен опит — ипотечен, потребителски и фирмен кредит, включително рефинансиране.",
+        "Кредитен консултант за ипотечни, потребителски и фирмени кредити. Сравнение на банкови оферти, рефинансиране и професионално съдействие. Безплатна консултация.",
       headline: "Вашият кредит. Нашата експертиза.",
       support:
         "Сравняваме предложения от банки и ви помагаме да изберете подходящото финансиране според вашите цели и финансов профил.",
@@ -363,18 +384,18 @@ export const dictionaries: Record<Locale, Dictionary> = {
         "Четири стъпки от първия разговор до подадена заявка. Целият процес може да е изцяло онлайн и по телефона — без да губите време в офис.",
     },
     servicesOverview: {
-      metaTitle: "Услуги — СМ Кредит Консулт",
+      metaTitle: "Услуги | СМ Кредит Консулт",
       metaDescription:
-        "Ипотечен, потребителски и фирмен кредит — включително рефинансиране с кредитна консултация.",
+        "Ипотечен, потребителски и фирмен кредит — включително рефинансиране. Сравнение на банкови оферти и професионално съдействие.",
       title: "Услуги",
       support:
         "Изберете продукта, който ви интересува, или започнете с обща консултация — ще уточним заедно най-подходящия път.",
     },
     services: bgServices,
     processPage: {
-      metaTitle: "Как работим — СМ Кредит Консулт",
+      metaTitle: "Как работим | СМ Кредит Консулт",
       metaDescription:
-        "Консултация, анализ, сравнение на оферти и съдействие при кандидатстване.",
+        "Как работи кредитната консултация: анализ на профила, сравнение на банкови оферти и съдействие при кандидатстване.",
       title: "Как работим",
       support:
         "Процесът е прозрачен. На всеки етап знаете какво следва и защо. Можем да минем през всичко изцяло онлайн и по телефона, без посещение в офис.",
@@ -402,9 +423,9 @@ export const dictionaries: Record<Locale, Dictionary> = {
       ],
     },
     aboutPage: {
-      metaTitle: "За нас — СМ Кредит Консулт",
+      metaTitle: "За нас | СМ Кредит Консулт",
       metaDescription:
-        "Зад СМ Кредит Консулт стоят хора с дългогодишен опит в кредитирането. Безплатна консултация за ипотечен, потребителски и фирмен кредит.",
+        "Зад СМ Кредит Консулт стоят хора с дългогодишен опит в кредитирането. Кредитна консултация за ипотечен, потребителски и фирмен кредит. Безплатна консултация.",
       title: "За СМ Кредит Консулт",
       lead: "Зад сайта стоят хора с дългогодишен опит в кредитирането — за клиенти, които искат яснота и спокойствие преди да подпишат.",
       body: [
@@ -439,9 +460,9 @@ export const dictionaries: Record<Locale, Dictionary> = {
       ],
     },
     usefulPage: {
-      metaTitle: "Полезно — СМ Кредит Консулт",
+      metaTitle: "Полезно | СМ Кредит Консулт",
       metaDescription:
-        "Практични съвети за ипотечен, потребителски и фирмен кредит — включително рефинансиране.",
+        "Практични съвети преди кандидатстване за ипотечен, потребителски или фирмен кредит — включително рефинансиране.",
       title: "Полезно преди да кандидатствате",
       support:
         "Кратки ориентири, за да влезете в разговора подготвени.",
@@ -474,9 +495,9 @@ export const dictionaries: Record<Locale, Dictionary> = {
       ],
     },
     faqPage: {
-      metaTitle: "Често задавани въпроси — СМ Кредит Консулт",
+      metaTitle: "Често задавани въпроси | СМ Кредит Консулт",
       metaDescription:
-        "Отговори за безплатната консултация, кредитите, с които работим, и онлайн процеса.",
+        "Отговори за безплатната консултация, комисионата, банките, одобрението и онлайн процеса при кредитна консултация.",
       title: "Често задавани въпроси",
       support:
         "Кратки отговори преди да заявите консултация — за услугата, продуктите и начина на работа.",
@@ -524,9 +545,9 @@ export const dictionaries: Record<Locale, Dictionary> = {
       ],
     },
     consultPage: {
-      metaTitle: "Безплатна консултация — СМ Кредит Консулт",
+      metaTitle: "Безплатна консултация | СМ Кредит Консулт",
       metaDescription:
-        "Заявете безплатна кредитна консултация за ипотечен, потребителски или фирмен кредит — включително рефинансиране.",
+        "Заявете безплатна кредитна консултация за ипотечен, потребителски или фирмен кредит. Отговаряме до един работен ден.",
       title: "Заявете безплатна консултация",
       support:
         "Напишете ни кратко какво търсите. Консултацията е безплатна. Отговаряме до един работен ден. Целият процес може да е изцяло онлайн и по телефона.",
@@ -593,9 +614,9 @@ export const dictionaries: Record<Locale, Dictionary> = {
   },
   en: {
     meta: {
-      title: "SM Credit Consult — Credit consultation",
+      title: "SM Credit Consult | Credit consultant and intermediary",
       description:
-        "Credit consultant with years of experience. Mortgage, consumer, and business loans — including refinancing. Consultation is free.",
+        "Credit consultant for mortgages, consumer loans, and business loans. Compare bank offers, refinancing, and professional support. Free consultation.",
     },
     brand: "SM Credit Consult",
     nav: {
@@ -609,9 +630,9 @@ export const dictionaries: Record<Locale, Dictionary> = {
       phoneAria: "Call us",
     },
     home: {
-      metaTitle: "SM Credit Consult — Credit consultant",
+      metaTitle: "SM Credit Consult | Credit consultant and intermediary",
       metaDescription:
-        "Free credit consultation with years of experience — mortgages, consumer loans, and business loans, including refinancing.",
+        "Credit consultant for mortgages, consumer loans, and business loans. Compare bank offers, refinancing, and professional support. Free consultation.",
       headline: "Your credit. Our expertise.",
       support:
         "We compare bank offers and help you choose the right financing for your goals and financial profile.",
@@ -664,18 +685,18 @@ export const dictionaries: Record<Locale, Dictionary> = {
         "Four steps from the first call to a submitted application. The whole process can be fully online and by phone — without wasting time at an office.",
     },
     servicesOverview: {
-      metaTitle: "Services — SM Credit Consult",
+      metaTitle: "Services | SM Credit Consult",
       metaDescription:
-        "Mortgage, consumer, and business loans — including refinancing with credit consultation.",
+        "Mortgage, consumer, and business loans — including refinancing. Compare bank offers with professional support.",
       title: "Services",
       support:
         "Pick the product you care about, or start with a general consultation — we will refine the best path together.",
     },
     services: enServices,
     processPage: {
-      metaTitle: "How we work — SM Credit Consult",
+      metaTitle: "How we work | SM Credit Consult",
       metaDescription:
-        "Consultation, analysis, offer comparison, and application support.",
+        "How credit consultation works: profile analysis, bank offer comparison, and application support.",
       title: "How we work",
       support:
         "The process is transparent. At every stage you know what comes next and why. We can do everything fully online and by phone, with no office visit.",
@@ -703,9 +724,9 @@ export const dictionaries: Record<Locale, Dictionary> = {
       ],
     },
     aboutPage: {
-      metaTitle: "About us — SM Credit Consult",
+      metaTitle: "About us | SM Credit Consult",
       metaDescription:
-        "Behind SM Credit Consult are people with years of experience in lending. Free consultation for mortgages, consumer loans, and business loans.",
+        "Behind SM Credit Consult are people with years of experience in lending. Credit consultation for mortgages, consumer loans, and business loans. Free consultation.",
       title: "About SM Credit Consult",
       lead: "Behind the site are people with years of experience in lending — for clients who want clarity and peace of mind before they sign.",
       body: [
@@ -740,9 +761,9 @@ export const dictionaries: Record<Locale, Dictionary> = {
       ],
     },
     usefulPage: {
-      metaTitle: "Guides — SM Credit Consult",
+      metaTitle: "Guides | SM Credit Consult",
       metaDescription:
-        "Practical tips on mortgages, consumer loans, and business loans — including refinancing.",
+        "Practical tips before applying for a mortgage, consumer loan, or business loan — including refinancing.",
       title: "Useful before you apply",
       support:
         "Short pointers so you enter the conversation prepared.",
@@ -775,9 +796,9 @@ export const dictionaries: Record<Locale, Dictionary> = {
       ],
     },
     faqPage: {
-      metaTitle: "Frequently asked questions — SM Credit Consult",
+      metaTitle: "Frequently asked questions | SM Credit Consult",
       metaDescription:
-        "Answers about the free consultation, the loans we cover, and the online process.",
+        "Answers about the free consultation, commission, banks, approval, and the online credit consultation process.",
       title: "Frequently asked questions",
       support:
         "Short answers before you request a consultation — about the service, products, and how we work.",
@@ -825,9 +846,9 @@ export const dictionaries: Record<Locale, Dictionary> = {
       ],
     },
     consultPage: {
-      metaTitle: "Free consultation — SM Credit Consult",
+      metaTitle: "Free consultation | SM Credit Consult",
       metaDescription:
-        "Request a free credit consultation for a mortgage, consumer, or business loan — including refinancing.",
+        "Request a free credit consultation for a mortgage, consumer, or business loan. We reply within one business day.",
       title: "Request a free consultation",
       support:
         "Tell us briefly what you need. The consultation is free. We reply within one business day. The whole process can be fully online and by phone.",

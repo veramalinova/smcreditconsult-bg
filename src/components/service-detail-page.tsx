@@ -13,7 +13,7 @@ export function ServiceDetailPage({ serviceId }: { serviceId: ServiceId }) {
   const { t } = useLanguage();
   const service = t.services[serviceId];
   const Icon = serviceIcons[serviceId];
-  usePageMeta(`${service.title} — ${t.brand}`, service.short);
+  usePageMeta(service.metaTitle, service.metaDescription);
 
   return (
     <div className="flex min-h-full flex-col">
