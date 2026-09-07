@@ -447,7 +447,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       metaDescription:
         "Зад СМ Кредит Консулт стоят хора с дългогодишен опит в кредитирането. Кредитна консултация за ипотечен, потребителски и фирмен кредит. Безплатна консултация.",
       title: "За СМ Кредит Консулт",
-      lead: "Зад сайта стоят хора с дългогодишен опит в кредитирането — за клиенти, които искат яснота и спокойствие преди да подпишат.",
+      lead: "Ние сме експерти с дългогодишен опит в кредитирането — за клиенти, които искат яснота и спокойствие преди да подпишат.",
       body: [
         "СМ Кредит Консулт е кредитна консултация с дългогодишен опит. Зад услугата стоят специалисти в кредитирането — хора, които познават как реално работят банковите процеси, как се оценява кредитен профил и къде най-често се губят време и пари.",
         "Помагаме при избор на ипотечен, потребителски и фирмен кредит — включително рефинансиране. Обясняваме условията на разбираем език: лихва, такси, ГПР, месечна вноска и какво реално се изисква като документи. Целият процес може да е изцяло онлайн и по телефона — без губене на време с ходене в офис.",
@@ -771,7 +771,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       metaDescription:
         "Behind SM Credit Consult are people with years of experience in lending. Credit consultation for mortgages, consumer loans, and business loans. Free consultation.",
       title: "About SM Credit Consult",
-      lead: "Behind the site are people with years of experience in lending — for clients who want clarity and peace of mind before they sign.",
+      lead: "We are experts with years of experience in lending — for clients who want clarity and peace of mind before they sign.",
       body: [
         "SM Credit Consult is credit consulting with years of experience. Behind the service are specialists in lending — people who know how bank processes really work, how a credit profile is assessed, and where time and money are most often lost.",
         "We help with mortgage, consumer, and business loans — including refinancing. We explain the terms in plain language: rate, fees, APR, monthly payment, and what documents are actually required. The whole process can be fully online and by phone — without wasting time visiting an office.",
