@@ -63,16 +63,6 @@ export function SiteFooter() {
               </Link>
             </li>
             <li>
-              <Link href="/polezno" className="transition-colors hover:text-white">
-                {t.nav.useful}
-              </Link>
-            </li>
-            <li>
-              <Link href="/vaprosi" className="transition-colors hover:text-white">
-                {t.nav.faq}
-              </Link>
-            </li>
-            <li>
               <Link
                 href="/konsultaciya"
                 className="transition-colors hover:text-white"
