@@ -291,7 +291,7 @@ const enServices: Record<ServiceId, ServicePage> = {
       "Compare rate, fees, and term",
       "Check whether a new or refinancing loan is the better deal",
       "Help with documents and application",
-      "An honest talk when borrowing is not a good idea",
+      "An honest talk when a loan is not a good idea",
     ],
     forWhomTitle: "Who it is for",
     forWhom: [
