@@ -36,6 +36,7 @@ export type Dictionary = {
     metaDescription: string;
     headline: string;
     support: string;
+    highlights: string[];
     cta: string;
     secondaryCta: string;
     imageAlt: string;
@@ -306,11 +307,16 @@ export const dictionaries: Record<Locale, Dictionary> = {
       metaTitle: "СМ Кредит Консулт — Кредитен консултант",
       metaDescription:
         "Безплатна кредитна консултация с дългогодишен опит — ипотечен, потребителски и фирмен кредит, включително рефинансиране.",
-      headline: "Консултация за кредит според вашите нужди",
+      headline: "Вашият кредит. Нашата експертиза.",
       support:
-        "Независима кредитна консултация с дългогодишен опит — сравняваме банкови оферти, обясняваме условията и ви водим до кандидатстване. Услугата е напълно безплатна за вас.",
-      cta: "Безплатна консултация",
-      secondaryCta: "Виж услугите",
+        "Сравняваме предложения от банки и ви помагаме да изберете подходящото финансиране според вашите цели и финансов профил.",
+      highlights: [
+        "Безплатна консултация",
+        "Дългогодишен опит",
+        "Изцяло онлайн",
+      ],
+      cta: "Получете безплатна консултация",
+      secondaryCta: "Вижте услугите",
       imageAlt: "Спокоен дом и градска улица при дневна светлина",
       servicesTitle: "С какво можем да помогнем",
       servicesSupport:
@@ -578,10 +584,15 @@ export const dictionaries: Record<Locale, Dictionary> = {
       metaTitle: "SM Credit Consult — Credit consultant",
       metaDescription:
         "Free credit consultation with years of experience — mortgages, consumer loans, and business loans, including refinancing.",
-      headline: "Credit consultation tailored to your needs",
+      headline: "Your credit. Our expertise.",
       support:
-        "Independent credit consulting with years of experience — we compare bank offers, explain the terms, and guide you to application. The service is completely free for you.",
-      cta: "Free consultation",
+        "We compare bank offers and help you choose the right financing for your goals and financial profile.",
+      highlights: [
+        "Free consultation",
+        "Years of experience",
+        "Fully online",
+      ],
+      cta: "Get a free consultation",
       secondaryCta: "See services",
       imageAlt: "Calm home and city street in daylight",
       servicesTitle: "How we can help",
