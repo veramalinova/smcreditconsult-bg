@@ -44,13 +44,13 @@ export function PhoneLink({
     <>
       <a
         href={`tel:${CONTACT_PHONE_TEL}`}
-        className={cn("md:hidden", className)}
+        className={cn(className, "md:hidden")}
         aria-label={ariaLabel}
         onClick={onClick}
       >
         {label}
       </a>
-      <span className={cn("hidden md:inline", className)}>{label}</span>
+      <span className={cn(className, "hidden md:inline")}>{label}</span>
     </>
   );
 }
