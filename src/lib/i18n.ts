@@ -288,7 +288,7 @@ const enServices: Record<ServiceId, ServicePage> = {
     intro:
       "When you need financing for a renovation, car, debt consolidation, or refinancing an existing consumer loan, we compare offers and explain what it will really cost.",
     points: [
-      "Compare rate, fees, and term",
+      "Compare rates, fees, and terms",
       "Check whether a new or refinancing loan is the better deal",
       "Help with documents and application",
       "An honest talk when a loan is not a good idea",
