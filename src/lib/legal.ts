@@ -232,7 +232,7 @@ const pages: Record<Locale, Record<LegalPageId, LegalPageContent>> = {
         {
           title: "Scope of the service",
           paragraphs: [
-            "SM Credit Consult provides independent guidance and support when choosing and applying for a mortgage, consumer, or business loan — including refinancing. Consultation is free for the client.",
+            "SM Credit Consult provides independent guidance and support when choosing and applying for a mortgage, consumer, or business loan — including refinancing. We work with years of experience. Consultation is free for the client.",
             "We are not a lender. Final approval, terms, and disbursement are decided solely by the relevant bank or financial institution.",
           ],
         },
