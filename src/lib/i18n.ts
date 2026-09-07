@@ -147,7 +147,7 @@ const bgServices: Record<ServiceId, ServicePage> = {
     eyebrow: "Жилищно финансиране",
     headline: "Ипотечен кредит с ясни условия от първия разговор",
     intro:
-      "Помагаме ви да сравните банкови оферти за покупка на жилище, строеж, ремонт или рефинансиране на съществуваща ипотека. Работим независимо и безплатно за вас.",
+      "Помагаме ви да сравните банкови оферти за покупка на жилище, строеж, ремонт или рефинансиране на съществуваща ипотека. Работим безплатно за вас.",
     points: [
       "Сравнение на лихви, такси, ГПР и месечна вноска",
       "Оценка на самоучастие, срок и одобряемост",
@@ -221,7 +221,7 @@ const enServices: Record<ServiceId, ServicePage> = {
     eyebrow: "Home financing",
     headline: "Mortgage advice with clear terms from the first call",
     intro:
-      "We help you compare bank offers for buying a home, building, renovating, or refinancing an existing mortgage. Independent guidance, free for you.",
+      "We help you compare bank offers for buying a home, building, renovating, or refinancing an existing mortgage. Guidance is free for you.",
     points: [
       "Compare rates, fees, APR, and monthly payments",
       "Assess down payment, term, and approval likelihood",
@@ -290,7 +290,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     meta: {
       title: "СМ Кредит Консулт — Кредитна консултация",
       description:
-        "Независим кредитен консултант с дългогодишен опит. Ипотечен, потребителски и фирмен кредит — включително рефинансиране. Консултацията е безплатна.",
+        "Кредитен консултант с дългогодишен опит. Ипотечен, потребителски и фирмен кредит — включително рефинансиране. Консултацията е безплатна.",
     },
     brand: "СМ Кредит Консулт",
     nav: {
@@ -338,7 +338,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
           body: "Помагаме да подредите нужните документи и да избегнете връщания заради липсващи справки. Когато досието е ясно, процесът при банката обикновено върви по-бързо и по-спокойно.",
         },
         {
-          title: "Независим поглед върху профила ви",
+          title: "Обективен поглед върху профила ви",
           body: "Оценяваме дохода, текущите задължения и целта на кредита. Ако даден продукт не ви пасва или рискът е висок, го казваме директно — дори това да значи да изчакате или да изберете друг вариант.",
         },
         {
@@ -400,13 +400,13 @@ export const dictionaries: Record<Locale, Dictionary> = {
     aboutPage: {
       metaTitle: "За нас — СМ Кредит Консулт",
       metaDescription:
-        "Зад СМ Кредит Консулт стоят хора с дългогодишен опит в кредитирането. Независима и безплатна консултация за ипотечен, потребителски и фирмен кредит.",
+        "Зад СМ Кредит Консулт стоят хора с дългогодишен опит в кредитирането. Безплатна консултация за ипотечен, потребителски и фирмен кредит.",
       title: "За СМ Кредит Консулт",
       lead: "Зад сайта стоят хора с дългогодишен опит в кредитирането — за клиенти, които искат яснота и спокойствие преди да подпишат.",
       body: [
-        "СМ Кредит Консулт е независима кредитна консултация. Зад услугата стоят специалисти с дългогодишен опит в кредитирането — хора, които познават как реално работят банковите процеси, как се оценява кредитен профил и къде най-често се губят време и пари.",
+        "СМ Кредит Консулт е кредитна консултация с дългогодишен опит. Зад услугата стоят специалисти в кредитирането — хора, които познават как реално работят банковите процеси, как се оценява кредитен профил и къде най-често се губят време и пари.",
         "Помагаме при избор на ипотечен, потребителски и фирмен кредит — включително рефинансиране. Обясняваме условията на разбираем език: лихва, такси, ГПР, месечна вноска и какво реално се изисква като документи. Целият процес може да е изцяло онлайн и по телефона — без губене на време с ходене в офис.",
-        "Опитът ни е практически: сравнение на оферти, подреждане на документите, типични причини за отказ или забавяне и как да кандидатствате подготвени. Не сме банка и не отпускаме кредити — ролята ни е да ви ориентираме независимо, без натиск към конкретна институция.",
+        "Опитът ни е практически: сравнение на оферти, подреждане на документите, типични причини за отказ или забавяне и как да кандидатствате подготвени. Не сме банка и не отпускаме кредити — ролята ни е да ви ориентираме според вашия профил, без натиск към конкретна институция.",
         "Консултацията е безплатна за вас. Целта ни е да вземете информирано решение и да кандидатствате спокойно — с ясна картина какво подписвате и защо.",
       ],
       imageAlt: "Консултант и клиент преглеждат документи заедно",
@@ -421,7 +421,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
           body: "Говорим с числа, срокове и условия — не с общи обещания. Ако даден продукт не ви пасва или рискът е висок, го казваме директно.",
         },
         {
-          title: "Независимост",
+          title: "Обективно сравнение",
           body: "Сравняваме варианти според вашия профил и цел, не според удобството на една банка. Вие избирате офертата, която ви устройва.",
         },
         {
@@ -547,7 +547,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       hoursLabel: "Работно време",
       hoursValue: "Понеделник–петък, 9:00–18:00",
       disclaimer:
-        "Независими кредитни консултации с дългогодишен опит. Консултацията е напълно безплатна за клиента.",
+        "Кредитни консултации с дългогодишен опит. Консултацията е напълно безплатна за клиента.",
     },
     mobileCall: {
       label: "Обадете се за безплатна консултация",
@@ -567,7 +567,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     meta: {
       title: "SM Credit Consult — Credit consultation",
       description:
-        "Independent credit consultant with years of experience. Mortgage, consumer, and business loans — including refinancing. Consultation is free.",
+        "Credit consultant with years of experience. Mortgage, consumer, and business loans — including refinancing. Consultation is free.",
     },
     brand: "SM Credit Consult",
     nav: {
@@ -615,7 +615,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
           body: "We help you organize the required documents and avoid returns for missing paperwork. When the file is clear, the bank process usually moves faster and with fewer surprises.",
         },
         {
-          title: "An independent view of your profile",
+          title: "An objective view of your profile",
           body: "We assess income, current obligations, and the purpose of the loan. If a product does not fit or the risk is high, we say so directly — even if that means waiting or choosing another option.",
         },
         {
@@ -677,13 +677,13 @@ export const dictionaries: Record<Locale, Dictionary> = {
     aboutPage: {
       metaTitle: "About us — SM Credit Consult",
       metaDescription:
-        "Behind SM Credit Consult are people with years of experience in lending. Independent, free consultation for mortgages, consumer loans, and business loans.",
+        "Behind SM Credit Consult are people with years of experience in lending. Free consultation for mortgages, consumer loans, and business loans.",
       title: "About SM Credit Consult",
       lead: "Behind the site are people with years of experience in lending — for clients who want clarity and peace of mind before they sign.",
       body: [
-        "SM Credit Consult is independent credit consulting. Behind the service are specialists with years of experience in lending — people who know how bank processes really work, how a credit profile is assessed, and where time and money are most often lost.",
+        "SM Credit Consult is credit consulting with years of experience. Behind the service are specialists in lending — people who know how bank processes really work, how a credit profile is assessed, and where time and money are most often lost.",
         "We help with mortgage, consumer, and business loans — including refinancing. We explain the terms in plain language: rate, fees, APR, monthly payment, and what documents are actually required. The whole process can be fully online and by phone — without wasting time visiting an office.",
-        "Our experience is practical: comparing offers, organizing the file, common reasons for refusal or delay, and how to apply prepared. We are not a bank and we do not issue loans — our role is to guide you independently, without pressure toward a specific institution.",
+        "Our experience is practical: comparing offers, organizing the file, common reasons for refusal or delay, and how to apply prepared. We are not a bank and we do not issue loans — our role is to guide you according to your profile, without pressure toward a specific institution.",
         "Consultation is free for you. Our goal is an informed decision and a calm application — with a clear picture of what you are signing and why.",
       ],
       imageAlt: "Advisor and client reviewing documents together",
@@ -698,7 +698,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
           body: "We talk in numbers, timelines, and terms — not vague promises. If a product does not fit or the risk is high, we say so directly.",
         },
         {
-          title: "Independence",
+          title: "Objective comparison",
           body: "We compare options for your profile and goal, not for one bank’s convenience. You choose the offer that fits.",
         },
         {
@@ -824,7 +824,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       hoursLabel: "Working hours",
       hoursValue: "Monday–Friday, 9:00–18:00",
       disclaimer:
-        "Independent loan consulting with years of experience. Consultation is completely free for the client.",
+        "Loan consulting with years of experience. Consultation is completely free for the client.",
     },
     mobileCall: {
       label: "Call for a free consultation",

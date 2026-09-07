@@ -34,7 +34,7 @@ const pages: Record<Locale, Record<LegalPageId, LegalPageContent>> = {
         {
           title: "Кой сме ние",
           paragraphs: [
-            "СМ Кредит Консулт предоставя независими кредитни консултации. Не сме банка и не отпускаме кредити. Администратор на личните данни, събрани чрез сайта, е СМ Кредит Консулт.",
+            "СМ Кредит Консулт предоставя кредитни консултации. Не сме банка и не отпускаме кредити. Администратор на личните данни, събрани чрез сайта, е СМ Кредит Консулт.",
             `За въпроси относно личните данни: ${CONTACT_EMAIL}, телефон ${CONTACT_PHONE_DISPLAY}.`,
           ],
         },
@@ -112,7 +112,7 @@ const pages: Record<Locale, Record<LegalPageId, LegalPageContent>> = {
         {
           title: "Предмет на услугата",
           paragraphs: [
-            "СМ Кредит Консулт предоставя независима ориентация и съдействие при избор и кандидатстване за ипотечен, потребителски или фирмен кредит — включително рефинансиране. Работим с дългогодишен опит. Консултацията за клиента е безплатна.",
+            "СМ Кредит Консулт предоставя ориентация и съдействие при избор и кандидатстване за ипотечен, потребителски или фирмен кредит — включително рефинансиране. Работим с дългогодишен опит. Консултацията за клиента е безплатна.",
             "Не сме кредитор. Окончателното одобрение, условията и отпускането на кредит са изцяло решение на съответната банка или финансов институция.",
           ],
         },
@@ -154,7 +154,7 @@ const pages: Record<Locale, Record<LegalPageId, LegalPageContent>> = {
         {
           title: "Who we are",
           paragraphs: [
-            "SM Credit Consult provides independent credit consulting. We are not a bank and we do not issue loans. SM Credit Consult is the controller of personal data collected through this website.",
+            "SM Credit Consult provides credit consulting. We are not a bank and we do not issue loans. SM Credit Consult is the controller of personal data collected through this website.",
             `For privacy questions: ${CONTACT_EMAIL}, phone ${CONTACT_PHONE_DISPLAY}.`,
           ],
         },
@@ -232,7 +232,7 @@ const pages: Record<Locale, Record<LegalPageId, LegalPageContent>> = {
         {
           title: "Scope of the service",
           paragraphs: [
-            "SM Credit Consult provides independent guidance and support when choosing and applying for a mortgage, consumer, or business loan — including refinancing. We work with years of experience. Consultation is free for the client.",
+            "SM Credit Consult provides guidance and support when choosing and applying for a mortgage, consumer, or business loan — including refinancing. We work with years of experience. Consultation is free for the client.",
             "We are not a lender. Final approval, terms, and disbursement are decided solely by the relevant bank or financial institution.",
           ],
         },
