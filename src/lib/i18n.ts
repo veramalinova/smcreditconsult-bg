@@ -486,6 +486,22 @@ export const dictionaries: Record<Locale, Dictionary> = {
           a: "Да. За клиента консултацията и съдействието са без допълнителна такса и не ви обвързват да кандидатствате. Когато е приложимо, възнаграждението на кредитния посредник се заплаща от кредитора съгласно договорните отношения между страните.",
         },
         {
+          q: "Трябва ли да плащам за консултацията?",
+          a: "Не. За вас консултацията и съдействието са без допълнителна такса. Не ви обвързваме да продължите с кандидатстване.",
+        },
+        {
+          q: "Получавате ли комисиона от банката?",
+          a: "Когато е приложимо, възнаграждението на кредитния посредник се заплаща от кредитора съгласно договорните отношения между страните. За вас услугата остава без допълнителна такса.",
+        },
+        {
+          q: "Работите ли с всички банки?",
+          a: "Сравняваме оферти от различни банки според вашия профил и цел — не всяка банка е подходяща за всеки случай. Работим с водещи кредитори на пазара и ви показваме реалистичните варианти за вас.",
+        },
+        {
+          q: "Гарантирате ли одобрение?",
+          a: "Не. Решението за отпускане на кредита и окончателните условия се определят от съответната банка въз основа на нейния анализ на кредитоспособността.",
+        },
+        {
           q: "Защо ми е нужен кредитен консултант?",
           a: "За да сравните реалните условия на няколко банки на едно място — лихва, такси, ГПР и месечна вноска — и да кандидатствате подготвени, без да обикаляте сами всеки клон. Спестявате време и намалявате риска от скъп избор.",
         },
@@ -769,6 +785,22 @@ export const dictionaries: Record<Locale, Dictionary> = {
         {
           q: "Is the consultation free?",
           a: "Yes. For the client, consultation and support come with no extra fee and do not obligate you to apply. When applicable, the credit intermediary’s remuneration is paid by the lender under the contractual arrangements between the parties.",
+        },
+        {
+          q: "Do I have to pay for the consultation?",
+          a: "No. Consultation and support come with no extra fee for you. We do not obligate you to continue with an application.",
+        },
+        {
+          q: "Do you receive a commission from the bank?",
+          a: "When applicable, the credit intermediary’s remuneration is paid by the lender under the contractual arrangements between the parties. For you, the service remains without an extra fee.",
+        },
+        {
+          q: "Do you work with all banks?",
+          a: "We compare offers from different banks based on your profile and goal — not every bank fits every case. We work with leading lenders on the market and show you the realistic options for you.",
+        },
+        {
+          q: "Do you guarantee approval?",
+          a: "No. The decision to grant the loan and the final terms are determined by the relevant bank based on its creditworthiness assessment.",
         },
         {
           q: "Why do I need a credit consultant?",
