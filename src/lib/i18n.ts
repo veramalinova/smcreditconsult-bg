@@ -771,7 +771,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       metaDescription:
         "Behind SM Credit Consult are people with years of experience in lending. Credit consultation for mortgages, consumer loans, and business loans. Free consultation.",
       title: "About SM Credit Consult",
-      lead: "We are experts with years of experience in lending — for clients who want clarity and peace of mind before they sign.",
+      lead: "We are experts with years of experience in loans — for clients who want clarity and peace of mind before they sign.",
       body: [
         "SM Credit Consult is credit consulting with years of experience. Behind the service are specialists in lending — people who know how bank processes really work, how a credit profile is assessed, and where time and money are most often lost.",
         "We help with mortgage, consumer, and business loans — including refinancing. We explain the terms in plain language: rate, fees, APR, monthly payment, and what documents are actually required. The whole process can be fully online and by phone — without wasting time visiting an office.",
