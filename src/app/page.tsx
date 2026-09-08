@@ -68,12 +68,6 @@ export default function HomePage() {
                 {t.freeWhy.linkLabel}
               </Link>
               <Link
-                href="/konsultaciya"
-                className="hidden h-12 items-center justify-center rounded-md border border-white/35 px-6 text-base font-medium text-white transition-colors hover:bg-white/10 sm:inline-flex"
-              >
-                {t.home.cta}
-              </Link>
-              <Link
                 href="/uslugi"
                 className="inline-flex h-12 items-center justify-center rounded-md border border-white/35 px-6 text-base font-medium text-white transition-colors hover:bg-white/10"
               >
