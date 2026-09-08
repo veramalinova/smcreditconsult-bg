@@ -635,8 +635,8 @@ export const dictionaries: Record<Locale, Dictionary> = {
         "Кредитни консултации с дългогодишен опит. Консултацията е напълно безплатна за клиента.",
     },
     mobileCall: {
-      label: "Обадете се за безплатна консултация",
-      aria: "Обадете се за безплатна консултация",
+      label: "Получете безплатна консултация",
+      aria: "Получете безплатна консултация",
     },
     notFound: {
       metaTitle: "Страницата не е намерена | СМ Кредит Консулт",
@@ -958,8 +958,8 @@ export const dictionaries: Record<Locale, Dictionary> = {
         "Loan consulting with years of experience. Consultation is completely free for the client.",
     },
     mobileCall: {
-      label: "Call for a free consultation",
-      aria: "Call for a free consultation",
+      label: "Get a free consultation",
+      aria: "Get a free consultation",
     },
     notFound: {
       metaTitle: "Page not found | SM Credit Consult",

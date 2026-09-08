@@ -50,3 +50,11 @@ export function trackPhoneClick() {
     event_label: "phone",
   });
 }
+
+/** Mobile sticky bar CTA toward the consultation form. */
+export function trackMobileConsultCta() {
+  trackEvent("consult_cta_click", {
+    event_category: "consultation",
+    event_label: "mobile_sticky_bar",
+  });
+}
