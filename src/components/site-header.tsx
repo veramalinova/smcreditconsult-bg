@@ -58,7 +58,7 @@ export function SiteHeader({
           {t.brand}
         </Link>
 
-        <nav className="hidden items-center gap-7 text-sm md:flex">
+        <nav className="hidden items-center gap-5 text-sm lg:gap-7 md:flex">
           {links.map((link) => (
             <Link key={link.href} href={link.href} className={linkClass(link.href)}>
               {link.label}
