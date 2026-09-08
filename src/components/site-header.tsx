@@ -23,7 +23,6 @@ export function SiteHeader({
     { href: "/uslugi", label: t.nav.services },
     { href: "/kak-rabotim", label: t.nav.process },
     { href: "/za-nas", label: t.nav.about },
-    { href: "/polezno", label: t.nav.useful },
     { href: "/vaprosi", label: t.nav.faq },
   ];
 
