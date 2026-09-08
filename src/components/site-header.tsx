@@ -24,6 +24,8 @@ export function SiteHeader({
     { href: "/kak-rabotim", label: t.nav.process },
     { href: "/za-nas", label: t.nav.about },
     { href: t.freeWhy.href, label: t.freeWhy.linkLabel },
+    { href: "/polezno", label: t.nav.useful },
+    { href: "/vaprosi", label: t.nav.faq },
   ];
 
   function linkClass(href: string) {
