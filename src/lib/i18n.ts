@@ -356,7 +356,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       support:
         "Сравняваме предложения от банки и ви помагаме да изберете подходящото финансиране според вашите цели и финансов профил — напълно безплатно.",
       highlights: [
-        "Напълно безплатно",
+        "Безплатна консултация",
         "Дългогодишен опит",
         "Изцяло онлайн",
       ],
@@ -680,7 +680,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       support:
         "We compare bank offers and help you choose the right financing for your goals and financial profile — completely free.",
       highlights: [
-        "Completely free",
+        "Free consultation",
         "Years of experience",
         "Fully online",
       ],
