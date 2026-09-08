@@ -29,9 +29,9 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="pt-10 sm:pt-12">
+        <section className="overflow-x-hidden pt-10 sm:pt-12">
           <div className="mx-auto max-w-6xl px-5 sm:px-8">
-            <div className="relative aspect-[21/9] min-h-[220px] overflow-hidden sm:aspect-[2.4/1]">
+            <div className="relative aspect-[16/10] w-full max-w-full overflow-hidden sm:aspect-[2.4/1]">
               <Image
                 src="/consult.jpg"
                 alt={t.aboutPage.imageAlt}
@@ -51,9 +51,9 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="pb-4">
+        <section className="overflow-x-hidden pb-4">
           <div className="mx-auto max-w-6xl px-5 sm:px-8">
-            <div className="relative aspect-[21/9] min-h-[200px] overflow-hidden sm:aspect-[2.4/1]">
+            <div className="relative aspect-[16/10] w-full max-w-full overflow-hidden sm:aspect-[2.4/1]">
               <Image
                 src="/hero.jpg"
                 alt={t.aboutPage.secondaryImageAlt}
