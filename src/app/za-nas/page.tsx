@@ -15,9 +15,9 @@ export default function AboutPage() {
   const [first, second, ...rest] = t.aboutPage.body;
 
   return (
-    <div className="flex min-h-full flex-col">
+    <div className="flex min-h-full min-w-0 flex-col">
       <SiteHeader />
-      <main className="flex-1">
+      <main className="min-w-0 flex-1">
         <section className="border-b border-border/70 bg-[linear-gradient(160deg,#e8f0f2_0%,#f3f6f8_55%,#dce8e6_100%)] py-16 sm:py-20">
           <div className="mx-auto max-w-6xl px-5 sm:px-8">
             <h1 className="font-display text-4xl tracking-tight text-ink sm:text-5xl">
@@ -29,16 +29,17 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="overflow-x-hidden pt-10 sm:pt-12">
-          <div className="mx-auto max-w-6xl px-5 sm:px-8">
-            <div className="relative aspect-[16/10] w-full max-w-full overflow-hidden sm:aspect-[2.4/1]">
+        <section className="pt-10 sm:pt-12">
+          <div className="mx-auto min-w-0 max-w-6xl px-5 sm:px-8">
+            <div className="w-full max-w-full overflow-hidden">
               <Image
                 src="/consult.jpg"
                 alt={t.aboutPage.imageAlt}
-                fill
+                width={1600}
+                height={1068}
                 priority
-                className="object-cover object-center"
-                sizes="(max-width: 1152px) 100vw, 1152px"
+                className="block h-auto w-full max-w-full object-cover"
+                sizes="(max-width: 640px) 100vw, (max-width: 1152px) 100vw, 1152px"
               />
             </div>
           </div>
@@ -51,15 +52,16 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="overflow-x-hidden pb-4">
-          <div className="mx-auto max-w-6xl px-5 sm:px-8">
-            <div className="relative aspect-[16/10] w-full max-w-full overflow-hidden sm:aspect-[2.4/1]">
+        <section className="pb-4">
+          <div className="mx-auto min-w-0 max-w-6xl px-5 sm:px-8">
+            <div className="w-full max-w-full overflow-hidden">
               <Image
                 src="/hero.jpg"
                 alt={t.aboutPage.secondaryImageAlt}
-                fill
-                className="object-cover object-center"
-                sizes="(max-width: 1152px) 100vw, 1152px"
+                width={2400}
+                height={1377}
+                className="block h-auto w-full max-w-full object-cover"
+                sizes="(max-width: 640px) 100vw, (max-width: 1152px) 100vw, 1152px"
               />
             </div>
           </div>

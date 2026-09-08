@@ -62,9 +62,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="bg"
-      className={`${manrope.variable} ${literata.variable} h-full antialiased`}
+      className={`${manrope.variable} ${literata.variable} h-full overflow-x-hidden antialiased`}
     >
-      <body className="flex min-h-full flex-col pb-20 font-sans md:pb-0">
+      <body className="flex min-h-full min-w-0 flex-col overflow-x-hidden pb-20 font-sans md:pb-0">
         <LanguageProvider>
           {children}
           <MobileCallBar />
