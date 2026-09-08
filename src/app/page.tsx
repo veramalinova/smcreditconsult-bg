@@ -62,8 +62,14 @@ export default function HomePage() {
             </ul>
             <div className="animate-fade-up-delay-3 mt-8 flex flex-wrap items-center justify-center gap-3">
               <Link
+                href={t.freeWhy.href}
+                className="inline-flex h-12 items-center justify-center rounded-md bg-jade px-6 text-base font-medium text-accent-foreground transition-colors hover:bg-jade/90 sm:hidden"
+              >
+                {t.freeWhy.linkLabel}
+              </Link>
+              <Link
                 href="/konsultaciya"
-                className="inline-flex h-12 items-center justify-center rounded-md bg-jade px-6 text-base font-medium text-accent-foreground transition-colors hover:bg-jade/90"
+                className="hidden h-12 items-center justify-center rounded-md bg-jade px-6 text-base font-medium text-accent-foreground transition-colors hover:bg-jade/90 sm:inline-flex"
               >
                 {t.home.cta}
               </Link>

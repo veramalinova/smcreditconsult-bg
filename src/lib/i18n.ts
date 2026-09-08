@@ -354,7 +354,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         "Кредитен консултант за ипотечни, потребителски и фирмени кредити. Сравнение на банкови оферти, рефинансиране и професионално съдействие. Безплатна консултация.",
       headline: "Вашият кредит. Нашата експертиза.",
       support:
-        "Сравняваме предложения от банки и ви помагаме да изберете подходящото финансиране според вашите цели и финансов профил — напълно безплатно.",
+        "Сравняваме предложения от банки и ви помагаме да изберете подходящото финансиране според вашите цели и финансов профил.",
       highlights: [
         "Безплатна консултация",
         "Дългогодишен опит",
@@ -678,7 +678,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         "Credit consultant for mortgages, consumer loans, and business loans. Compare bank offers, refinancing, and professional support. Free consultation.",
       headline: "Your credit. Our expertise.",
       support:
-        "We compare bank offers and help you choose the right financing for your goals and financial profile — completely free.",
+        "We compare bank offers and help you choose the right financing for your goals and financial profile.",
       highlights: [
         "Free consultation",
         "Years of experience",
