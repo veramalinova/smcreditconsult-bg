@@ -1,6 +1,6 @@
 "use client";
 
-import type { ReactNode } from "react";
+import type { MouseEvent, ReactNode } from "react";
 import { useLanguage } from "@/components/language-provider";
 import {
   getContactPhones,
@@ -22,7 +22,8 @@ type PhoneLinkProps = {
 
 /**
  * On phones, tapping opens the dialer.
- * On desktop, the number is plain text so browsers do not prompt for an app.
+ * On desktop, the number stays a single text node so crawlers do not see it twice;
+ * clicks do not open a calling app.
  */
 export function PhoneLink({
   className,
@@ -36,31 +37,26 @@ export function PhoneLink({
   const phone = phoneProp ?? getPrimaryContactPhone(locale);
   const label = children ?? phone.display;
 
-  if (forceCall) {
-    return (
-      <a
-        href={`tel:${phone.tel}`}
-        className={className}
-        aria-label={ariaLabel}
-        onClick={onClick}
-      >
-        {label}
-      </a>
-    );
+  function handleClick(event: MouseEvent<HTMLAnchorElement>) {
+    onClick?.();
+    if (
+      !forceCall &&
+      typeof window !== "undefined" &&
+      window.matchMedia("(min-width: 768px)").matches
+    ) {
+      event.preventDefault();
+    }
   }
 
   return (
-    <span className="block">
-      <a
-        href={`tel:${phone.tel}`}
-        className={cn(className, "md:hidden")}
-        aria-label={ariaLabel}
-        onClick={onClick}
-      >
-        {label}
-      </a>
-      <span className={cn(className, "hidden md:inline")}>{label}</span>
-    </span>
+    <a
+      href={`tel:${phone.tel}`}
+      className={className}
+      aria-label={ariaLabel}
+      onClick={handleClick}
+    >
+      {label}
+    </a>
   );
 }
 
@@ -68,9 +64,13 @@ export function PhoneLink({
 export function PhoneList({
   className,
   itemClassName,
+  forceCall = false,
+  onItemClick,
 }: {
   className?: string;
   itemClassName?: string;
+  forceCall?: boolean;
+  onItemClick?: () => void;
 }) {
   const { locale } = useLanguage();
   const phones = getContactPhones(locale);
@@ -78,7 +78,13 @@ export function PhoneList({
   return (
     <div className={cn("flex flex-col gap-1", className)}>
       {phones.map((phone) => (
-        <PhoneLink key={phone.tel} phone={phone} className={itemClassName}>
+        <PhoneLink
+          key={phone.tel}
+          phone={phone}
+          className={itemClassName}
+          forceCall={forceCall}
+          onClick={onItemClick}
+        >
           {phone.display}
         </PhoneLink>
       ))}

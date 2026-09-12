@@ -5,19 +5,17 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { useLanguage } from "@/components/language-provider";
-import { PhoneLink } from "@/components/phone-link";
-import { getPrimaryContactPhone } from "@/lib/contact";
+import { PhoneLink, PhoneList } from "@/components/phone-link";
 
 export function SiteHeader({
   variant = "solid",
 }: {
   variant?: "solid" | "transparent";
 }) {
-  const { locale, t } = useLanguage();
+  const { t } = useLanguage();
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const light = variant === "transparent";
-  const phone = getPrimaryContactPhone(locale);
 
   const links = [
     { href: "/uslugi", label: t.nav.services },
@@ -147,13 +145,12 @@ export function SiteHeader({
                 {link.label}
               </Link>
             ))}
-            <PhoneLink
+            <PhoneList
               forceCall
-              className="mt-2 rounded-md px-3 py-3 font-medium hover:bg-black/5"
-              onClick={() => setOpen(false)}
-            >
-              {`${t.nav.phoneAria}: ${phone.display}`}
-            </PhoneLink>
+              className="mt-2"
+              itemClassName="rounded-md px-3 py-3 font-medium hover:bg-black/5"
+              onItemClick={() => setOpen(false)}
+            />
             <Link
               href="/konsultaciya"
               className="mt-1 rounded-md bg-jade px-3 py-3 text-center font-medium text-accent-foreground"

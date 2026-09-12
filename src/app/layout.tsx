@@ -3,6 +3,7 @@ import { Literata, Manrope } from "next/font/google";
 import { Analytics } from "@/components/analytics";
 import { LanguageProvider } from "@/components/language-provider";
 import { MobileCallBar } from "@/components/mobile-call-bar";
+import { CONTACT_EMAIL, CONTACT_PHONES_BG } from "@/lib/contact";
 import { dictionaries } from "@/lib/i18n";
 import { getSiteUrl } from "@/lib/site";
 import "./globals.css";
@@ -58,6 +59,16 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: bg.brand,
+  url: siteUrl,
+  email: CONTACT_EMAIL,
+  telephone: CONTACT_PHONES_BG.map((phone) => phone.tel),
+  areaServed: "BG",
+};
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
@@ -65,6 +76,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${manrope.variable} ${literata.variable} h-full overflow-x-hidden antialiased`}
     >
       <body className="flex min-h-full min-w-0 flex-col overflow-x-hidden pb-20 font-sans md:pb-0">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <LanguageProvider>
           {children}
           <MobileCallBar />
