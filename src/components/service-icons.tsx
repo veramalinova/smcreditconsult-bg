@@ -44,8 +44,44 @@ export function BusinessIcon({ className = "h-10 w-10" }: { className?: string }
   );
 }
 
+export function RefinancingIcon({ className = "h-10 w-10" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 48 48" className={className} fill="none" aria-hidden>
+      {/* Two arrows forming a circle: moving a loan to better terms */}
+      <path
+        d="M37 20a14 14 0 0 0-25.5-5.5"
+        stroke="currentColor"
+        strokeWidth="1.75"
+        strokeLinecap="round"
+      />
+      <path
+        d="M11 9v6h6"
+        stroke="currentColor"
+        strokeWidth="1.75"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M11 28a14 14 0 0 0 25.5 5.5"
+        stroke="currentColor"
+        strokeWidth="1.75"
+        strokeLinecap="round"
+      />
+      <path
+        d="M37 39v-6h-6"
+        stroke="currentColor"
+        strokeWidth="1.75"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path d="M21 24h6" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+    </svg>
+  );
+}
+
 export const serviceIcons = {
   mortgage: MortgageIcon,
   consumer: ConsumerIcon,
   business: BusinessIcon,
+  refinancing: RefinancingIcon,
 } as const;

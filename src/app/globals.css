@@ -66,20 +66,21 @@
   --secondary-foreground: #0a2a32;
   --muted: #e4ecef;
   --muted-foreground: #4a6570;
-  --accent: #1f7a6e;
+  --accent: #047857;
   --accent-foreground: #f7fbfa;
   --destructive: oklch(0.577 0.245 27.325);
   --border: #c9d7dc;
   --input: #c9d7dc;
-  --ring: #1f7a6e;
+  --ring: #047857;
   --ink: #062029;
   --mist: #e8f0f2;
-  --jade: #1f7a6e;
-  --foam: #b7d4cf;
+  /* Deep emerald brand green (previous: jade #1f7a6e, foam #b7d4cf) */
+  --jade: #047857;
+  --foam: #9ee6c4;
   --chart-1: #0a2a32;
-  --chart-2: #1f7a6e;
+  --chart-2: #047857;
   --chart-3: #4a6570;
-  --chart-4: #b7d4cf;
+  --chart-4: #9ee6c4;
   --chart-5: #c9d7dc;
   --radius: 0.5rem;
   --sidebar: #f3f6f8;
@@ -89,7 +90,7 @@
   --sidebar-accent: #dce8e6;
   --sidebar-accent-foreground: #0a2a32;
   --sidebar-border: #c9d7dc;
-  --sidebar-ring: #1f7a6e;
+  --sidebar-ring: #047857;
 }
 
 @layer base {

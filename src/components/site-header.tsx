@@ -47,7 +47,7 @@ export function SiteHeader({
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-5 py-4 sm:px-8">
         <Link
           href="/"
-          className={`font-display text-lg tracking-tight ${
+          className={`whitespace-nowrap font-display text-base tracking-tight sm:text-lg ${
             light ? "text-white" : "text-ink"
           }`}
         >

@@ -2,7 +2,7 @@ export type Locale = "bg" | "en";
 
 export const defaultLocale: Locale = "bg";
 
-export type ServiceId = "mortgage" | "consumer" | "business";
+export type ServiceId = "mortgage" | "consumer" | "business" | "refinancing";
 
 export type ServicePage = {
   id: ServiceId;
@@ -44,6 +44,7 @@ export type Dictionary = {
     imageAlt: string;
     servicesTitle: string;
     servicesSupport: string;
+    servicesMore: string;
     whyTitle: string;
     whySupport: string;
     whyItems: { title: string; body: string }[];
@@ -71,7 +72,6 @@ export type Dictionary = {
     lead: string;
     body: string[];
     imageAlt: string;
-    secondaryImageAlt: string;
     valuesTitle: string;
     values: { title: string; body: string }[];
   };
@@ -100,7 +100,7 @@ export type Dictionary = {
     hoursLabel: string;
     hoursValue: string;
   };
-  ctaBand: { title: string; button: string };
+  ctaBand: { title: string; support: string; button: string; call: string };
   freeWhy: {
     title: string;
     body: string;
@@ -130,6 +130,7 @@ export type Dictionary = {
     submit: string;
     submitting: string;
     invalid: string;
+    invalidEmail: string;
     error: string;
     successTitle: string;
     successBody: string;
@@ -245,6 +246,33 @@ const bgServices: Record<ServiceId, ServicePage> = {
     ],
     cta: "Получете безплатна консултация",
   },
+  refinancing: {
+    id: "refinancing",
+    href: "/uslugi/refinansirane",
+    title: "Рефинансиране",
+    short:
+      "Прехвърляне на текущ кредит към по-изгодни условия — по-ниска лихва, вноска или по-удобен срок.",
+    metaTitle: "Рефинансиране на кредит | СМ Кредит Консулт",
+    metaDescription:
+      "Рефинансиране на ипотечен, потребителски или фирмен кредит. Изчисляваме реалната полза след всички такси и съдействаме при прехвърлянето.",
+    eyebrow: "По-добри условия",
+    headline: "Рефинансиране — само когато наистина си струва",
+    intro:
+      "Ако лихвата ви е висока или вноската ви натоварва, проверяваме дали прехвърлянето на кредита в друга банка ще ви донесе реална полза — след таксите за предсрочно погасяване, оценка и отпускане на новия кредит.",
+    points: [
+      "Изчисляване на реалната разлика — с всички такси по стария и новия кредит",
+      "Сравнение на оферти за ипотечни, потребителски и фирмени кредити",
+      "Възможност за обединяване на няколко задължения в едно",
+      "Съдействие с документите и прехвърлянето към новата банка",
+    ],
+    forWhomTitle: "За кого е подходящ",
+    forWhom: [
+      "Лихвата по текущия ви кредит е по-висока от днешните оферти",
+      "Искате по-ниска месечна вноска или по-кратък срок",
+      "Имате няколко кредита и искате да ги обедините",
+    ],
+    cta: "Получете безплатна консултация",
+  },
 };
 
 const enServices: Record<ServiceId, ServicePage> = {
@@ -328,6 +356,33 @@ const enServices: Record<ServiceId, ServicePage> = {
     ],
     cta: "Get a free consultation",
   },
+  refinancing: {
+    id: "refinancing",
+    href: "/uslugi/refinansirane",
+    title: "Refinancing",
+    short:
+      "Move an existing loan to better terms — a lower rate, a lower payment, or a more convenient term.",
+    metaTitle: "Loan refinancing | SM Credit Consult",
+    metaDescription:
+      "Refinance a mortgage, consumer, or business loan. We calculate the real benefit after all fees and support you through the switch.",
+    eyebrow: "Better terms",
+    headline: "Refinancing — only when it is really worth it",
+    intro:
+      "If your rate is high or your payment is a strain, we check whether moving the loan to another bank brings a real benefit — after early-repayment, valuation, and new-loan fees.",
+    points: [
+      "Calculate the real difference — with all fees on the old and new loan",
+      "Compare offers for mortgage, consumer, and business loans",
+      "Option to consolidate several debts into one",
+      "Help with documents and the switch to the new bank",
+    ],
+    forWhomTitle: "Who it is for",
+    forWhom: [
+      "Your current loan rate is higher than today’s offers",
+      "You want a lower monthly payment or a shorter term",
+      "You have several loans and want to combine them",
+    ],
+    cta: "Get a free consultation",
+  },
 };
 
 export const dictionaries: Record<Locale, Dictionary> = {
@@ -352,23 +407,24 @@ export const dictionaries: Record<Locale, Dictionary> = {
       metaTitle: "СМ Кредит Консулт | Кредитен консултант и посредник",
       metaDescription:
         "Кредитен консултант за ипотечни, потребителски и фирмени кредити. Сравнение на банкови оферти, рефинансиране и професионално съдействие. Безплатна консултация.",
-      headline: "Вашият кредит. Нашата експертиза.",
+      headline: "Сравняваме банките вместо вас. Безплатно.",
       support:
-        "Сравняваме предложения от банки и ви помагаме да изберете подходящото финансиране според вашите цели и финансов профил.",
+        "Помагаме ви да изберете подходящото финансиране според вашите цели и финансов профил — от първия разговор до подаването на заявката.",
       highlights: [
-        "Безплатна консултация",
+        "Отговор до 1 работен ден",
         "Дългогодишен опит",
         "Изцяло онлайн",
       ],
-      cta: "Получете безплатна консултация",
+      cta: "Заявете консултация",
       secondaryCta: "Вижте услугите",
-      imageAlt: "Спокоен дом и градска улица при дневна светлина",
+      imageAlt: "Договор за кредит, документи и калкулатор върху бюро",
       servicesTitle: "С какво можем да помогнем",
       servicesSupport:
         "Работим с всички основни кредитни продукти — ипотечен, потребителски и фирмен кредит — включително рефинансиране.",
+      servicesMore: "Научете повече",
       whyTitle: "Защо кредитен консултант",
       whySupport:
-        "Благодарение на дългогодишния си опит ви помагаме да разберете пазара, да сравните реалните условия и да кандидатствате подготвени — без да обикаляте сам всяка банка. Услугата е напълно безплатна за вас.",
+        "Благодарение на дългогодишния си опит ви помагаме да разберете пазара, да сравните реалните условия и да кандидатствате подготвени — без да обикаляте сам всяка банка.",
       whyItems: [
         {
           title: "Един разговор вместо много клонове",
@@ -385,18 +441,6 @@ export const dictionaries: Record<Locale, Dictionary> = {
         {
           title: "Обективен поглед върху профила ви",
           body: "Оценяваме дохода, текущите задължения и целта на кредита. Ако даден продукт не ви пасва или рискът е висок, го казваме директно — дори това да значи да изчакате или да изберете друг вариант.",
-        },
-        {
-          title: "Съдействие до кандидатстването",
-          body: "След като изберете оферта, оставаме с вас при подаване на заявката и следващите стъпки. Целта е да знаете какво се случва на всеки етап, без изненади и без натиск.",
-        },
-        {
-          title: "Услугата е безплатна за вас",
-          body: "Консултацията и съдействието са без допълнителна такса за вас. Когато е приложимо, възнаграждението на кредитния посредник се заплаща от кредитора съгласно договорните отношения между страните.",
-        },
-        {
-          title: "Изцяло онлайн и по телефона",
-          body: "Целият процес може да мине дистанционно — разговор, анализ, сравнение на оферти и кандидатстване. Без губене на време с ходене в офис, ако предпочитате да работите от вкъщи или в движение.",
         },
       ],
       processTitle: "Как работим",
@@ -437,8 +481,8 @@ export const dictionaries: Record<Locale, Dictionary> = {
         },
         {
           number: "04",
-          title: "Кандидатстване и проследяване",
-          body: "Подготвяме документите, подаваме заявката и сме с вас до ясно решение и следващи стъпки — изцяло онлайн и по телефона.",
+          title: "Кандидатстване",
+          body: "Подготвяме документите, подаваме заявката и сме с вас до решението на банката.",
         },
       ],
     },
@@ -455,7 +499,6 @@ export const dictionaries: Record<Locale, Dictionary> = {
         "Консултацията е безплатна за вас. Целта ни е да вземете информирано решение и да кандидатствате спокойно — с ясна картина какво подписвате и защо.",
       ],
       imageAlt: "Консултант и клиент преглеждат документи заедно",
-      secondaryImageAlt: "Спокоен дом и градска улица при дневна светлина",
       valuesTitle: "На какво можете да разчитате",
       values: [
         {
@@ -579,7 +622,10 @@ export const dictionaries: Record<Locale, Dictionary> = {
     },
     ctaBand: {
       title: "Имате въпрос за кредит?",
-      button: "Получете безплатна консултация",
+      support:
+        "Отговаряме до един работен ден — без такса и без ангажимент.",
+      button: "Заявете консултация",
+      call: "Обадете се",
     },
     freeWhy: {
       title: "Защо консултацията е безплатна?",
@@ -593,7 +639,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       metaDescription:
         "Защо кредитната консултация е безплатна за клиента и как се заплаща възнаграждението на посредника.",
       title: "Защо консултацията е безплатна?",
-      lead: "Кратък и ясен отговор — без скрити такси за вас при консултацията и съдействието.",
+      lead: "Вие не плащате за нашата помощ. Когато има възнаграждение, то се плаща от кредитора — не от вас.",
       body: [
         "За клиента консултацията и съдействието са без допълнителна такса. Не плащате отделно за разговор, сравнение на оферти или помощ с документите през нас.",
         "Когато е приложимо, възнаграждението на кредитния посредник се заплаща от кредитора съгласно договорните отношения между страните.",
@@ -616,6 +662,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       submit: "Получете безплатна консултация",
       submitting: "Изпращане…",
       invalid: "Моля, попълнете име, имейл и какъв кредит ви интересува.",
+      invalidEmail: "Моля, въведете валиден имейл адрес.",
       error:
         "Не успяхме да изпратим заявката през сайта. Опитайте отново след малко или се обадете по телефона.",
       successTitle: "Заявката е получена",
@@ -632,10 +679,10 @@ export const dictionaries: Record<Locale, Dictionary> = {
       hoursLabel: "Работно време",
       hoursValue: "Понеделник–петък, 9:00–18:00",
       disclaimer:
-        "Кредитни консултации с дългогодишен опит. Консултацията е напълно безплатна за клиента.",
+        "Кредитни консултации с дългогодишен опит. Ипотечни, потребителски и фирмени кредити и рефинансиране — с ясни условия.",
     },
     mobileCall: {
-      label: "Получете безплатна консултация",
+      label: "Заявете консултация",
       aria: "Получете безплатна консултация",
     },
     notFound: {
@@ -676,23 +723,24 @@ export const dictionaries: Record<Locale, Dictionary> = {
       metaTitle: "SM Credit Consult | Credit consultant and intermediary",
       metaDescription:
         "Credit consultant for mortgages, consumer loans, and business loans. Compare bank offers, refinancing, and professional support. Free consultation.",
-      headline: "Your credit. Our expertise.",
+      headline: "We compare the banks for you. Free of charge.",
       support:
-        "We compare bank offers and help you choose the right financing for your goals and financial profile.",
+        "We help you choose the right financing for your goals and financial profile — from the first conversation to the application.",
       highlights: [
-        "Free consultation",
+        "Reply within 1 working day",
         "Years of experience",
         "Fully online",
       ],
-      cta: "Get a free consultation",
+      cta: "Request a consultation",
       secondaryCta: "See services",
-      imageAlt: "Calm home and city street in daylight",
+      imageAlt: "Loan agreement, documents and a calculator on a desk",
       servicesTitle: "How we can help",
       servicesSupport:
         "We cover the main loan products — mortgages, consumer loans, and business loans — including refinancing.",
+      servicesMore: "Learn more",
       whyTitle: "Why use a credit consultant",
       whySupport:
-        "Thanks to our years of experience, we help you understand the market, compare real terms, and apply prepared — without visiting every bank yourself. The service is completely free for you.",
+        "Thanks to our years of experience, we help you understand the market, compare real terms, and apply prepared — without visiting every bank yourself.",
       whyItems: [
         {
           title: "One conversation instead of many branches",
@@ -709,18 +757,6 @@ export const dictionaries: Record<Locale, Dictionary> = {
         {
           title: "An objective view of your profile",
           body: "We assess income, current obligations, and the purpose of the loan. If a product does not fit or the risk is high, we say so directly — even if that means waiting or choosing another option.",
-        },
-        {
-          title: "Support through application",
-          body: "After you choose an offer, we stay with you for submission and the next steps. The goal is that you know what is happening at every stage, without pressure.",
-        },
-        {
-          title: "The service is free for you",
-          body: "Consultation and support come with no extra fee for you. When applicable, the credit intermediary’s remuneration is paid by the lender under the contractual arrangements between the parties.",
-        },
-        {
-          title: "Fully online and by phone",
-          body: "The whole process can happen remotely — conversation, analysis, offer comparison, and application. No time wasted visiting an office if you prefer to work from home or on the go.",
         },
       ],
       processTitle: "How we work",
@@ -761,8 +797,8 @@ export const dictionaries: Record<Locale, Dictionary> = {
         },
         {
           number: "04",
-          title: "Application and follow-up",
-          body: "We prepare documents, submit the application, and stay with you until the next step is clear — fully online and by phone.",
+          title: "Application",
+          body: "We prepare the documents, submit the application, and stay with you until the bank’s decision.",
         },
       ],
     },
@@ -779,7 +815,6 @@ export const dictionaries: Record<Locale, Dictionary> = {
         "Consultation is free for you. Our goal is an informed decision and a calm application — with a clear picture of what you are signing and why.",
       ],
       imageAlt: "Advisor and client reviewing documents together",
-      secondaryImageAlt: "Calm home and city street in daylight",
       valuesTitle: "What you can rely on",
       values: [
         {
@@ -903,7 +938,10 @@ export const dictionaries: Record<Locale, Dictionary> = {
     },
     ctaBand: {
       title: "Have a question about a loan?",
-      button: "Get a free consultation",
+      support:
+        "We reply within one working day — no fee, no obligation.",
+      button: "Request a consultation",
+      call: "Call us",
     },
     freeWhy: {
       title: "Why is the consultation free?",
@@ -917,7 +955,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       metaDescription:
         "Why credit consultation is free for the client and how the intermediary’s remuneration is paid.",
       title: "Why is the consultation free?",
-      lead: "A short, clear answer — no hidden fees for you for consultation and support.",
+      lead: "You don’t pay for our help. When there is a fee, it is paid by the lender — not by you.",
       body: [
         "For the client, consultation and support come with no extra fee. You do not pay separately for a conversation, offer comparison, or document help through us.",
         "When applicable, the credit intermediary’s remuneration is paid by the lender under the contractual arrangements between the parties.",
@@ -939,6 +977,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       submit: "Get a free consultation",
       submitting: "Sending…",
       invalid: "Please fill in your name, email, and which loan you need.",
+      invalidEmail: "Please enter a valid email address.",
       error:
         "We could not send the request through the site. Please try again shortly or call us.",
       successTitle: "Request received",
@@ -955,10 +994,10 @@ export const dictionaries: Record<Locale, Dictionary> = {
       hoursLabel: "Working hours",
       hoursValue: "Monday–Friday, 9:00–18:00",
       disclaimer:
-        "Loan consulting with years of experience. Consultation is completely free for the client.",
+        "Loan consulting with years of experience. Mortgage, consumer and business loans and refinancing — with clear terms.",
     },
     mobileCall: {
-      label: "Get a free consultation",
+      label: "Request a consultation",
       aria: "Get a free consultation",
     },
     notFound: {
@@ -984,4 +1023,5 @@ export const serviceOrder: ServiceId[] = [
   "mortgage",
   "consumer",
   "business",
+  "refinancing",
 ];

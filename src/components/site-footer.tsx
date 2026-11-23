@@ -7,16 +7,19 @@ import { CONTACT_EMAIL } from "@/lib/contact";
 import { serviceOrder } from "@/lib/i18n";
 import { getLegalNav } from "@/lib/legal";
 
+const CURRENT_YEAR = new Date().getFullYear();
+
 export function SiteFooter() {
   const { locale, t } = useLanguage();
   const legalLinks = getLegalNav(locale);
 
   return (
     <footer className="border-t border-white/10 bg-ink text-white/70">
-      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-12 sm:px-8 lg:grid-cols-[1fr_0.9fr_0.9fr_1.15fr]">
+      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-12 sm:px-8 lg:grid-cols-[1.25fr_0.8fr_0.8fr_1.15fr]">
         <div>
           <p className="font-display text-xl text-white">{t.brand}</p>
-          <p className="mt-3 max-w-sm text-sm leading-relaxed">
+          {/* text-wrap: balance — evens out line lengths so no single word is left alone */}
+          <p className="mt-3 max-w-sm text-sm leading-relaxed [text-wrap:balance]">
             {t.footer.disclaimer}
           </p>
         </div>
@@ -69,13 +72,14 @@ export function SiteFooter() {
                 href="/konsultaciya"
                 className="transition-colors hover:text-white"
               >
-                {t.footer.contacts}
+                {t.home.cta}
               </Link>
             </li>
           </ul>
         </div>
 
-        <div className="rounded-2xl bg-jade px-5 py-6 text-white sm:px-6">
+        {/* Subtle panel: the green CTA band above is the main call to action */}
+        <div className="rounded-2xl border border-white/15 bg-white/[0.04] px-5 py-6 text-white sm:px-6">
           <p className="text-sm font-medium tracking-[0.14em] text-foam/90 uppercase">
             {t.footer.contacts}
           </p>
@@ -107,23 +111,26 @@ export function SiteFooter() {
         </div>
       </div>
 
+      {/* Slim bottom bar: copyright left, legal links right (stacked on phones) */}
       <div className="border-t border-white/10">
-        <div className="mx-auto max-w-6xl px-5 py-6 sm:px-8">
-          <p className="text-sm font-medium tracking-[0.14em] text-foam uppercase">
-            {t.footer.legal}
+        <div className="mx-auto flex max-w-6xl flex-col gap-3 px-5 py-5 text-sm text-white/55 sm:px-8 md:flex-row md:items-center md:justify-between">
+          <p>
+            © {CURRENT_YEAR} {t.brand}
           </p>
-          <ul className="mt-3 flex flex-col gap-2 text-sm sm:flex-row sm:flex-wrap sm:gap-x-6 sm:gap-y-2">
-            {legalLinks.map((link) => (
-              <li key={link.id}>
-                <Link
-                  href={link.href}
-                  className="transition-colors hover:text-white"
-                >
-                  {link.title}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <nav aria-label={t.footer.legal}>
+            <ul className="flex flex-wrap gap-x-5 gap-y-2">
+              {legalLinks.map((link) => (
+                <li key={link.id}>
+                  <Link
+                    href={link.href}
+                    className="transition-colors hover:text-white"
+                  >
+                    {link.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </div>
       </div>
     </footer>

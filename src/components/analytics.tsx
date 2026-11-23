@@ -1,7 +1,7 @@
 "use client";
 
 import Script from "next/script";
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import {
   ANALYTICS_ENABLED,
   GA_MEASUREMENT_ID,
@@ -11,26 +11,62 @@ import {
 } from "@/lib/analytics";
 import { useLanguage } from "@/components/language-provider";
 
+/*
+ * Consent lives in localStorage. useSyncExternalStore reads it without a
+ * setState-in-effect round trip. On the server (and during hydration) the
+ * snapshot is "unknown", so nothing renders until the browser value is known —
+ * the same behaviour as before, without the extra render.
+ */
+type ConsentSnapshot = AnalyticsConsent | null | "unknown";
+
+const listeners = new Set<() => void>();
+
+function subscribe(listener: () => void) {
+  listeners.add(listener);
+  return () => {
+    listeners.delete(listener);
+  };
+}
+
+function getSnapshot(): ConsentSnapshot {
+  try {
+    return getStoredConsent();
+  } catch {
+    // Storage blocked (e.g. some private modes): ask again on each visit.
+    return null;
+  }
+}
+
+function getServerSnapshot(): ConsentSnapshot {
+  return "unknown";
+}
+
+// Fallback for when localStorage cannot be written.
+let sessionChoice: AnalyticsConsent | null = null;
+
+function saveConsent(value: AnalyticsConsent) {
+  try {
+    storeConsent(value);
+  } catch {
+    // Storage blocked: the choice still applies until the page is reloaded.
+  }
+  sessionChoice = value;
+  for (const listener of listeners) listener();
+}
+
 export function Analytics() {
   const { t } = useLanguage();
-  const [consent, setConsent] = useState<AnalyticsConsent | null>(null);
-  const [ready, setReady] = useState(false);
+  const stored = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+  const consent = stored === null ? sessionChoice : stored;
 
-  useEffect(() => {
-    setConsent(getStoredConsent());
-    setReady(true);
-  }, []);
-
-  if (!ANALYTICS_ENABLED || !ready) return null;
+  if (!ANALYTICS_ENABLED || consent === "unknown") return null;
 
   function accept() {
-    storeConsent("accepted");
-    setConsent("accepted");
+    saveConsent("accepted");
   }
 
   function decline() {
-    storeConsent("declined");
-    setConsent("declined");
+    saveConsent("declined");
   }
 
   return (

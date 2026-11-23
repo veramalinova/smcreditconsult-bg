@@ -1,18 +1,67 @@
 import nodemailer from "nodemailer";
 import { NextResponse } from "next/server";
 import { CONTACT_EMAIL } from "@/lib/contact";
+import {
+  CONSULT_LIMITS,
+  HONEYPOT_FIELD,
+  MIN_FILL_TIME_MS,
+  isValidEmail,
+  isValidPhone,
+} from "@/lib/consult-validation";
 
 type ConsultPayload = {
-  name?: string;
-  email?: string;
-  phone?: string;
-  goal?: string;
-  privacyAccepted?: boolean;
+  name?: unknown;
+  email?: unknown;
+  phone?: unknown;
+  goal?: unknown;
+  privacyAccepted?: unknown;
+  elapsedMs?: unknown;
+  [HONEYPOT_FIELD]?: unknown;
 };
 
-export async function POST(request: Request) {
-  let body: ConsultPayload;
+/* ------------------------------------------------------------------ */
+/* Rate limiting: max RATE_MAX requests per IP per RATE_WINDOW_MS.     */
+/* In-memory, so it is per server instance and resets on restart.      */
+/* That is enough to stop simple floods; it is not a hard guarantee.   */
+/* ------------------------------------------------------------------ */
+const RATE_WINDOW_MS = 10 * 60 * 1000;
+const RATE_MAX = 5;
+const hits = new Map<string, number[]>();
 
+function isRateLimited(ip: string) {
+  const now = Date.now();
+  const recent = (hits.get(ip) ?? []).filter((t) => now - t < RATE_WINDOW_MS);
+  recent.push(now);
+  hits.set(ip, recent);
+  // Keep memory bounded: drop stale entries now and then.
+  if (hits.size > 5000) {
+    for (const [key, times] of hits) {
+      if (times.every((t) => now - t >= RATE_WINDOW_MS)) hits.delete(key);
+    }
+  }
+  return recent.length > RATE_MAX;
+}
+
+function clientIp(request: Request) {
+  const forwarded = request.headers.get("x-forwarded-for");
+  return (
+    forwarded?.split(",")[0]?.trim() ||
+    request.headers.get("x-real-ip")?.trim() ||
+    "unknown"
+  );
+}
+
+const text = (value: unknown) => (typeof value === "string" ? value.trim() : "");
+
+export async function POST(request: Request) {
+  if (isRateLimited(clientIp(request))) {
+    return NextResponse.json(
+      { ok: false, error: "rate_limited" },
+      { status: 429 },
+    );
+  }
+
+  let body: ConsultPayload;
   try {
     body = (await request.json()) as ConsultPayload;
   } catch {
@@ -22,15 +71,48 @@ export async function POST(request: Request) {
     );
   }
 
-  const name = String(body.name ?? "").trim();
-  const email = String(body.email ?? "").trim();
-  const phone = String(body.phone ?? "").trim();
-  const goal = String(body.goal ?? "").trim();
+  // Bot traps: the hidden field is filled in, or the form was sent too fast.
+  // Answer "ok" so the bot does not learn it was caught, but send nothing.
+  const elapsed = typeof body.elapsedMs === "number" ? body.elapsedMs : 0;
+  if (text(body[HONEYPOT_FIELD]) !== "" || elapsed < MIN_FILL_TIME_MS) {
+    return NextResponse.json({ ok: true });
+  }
+
+  // Collapse line breaks in single-line fields (name goes into the subject).
+  const name = text(body.name).replace(/\s+/g, " ");
+  const email = text(body.email);
+  const phone = text(body.phone).replace(/\s+/g, " ");
+  const goal = text(body.goal);
   const privacyAccepted = body.privacyAccepted === true;
 
   if (!name || !email || !goal) {
     return NextResponse.json(
       { ok: false, error: "missing_fields" },
+      { status: 400 },
+    );
+  }
+
+  if (
+    name.length > CONSULT_LIMITS.name ||
+    phone.length > CONSULT_LIMITS.phone ||
+    goal.length > CONSULT_LIMITS.goal
+  ) {
+    return NextResponse.json(
+      { ok: false, error: "too_long" },
+      { status: 400 },
+    );
+  }
+
+  if (!isValidEmail(email)) {
+    return NextResponse.json(
+      { ok: false, error: "invalid_email" },
+      { status: 400 },
+    );
+  }
+
+  if (!isValidPhone(phone)) {
+    return NextResponse.json(
+      { ok: false, error: "invalid_phone" },
       { status: 400 },
     );
   }
@@ -109,5 +191,6 @@ function escapeHtml(value: string) {
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;");
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
 }

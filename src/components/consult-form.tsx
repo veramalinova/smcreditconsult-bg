@@ -1,13 +1,18 @@
 "use client";
 
 import Link from "next/link";
-import { useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import { useLanguage } from "@/components/language-provider";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { trackConsultLead } from "@/lib/analytics";
+import {
+  CONSULT_LIMITS,
+  HONEYPOT_FIELD,
+  isValidEmail,
+} from "@/lib/consult-validation";
 
 type FormStatus =
   | "idle"
@@ -15,12 +20,20 @@ type FormStatus =
   | "success"
   | "error"
   | "invalid"
+  | "invalidEmail"
   | "privacy";
 
 export function ConsultForm() {
   const { t } = useLanguage();
   const [status, setStatus] = useState<FormStatus>("idle");
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
+  // When the form appeared; the server ignores submissions sent too quickly (bots).
+  const shownAt = useRef(0);
+  const formVisible = status !== "success";
+
+  useEffect(() => {
+    if (formVisible) shownAt.current = Date.now();
+  }, [formVisible]);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -32,9 +45,15 @@ export function ConsultForm() {
     const email = String(data.get("email") ?? "").trim();
     const phone = String(data.get("phone") ?? "").trim();
     const goal = String(data.get("goal") ?? "").trim();
+    const honeypot = String(data.get(HONEYPOT_FIELD) ?? "");
 
     if (!name || !email || !goal) {
       setStatus("invalid");
+      return;
+    }
+
+    if (!isValidEmail(email)) {
+      setStatus("invalidEmail");
       return;
     }
 
@@ -53,6 +72,8 @@ export function ConsultForm() {
           phone,
           goal,
           privacyAccepted: true,
+          elapsedMs: Date.now() - shownAt.current,
+          [HONEYPOT_FIELD]: honeypot,
         }),
       });
 
@@ -93,7 +114,7 @@ export function ConsultForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="space-y-5 rounded-md border border-border/80 bg-white/80 p-6 sm:p-8"
+      className="relative space-y-5 overflow-hidden rounded-md border border-border/80 bg-white/80 p-6 sm:p-8"
       noValidate
     >
       <div className="grid gap-5 sm:grid-cols-2">
@@ -104,6 +125,7 @@ export function ConsultForm() {
             name="name"
             autoComplete="name"
             required
+            maxLength={CONSULT_LIMITS.name}
             placeholder={t.form.namePlaceholder}
             className="h-11 bg-white"
             aria-invalid={status === "invalid" || undefined}
@@ -117,9 +139,12 @@ export function ConsultForm() {
             type="email"
             autoComplete="email"
             required
+            maxLength={CONSULT_LIMITS.email}
             placeholder={t.form.emailPlaceholder}
             className="h-11 bg-white"
-            aria-invalid={status === "invalid" || undefined}
+            aria-invalid={
+              status === "invalid" || status === "invalidEmail" || undefined
+            }
           />
         </div>
       </div>
@@ -131,6 +156,7 @@ export function ConsultForm() {
           name="phone"
           type="tel"
           autoComplete="tel"
+          maxLength={CONSULT_LIMITS.phone}
           placeholder={t.form.phonePlaceholder}
           className="h-11 bg-white"
         />
@@ -143,9 +169,26 @@ export function ConsultForm() {
           name="goal"
           required
           rows={4}
+          maxLength={CONSULT_LIMITS.goal}
           placeholder={t.form.goalPlaceholder}
           className="min-h-28 resize-y bg-white text-base md:text-sm"
           aria-invalid={status === "invalid" || undefined}
+        />
+      </div>
+
+      {/* Honeypot: hidden from people and screen readers; bots tend to fill every field. */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -left-[9999px] h-px w-px overflow-hidden"
+      >
+        <label htmlFor={HONEYPOT_FIELD}>Website</label>
+        <input
+          id={HONEYPOT_FIELD}
+          name={HONEYPOT_FIELD}
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+          defaultValue=""
         />
       </div>
 
@@ -179,6 +222,12 @@ export function ConsultForm() {
       {status === "invalid" ? (
         <p className="text-sm text-destructive" role="alert">
           {t.form.invalid}
+        </p>
+      ) : null}
+
+      {status === "invalidEmail" ? (
+        <p className="text-sm text-destructive" role="alert">
+          {t.form.invalidEmail}
         </p>
       ) : null}
 

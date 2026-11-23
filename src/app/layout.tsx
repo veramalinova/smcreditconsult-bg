@@ -28,9 +28,8 @@ export const metadata: Metadata = {
   title: bg.meta.title,
   description: bg.meta.description,
   applicationName: bg.brand,
-  alternates: {
-    canonical: "/",
-  },
+  // No default canonical here: each page sets its own via pageMetadata() in
+  // src/lib/seo.ts. A default "/" would mark every page as a copy of the home page.
   openGraph: {
     type: "website",
     locale: "bg_BG",

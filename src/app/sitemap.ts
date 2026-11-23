@@ -7,6 +7,7 @@ const paths = [
   "/uslugi/ipotechnen-kredit",
   "/uslugi/potrebitelski-kredit",
   "/uslugi/firmen-kredit",
+  "/uslugi/refinansirane",
   "/kak-rabotim",
   "/za-nas",
   "/zashto-e-bezplatno",
